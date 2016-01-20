@@ -1,0 +1,58 @@
+<div id="menu-panel" data-role="panel" data-position-fixed="true">
+	
+    <div id="menu-top" class="clearfix">
+    	{exp:search:simple_form no_result_page="/search/no-results" result_page="/search" form_id="search-form" search_in="entries"}
+            <input type="search" name="keywords" id="keywords" maxlength="100" size="20" placeholder="Search..." data-type="search" data-mini="true">
+        {/exp:search:simple_form}
+    	<!--
+        <form method="post" action="/" id="mobile-search-form" role="search">
+        	<label for="mobile-search" class="ui-hidden-accessible">Search</label>
+            <input type="search" name="mobile-search" id="mobile-search" value="" placeholder="Search..." data-type="search" data-mini="true">
+        </form>
+        -->
+    </div>
+    
+    <!-- <div id="menu-container" class="scrollfix">
+        
+        <ul data-role="listview">
+            <li><a href="/about-us">About Us</a></li>
+                <li class="submenu"><a href="/about-us/faq">FAQ</a></li>
+                <li class="submenu"><a href="/about-us/employment">Employment</a></li>
+            <li><a href="/news/homestart-reviews">Reviews</a></li>
+            <li><a href="/designs">Designs</a></li>
+        	<li><a href="/finance">Finance</a></li>
+                <li class="submenu"><a href="/finance/loan-calculator">Loan Calculator</a></li>
+                <li class="submenu"><a href="/finance/zero-deposit">Zero Deposit</a></li>
+                <li class="submenu"><a href="/finance/first-home-owner-grant">First Home Owner Grant</a></li>
+            <li><a href="/news">News</a></li>
+            <li><a href="/news/promotions">Promotions</a></li>
+            <li><a href="/contact-us">Contact Us</a></li>
+        </ul>
+    
+    </div> -->
+
+    <div id="menu-container" class="scrollfix">
+
+        <ul data-role="listview">
+            <li><a href="/designs">Home Designs</a></li>
+            <li><a href="/packages">House and Land Packages</a></li>
+            <li><a href="/finance/first-home-owners-grant">First Home Buyers</a>
+                <li class="submenu"><a href="/finance/first-home-owners-grant">First Home Owners Grant</a></li>
+            </li>
+            <li><a href="/finance">Home Loans</a>
+                <li class="submenu"><a href="/finance/zero-deposit">Zero Deposit Home Loans</a></li>
+                <li class="submenu"><a href="/finance/loan-calculator">Home Loan Calculator</a></li>
+            </li>
+            <li><a href="/about-us">About Us</a>
+                <li class="submenu"><a href="/about-us/faq">FAQ</a></li>
+                <li class="submenu"><a href="/news/homestart-reviews">Testimonials</a></li>
+                <li class="submenu"><a href="/about-us/careers">Careers</a></li>
+            </li>
+            <li><a href="/news">News</a></li>
+            <li><a href="/news/promotions">Promotions</a></li>
+            <li><a href="/contact-us">Contact Us</a></li>
+        </ul>
+
+    </div>
+    
+</div>

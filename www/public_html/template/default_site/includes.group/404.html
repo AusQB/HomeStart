@@ -1,0 +1,52 @@
+{embed="includes/.header"}
+
+<section class="content first-section {segment_1}">
+    <div class="container white-box clearfix">
+
+        <div class="pct50" style="float:left;">
+    
+        	<div class="content-header {if last_segment == 'about-us' OR last_segment == 'homestart-difference'}image{/if} clearfix">
+                <div class="content-header-copy">
+                    <h1>Not found</h1>
+                </div>
+            </div>
+
+            <div class="page-copy clearfix">
+                <h3>Sorry, but the page you were trying to view does not exist.</h3>
+                <p>It looks like this was the result of either:</p>
+                <ul>
+                    <li>A mistyped address</li>
+                    <li>An out-of-date link</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="pct50" style="float:left;">
+            <h2>Sitemap</h2>
+            {exp:taxonomy:nav tree_id="1" display_root="no" ul_css_id="sitemap"}
+                <a href="{node_url}" {if node_entry_template_group_name == segment_1}class="active-parent"{/if}>{node_title}</a> 
+            {/exp:taxonomy:nav}
+
+        </div>
+        
+    </div>
+</section>
+
+<section class="side-enquiry container clearfix">
+	
+    <div class="side-enquiry-main dog-man white-box">
+    
+    	{looking-for}
+        
+    </div>
+    
+    <div class="side-enquiry-form white-box">
+    
+        {enquiry-form}
+        
+    </div>
+    
+</section>
+        
+{embed="includes/.footer"}

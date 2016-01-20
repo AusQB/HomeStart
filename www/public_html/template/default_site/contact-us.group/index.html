@@ -1,0 +1,242 @@
+{embed="includes/.header"}
+
+{exp:channel:entries channel="pages" limit="1" url_title="{segment_1}"}
+<section class="content first-section {segment_1}">
+    <div class="container white-box clearfix">
+    
+    	<div class="content-header image clearfix">
+            <div class="content-header-copy">
+                <h1>{if page_heading != ''}{page_heading}{if:else}{title}{/if}</h1>
+                {page_header_copy}
+            </div>
+        </div>
+        
+        <img class="hover-gif hsrep-gif" data-src="hsrep" src="/template/default_site/assets/img/hsrep.gif" alt="" />
+            
+        <div class="page-copy">
+        {page_copy}
+        </div>
+    
+    </div>
+</section>
+{/exp:channel:entries}
+
+
+<section class="content {segment_1} {segment_2} contact-bottom">
+    <div class="container white-box clearfix">
+    
+    {if last_segment == 'thank-you'}
+    <div>
+    	<h2>Thanks for contacting HomeStart. </h2>
+        <h4>One of our representatives will be in touch within 24 hours.</h4>
+    </div>
+    
+    {rea}
+    
+    {if:else}
+    
+    {exp:freeform:form form_name="contact_us" form:class="contact-form" return="contact-us/thank-you" inline_errors="yes" required="name|email|first_buyer|enquiry|hear_about"}
+    
+    <div class="cols2 clearfix">
+    
+    	<h2>Fill out the form below to send us a message</h2>
+    
+        <div class="pct50">
+        
+            <ul>
+            
+                <li>
+                <label>{freeform:label:name}</label>
+                {!--{freeform:field:name attr:data-role="none" attr:tabindex="1" attr:required}--}
+                <input type="text" name="name" value="" id="freeform_name" maxlength="150" data-role="none" tabindex="1" required>
+                {if freeform:error:name}
+                    <span class="error">{freeform:error:name}</span>
+                {/if}
+                </li>
+                
+                <li>
+                <label>{freeform:label:email}</label>
+                {!--{freeform:field:email attr:data-role="none" attr:tabindex="2"}--}
+                <input type="email" name="email" value="" id="freeform_email" maxlength="150" data-role="none" tabindex="2" required>
+                {if freeform:error:email}
+                    <span class="error">{freeform:error:email}</span>
+                {/if}
+                </li>
+                
+                <li>
+                <label>{freeform:label:phone}</label>
+                {!--{freeform:field:phone attr:data-role="none" attr:tabindex="3"}--}
+                <input type="tel" pattern="[0-9]*" title="Numbers only" name="phone" value="" id="freeform_phone" maxlength="12" data-role="none" tabindex="3" required>
+                {if freeform:error:phone}
+                    <span class="error">{freeform:error:phone}</span>
+                {/if}
+                </li>
+            
+            </ul>
+        
+        </div>
+        
+        <div class="pct50">
+        
+            <ul>
+            
+                <!--<li>
+                <label>{freeform:label:live_now}</label>
+                {freeform:field:live_now attr:data-role="none"}
+                {if freeform:error:live_now}
+                    <span class="error">{freeform:error:live_now}</span>
+                {/if}
+                </li>
+                
+                <li>
+                <label>{freeform:label:like_live}</label>
+                {freeform:field:like_live attr:data-role="none"}
+                {if freeform:error:like_live}
+                    <span class="error">{freeform:error:like_live}</span>
+                {/if}
+                </li>-->
+             
+                <li>
+                <label>{freeform:label:enquiry}</label>
+                {!--{freeform:field:enquiry attr:data-role="none" attr:tabindex="4"}--}
+                <textarea name="enquiry" cols="50" rows="6" id="freeform_enquiry" data-role="none" tabindex="4" required></textarea>
+                {if freeform:error:enquiry}
+                    <span class="error">{freeform:error:enquiry}</span>
+                {/if}
+                </li>
+                
+            	<li class="drop-down">
+                <i class="icon-angle-down"></i>
+                <label>{freeform:label:hear_about}</label>
+                {!--{freeform:field:hear_about attr:data-role="none" attr:tabindex="6" attr:required="required"}--}
+                <select name="hear_about" id="freeform_hear_about" data-role="none" tabindex="6" required="required">
+                    <option value="">Please select one</option>
+                    <option value="Realestate.com.au">Realestate.com.au</option>
+                    <option value="Reiwa.com.au">Reiwa.com.au</option>
+                    <option value="Radio">Radio</option>
+                    <option value="TV">TV</option>
+                    <option value="Google">Google</option>
+                    <option value="Regional Centre">Regional Centre</option>
+                    <option value="Shopping Centre">Shopping Centre</option>
+                    <option value="Exhibitions">Exhibitions</option>
+                    <option value="Friend">Friend</option>
+                    <option value="Newspaper">Newspaper</option>
+                </select>
+                {if freeform:error:hear_about}
+                    <span class="error">{freeform:error:hear_about}</span>
+                {/if}
+                </li>
+                
+            </ul>
+            
+        </div>
+        
+    </div>
+    
+    <div class="cols2 clearfix">
+    
+    	<div class="pct50">
+        
+        	<ul>
+                
+                <li>
+                <label>{freeform:label:first_buyer}</label>
+                {!--{freeform:field:first_buyer attr:data-role="none" attr:tabindex="5"}--}
+                <ul style="list-style:none; padding:0;" data-role="none" tabindex="5">
+                <li>
+                <input type="radio" name="first_buyer" id="freeform_first_buyer_1" value="Yes" checked="checked">&nbsp;&nbsp;
+                <label for="freeform_first_buyer_1">Yes</label>
+                </li>
+                <li>
+                <input type="radio" name="first_buyer" id="freeform_first_buyer_2" value="No">&nbsp;&nbsp;
+                <label for="freeform_first_buyer_2">No</label>
+                </li>
+                </ul>
+                {if freeform:error:first_buyer}
+                    <span class="error">{freeform:error:first_buyer}</span>
+                {/if}
+                </li>
+                
+            </ul>
+        
+        </div>
+        
+        <div class="pct50">
+        
+            <ul>
+            
+                <li>
+                    <button class="btn-green" type="submit" name="submit" value="submit" data-role="none" tabindex="7" onclick="_gaq.push(['_trackEvent', 'Contact', 'Submit', 'Contact'])">Contact HomeStart</button>
+                </li>
+            
+            </ul>
+        
+        	<!--<p class="call-us">or call us on <span>(08) 9231 4567</span></p>-->
+            
+        </div>
+    
+    </div>
+    
+    {freeform:field:page_origin}
+    
+    {/exp:freeform:form}
+    
+    {/if}
+    
+    </div>
+</section>
+
+{if '{exp:detect_mobile:isphone}'}
+<?php if(!$this->EE->input->cookie('dontDoMob')) { ?>
+<a href="#contact-map" class="contact-map-link btn-green" data-role="button" data-transition="slideup">View map</a>
+<?php } ?>
+{if:else}
+
+<section class="side-enquiry content container {segment_1} {segment_2} clearfix">
+    
+    <div class="side-enquiry-main white-box contact-map-container">
+
+        <div class="gmap" id="gmap-{last_segment}" data-coords="-31.9606212,115.87101849999999"></div>
+    
+    </div>
+    
+    <div class="side-enquiry-form white-box">
+    
+    	<ul class="locations">
+    
+            <li class="location-button head-office current" data-coords="-31.9606212,115.87101849999999" data-title="Head Office" data-street="6 Bennett Street" data-suburb="East Perth, WA 6004" data-phone="+61(8) 6461 5300" data-fax="+61(8) 6461 5301">
+                <h3 style="padding-bottom:5px;">Head Office</h3>
+                <p style="padding-bottom:5px;">6 Bennett Street,<br>
+                East Perth, WA 6004</p>
+                <p><strong>P:</strong> +61(8) 6461 5300<br>
+                <strong>F:</strong> +61(8) 6461 5301<br>
+                <strong>E:</strong> <a href="mailto:info@homestart.net.au" onclick="_gaq.push(['_trackEvent', 'Contact', 'Submit', 'email'])">info@homestart.net.au</a></p>
+                <i class="icon-location-arrow"></i>
+            </li>
+            
+            <li class="location-button regional-display-north" data-coords="-31.883017,115.804371" data-title="Regional Information Centre - North" data-street="555 Karrinyup Road" data-suburb="Stirling, WA 6021">
+                <h3 style="padding-bottom:5px;">Regional Information Centre - North</h3>
+                <p style="padding-bottom:5px;">555 Karrinyup Road,<br>
+                Stirling, WA 6021</p>
+                {!--<p><strong>Opening hours:</strong><br>
+                <strong>Monday - Friday</strong> 12 PM - 7 PM<br>
+                <strong>Saturday - Sunday</strong> 11 AM - 5 PM</p>--}
+                <i class="icon-location-arrow"></i>
+            </li>
+            
+            {!--<li class="location-button regional-display-south" data-coords="-32.337588,115.80258700000002" data-title="Regional Display Centre - South" data-street="1 Osgood Way" data-suburb="Baldivis, WA 6171">
+                <h2>Regional Display Centre - South</h2>
+                <p>1 Osgood Way,<br>
+                Baldivis, WA 6171</p>
+                <i class="icon-location-arrow"></i>
+            </li>--}
+        
+        </ul>
+    
+    </div>
+   
+</section>
+
+{/if}
+    
+{embed="includes/.footer"}

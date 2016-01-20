@@ -1,0 +1,111 @@
+{exp:channel:entries channel="designs" url_title="{segment_2}" limit="1" dynamic="no"}
+
+<a href="/designs" class="back-button" data-transition="slide" data-direction="reverse"><i class="icon-arrow-left"></i>Back to designs</a>
+
+<section class="view-more">
+    <div class="container white-box clearfix">
+    
+    	<div class="view-more-header clearfix">
+            <div class="view-more-title">
+                <h1>The {title}</h1>
+            </div>
+            <div class="view-more-bbc clearfix">
+            	<ul class="bbc">
+                    <li class="bed">{beds}</li>
+                    <li class="bath">{baths}</li>
+                    <li class="car">{cars}</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="view-more-slider">
+        
+        	<ul {photos}{if "{image:total}" == 1}class="no-slider"{/if}{/photos}>
+        		{photos}
+                <li><img src="{image:url:large}" alt="The {title}" /></li>
+                {/photos}
+            </ul>
+            
+            <!--{photos cover_only="yes"}
+            <img src="{image:url:large}" alt="The {title}" />
+            {/photos}-->
+        
+        </div>
+    
+    </div>
+</section>
+
+<section class="view-more-info side-enquiry container clearfix">
+	
+    <div class="view-more-details side-enquiry-main white-box clearfix">
+    
+    	<div class="clearfix">
+    
+            <div class="view-more-details-description">
+        
+                <!--<h4>Frontage: <span class="green">{frontage}m</span> <span class="small">(front access design)</span></h4>-->
+                <h4>Welcome to <span class="green">The {title}</span></h4>
+                
+                <div class="view-more-description">
+                {description}
+                </div>
+            
+            </div>
+            
+            <div class="view-more-details-specifications">
+            
+            	<h4 class="green">Specifications:</h4>
+            	<ul>
+            	{specifications}
+                	<li><p>{item}</p></li>
+                {/specifications}
+            	</ul>
+            
+            </div>
+            
+        </div>
+
+        <div class="clearfix">
+        <!--<a class="btn-grey" href="/template/default_site/assets/uploads/specifications-sheet-standard.pdf" target="_blank">Standard Inclusions</a>-->
+        
+            <a class="btn-grey view-floorplan" href="#view-floorplan">View Floorplan</a>
+
+            {if url_title == 'escape'}
+            <div style="float:right;text-align:center;max-width:50%;margin:20px 0 0;" class="award clearfix">
+                <img style="height:90px;" src="{assets}/img/hia-logo.png" alt="" />
+                <p style="font-weight:bold;margin:1em 0 0;font-size:12px;">
+                <span style="display:block;font-size:1.4em;text-transform:uppercase;font-family:WhitneySemibold;margin:0 0 5px;">Finalist 2013</span>
+                <span style="display:block;">HIA Western Australia</span>
+                <span style="display:block;">Display Home</span>
+                <span style="display:block;">$180,001-$190,000</span>
+                </p>
+            </div>
+            {/if}
+
+		</div>
+                
+        <div class="hidden">
+        
+        	<div id="view-floorplan">
+        
+        	{floorplan}
+            <img src="{image:url:large}" alt="" />
+            {/floorplan}
+            
+            </div>
+        
+        </div>
+    
+    </div>
+    
+    <div class="side-enquiry-form white-box">
+    
+        {enquiry-form}
+        
+    </div>
+    
+    <img class="dog-tilted" src="/template/default_site/assets/img/dog-tilted.png" alt="" />
+    
+</section>
+    
+{/exp:channel:entries}

@@ -1,0 +1,264 @@
+<?php
+
+if($this->EE->input->cookie('filter_results_designs')) {
+    
+    $filter = unserialize($this->EE->input->cookie('filter_results_designs'));
+
+}
+
+if($this->EE->input->post('reset')) {
+
+    $filter = array(
+        'Any',
+        'Any',
+        '1'
+    );
+
+    $this->EE->functions->set_cookie('filter_results_designs', serialize($filter), time()+60*60);
+
+}
+
+if($this->EE->input->post('submit')) {
+
+    $filter = array(
+        $this->EE->input->post('frontage'),
+        $this->EE->input->post('beds'),
+        $this->EE->input->post('baths')
+    );
+
+    $this->EE->functions->set_cookie('filter_results_designs', serialize($filter), time()+60*60);
+
+}
+
+?>
+
+{embed="includes/.header"}
+
+{if segment_2 == '' OR {exp:segment_search keyword="/P\d+/" segments="last" regex="yes"}}
+
+<section class="page-header-box first-section {segment_1}">
+	<div class="container clearfix page-header-box-nav">
+    
+    	{exp:taxonomy:nav tree_id="2" display_root="no" ul_css_class="page-tabs" node_active_class="active" url_title="{segment_1}"}
+            <a href="{node_url}" data-transition="slide">{node_title}</a> 
+        {/exp:taxonomy:nav}
+        
+    </div>
+    <div class="content-header image container white-box clearfix">
+        <div class="content-header-copy">
+            {exp:channel:entries channel="pages" limit="1" url_title="{segment_1}"}
+            <h1>{if page_heading != ''}{page_heading}{if:else}{title}{/if}</h1>
+            {page_header_copy}
+            {/exp:channel:entries}
+        </div>
+        <img src="/template/default_site/assets/img/btn-homes@2x.png" alt="" />
+    </div>
+</section>
+
+<section class="content {segment_1} {segment_2} designs-list">
+    <div class="homes-container container clearfix white-box">
+    
+        <div class="homes-list-container clearfix">
+            <ul class="homes-list clearfix">
+            
+            {exp:channel:entries channel="designs" orderby="title" sort="asc" limit="10" paginate="bottom" dynamic="no"  
+            <?php 
+                    
+                    if(isset($filter[0])) {
+                    	switch ($filter[0]) {
+                        	case 'Any':
+                                break;
+                            case '5-9':
+                            	echo 'search:frontage="=5|6|7|8|9"';
+                                break;
+                            case '10-12':
+                            	echo 'search:frontage="=10|11|12"';
+                                break;
+                            case '13-14':
+                            	echo 'search:frontage="=13|14"';
+                                break;
+                            case '15-16':
+                            	echo 'search:frontage="=15|16"';
+                                break;
+                            case '17-18':
+                            	echo 'search:frontage="=17|18"';
+                                break;
+                        }
+                        echo ' ';
+                    }
+                    
+                    if(isset($filter[1])) {
+                    	switch ($filter[1]) {
+                        	case 'Any':
+                            	echo 'search:beds="=3|4"';
+                                break;
+                            case '3':
+                            	echo 'search:beds="=3"';
+                                break;
+                            case '4':
+                            	echo 'search:beds="=4"';
+                                break;
+                        }
+                        echo ' ';
+                    }
+                    
+                    if(isset($filter[2])) {
+                    	switch ($filter[2]) {
+                        	case '1':
+                            	echo 'search:baths="=1|2|3|4|5"';
+                                break;
+                            case '2':
+                            	echo 'search:baths="=2|3|4|5"';
+                                break;
+                            case '3':
+                            	echo 'search:baths="=3|4|5"';
+                                break;
+                            case '4':
+                            	echo 'search:baths="=4|5"';
+                                break;
+                            case '5':
+                            	echo 'search:baths="=5"';
+                                break;
+                        }
+                        echo ' ';
+                    }
+                    
+            ?>}
+            
+            	{if no_results}
+                
+                	<h4>There are no designs which match your search criteria.</h4>
+                
+                {/if}
+            
+                <li>
+                	<a href="{url_title_path='designs/index'}" data-transition="slide">
+                        <div class="homes-list-image">
+                            {photos cover_only="yes"}
+                            <img src="{image:url:small}" alt="Home Design - The {title}" />
+                            {/photos}
+                        </div>
+                        <div class="homes-list-details clearfix">
+                            <div class="homes-list-details-left">
+                                <h3>The {title}</h3>
+                            </div>
+                            <div class="homes-list-details-right clearfix">
+                                <ul class="bbc clearfix">
+                                    <li class="bed">{beds}</li>
+                                    <li class="bath">{baths}</li>
+                                    <li class="car">{cars}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                
+                {paginate}
+                	</ul>
+                    <div class="pagination clearfix">
+                    	<ul>
+                            <li class="pagination-button">
+                            {if previous_page}<a href="{auto_path}">{/if}
+                            <i class="icon-angle-left"></i>
+                            {if previous_page}</a>{/if}
+                            </li>
+                        	<li><p>{current_page} of {total_pages}</p></li>
+                            <li class="pagination-button">
+                            {if next_page}<a href="{auto_path}">{/if}
+                            <i class="icon-angle-right"></i>
+                            {if next_page}</a>{/if}
+                            </li>
+                        </ul>
+                    </div>
+                {/paginate}
+                
+                <!--{count} to {absolute_count} of {absolute_results} results-->
+                                
+            {/exp:channel:entries}
+            
+        </div>
+        
+        <div class="side-pane">
+        
+        	<div class="filter-results white-box clearfix">
+            
+            	<div class="container-header clearfix">
+                    <h3>Filter Results</h3>
+                    <a href="#">See All</a>
+                </div>
+                
+                <form action="/designs" method="post">
+                <ul>
+                    <!--<li>
+                        <label for="location">Location</label>
+                        <select name="location" id="location" data-role="none">
+                        	<option value="Any" <?php if(isset($filter[0]) && $filter[0] == 'Any') echo 'selected'; ?>>Any</option>
+                        	<option value="North of the River" <?php if(isset($filter[0]) && $filter[0] == 'North of the River') echo 'selected'; ?>>North of the River</option>
+                        	<option value="South of the River" <?php if(isset($filter[0]) && $filter[0] == 'South of the River') echo 'selected'; ?>>South of the River</option>
+                        </select>
+                    </li>-->
+                    <li class="drop-down">
+                	<i class="icon-angle-down"></i>
+                    	<label>Frontage</label>
+                    	<select name="frontage" data-role="none">
+                        	<option value="Any" <?php if(isset($filter[0]) && $filter[0] == 'Any') echo 'selected'; ?>>Any</option>
+                        	<option value="10-12" <?php if(isset($filter[0]) && $filter[0] == '10-12') echo 'selected'; ?>>10-12m</option>
+                        	<option value="13-14" <?php if(isset($filter[0]) && $filter[0] == '13-14') echo 'selected'; ?>>13-14m</option>
+                        	<option value="15-16" <?php if(isset($filter[0]) && $filter[0] == '15-16') echo 'selected'; ?>>15-16m</option>
+                        	<option value="17-18" <?php if(isset($filter[0]) && $filter[0] == '17-18') echo 'selected'; ?>>17-18m</option>                        
+                        </select>
+                    </li>
+                    <li class="drop-down">
+                	<i class="icon-angle-down"></i>
+                    	<label>Bedrooms</label>
+                    	<select name="beds" data-role="none">
+                        	<option value="Any" <?php if(isset($filter[1]) && $filter[1] == 'Any') echo 'selected'; ?>>Any</option>
+                            <option value="3" <?php if(isset($filter[1]) && $filter[1] == '3') echo 'selected'; ?>>3</option>
+                            <option value="4" <?php if(isset($filter[1]) && $filter[1] == '4') echo 'selected'; ?>>4</option>
+                        </select>
+                    </li>
+                    <!--<li class="drop-down">
+                	<i class="icon-angle-down"></i>
+                    	<label>Bathrooms</label>
+                        <select name="baths" data-role="none">
+                        	<option value="1" <?php if(isset($filter[2]) && $filter[2] == '1') echo 'selected'; ?>>1+</option>
+                            <option value="2" <?php if(isset($filter[2]) && $filter[2] == '2') echo 'selected'; ?>>2+</option>
+                            <option value="3" <?php if(isset($filter[2]) && $filter[2] == '3') echo 'selected'; ?>>3+</option>
+                            <option value="4" <?php if(isset($filter[2]) && $filter[2] == '4') echo 'selected'; ?>>4+</option>
+                            <option value="5" <?php if(isset($filter[2]) && $filter[2] == '5') echo 'selected'; ?>>5+</option>
+                        </select>
+                    </li>-->
+                    <!--<li class="slider">
+                        <div class="clearfix">
+                            <label>Price</label>
+                            <input type="text" name="min-price" id="min-price" value="<?php if(isset($filter[4])) { echo $filter[4]; } else { echo '0'; } ?>">
+                            <input type="text" name="max-price" id="max-price" value="<?php if(isset($filter[5])) { echo $filter[5]; } else { echo '500000'; } ?>">
+                        </div>
+                        <div class="noUiSlider"></div>
+                        <!--<select data-role="none">
+                        	<option value="foo">foo</option>
+                        </select>
+                    </li>-->
+                    <li class="button"><button class="btn-grey" name="submit" type="submit" value="submit" data-role="none">Submit</button></li>
+                    <li class="button"><button class="btn-grey" name="reset" type="submit" value="reset" id="filter-results-reset" data-role="none" action="/designs">Reset</button></li>
+                </ul>
+                </form>
+            
+            </div>
+            
+            <div class="enquiry-form white-box">
+            
+                {enquiry-form}
+            
+            </div>
+        
+        </div>
+    
+    </div>
+</section>
+
+{if:else}
+{embed="designs/view-more"}
+{/if}
+
+{embed="includes/.footer"}

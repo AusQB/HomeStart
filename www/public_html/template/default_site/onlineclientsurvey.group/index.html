@@ -1,0 +1,85 @@
+{if segment_2 == "entries"}
+    {embed="onlineclientsurvey/.entries"}
+{if:else}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>HomeStart Survey</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0", user-scalable=no>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="stylesheet" href="/template/default_site/assets/css/fonts.css?v<?php echo time() ?>">
+<link rel="stylesheet" href="/template/default_site/assets/css/survey.css?v<?php echo time() ?>">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+<script src="http://malsup.github.com/jquery.form.js"></script> 
+<script src="/template/default_site/assets/js/survey.js?v<?php echo time() ?>"></script>
+<script type="text/javascript">
+if(("standalone" in window.navigator) && window.navigator.standalone){
+var noddy, remotes = false;
+document.addEventListener('click', function(event) {
+noddy = event.target;
+while(noddy.nodeName !== "A" && noddy.nodeName !== "HTML") {
+noddy = noddy.parentNode;
+}
+if('href' in noddy && noddy.href.indexOf('http') !== -1 && (noddy.href.indexOf(document.location.host) !== -1 || remotes))
+{
+event.preventDefault();
+document.location.href = noddy.href;
+}
+},false);
+}
+</script>
+</head>
+
+<body>
+
+    <section id="header"> 
+    	<div class="container">
+            <a href="/onlineclientsurvey"><img src="/template/default_site/assets/img/home-logo.png" width="165" height="70" alt="home start logo"/></a>
+            <div class="clearfix"></div>
+       	</div>
+    </section>
+    
+    <section id="content">   
+    	<div class="container"> 
+        
+            {if segment_2 == "handover-survey"}
+                {embed="onlineclientsurvey/.handover_survey"}
+            {if:elseif segment_2 == "prestart-survey"}
+                {embed="onlineclientsurvey/.prestart_survey"}
+            {/if}
+            
+            {if segment_2 == "thank_you"}
+            <div class="thankyou">
+                <h1>Thank you!</h1>
+                <h2>We appreciate you taking the time to complete our survey.</h2>
+    			<img src="/template/default_site/assets/img/dog-man.png" alt="HomeStart Survey"/>
+                <a href="/onlineclientsurvey" class="btn-green">Begin new survey</a>
+            </div>
+            {/if}
+            
+            {if segment_2 == ""}
+            <div class="intro">
+            	<h1>Hello,</h1>
+                <h2>Please take a moment to complete our Survey...</h2>
+            	<a href="/onlineclientsurvey/prestart-survey" class="btn-green">Pre-Start Survey</a>
+                <a href="/onlineclientsurvey/handover-survey" class="btn-green">Handover Survey</a>
+    			<img src="/template/default_site/assets/img/dog-man.png" alt="HomeStart Survey"/>
+            </div>
+            {/if}
+       	</div>
+    </section>
+
+    {if logged_in AND segment_2 == ''}
+            
+        <a style="position:absolute;padding:20px;display:block;bottom:50px;left:50px;" class="btn-green" href="/onlineclientsurvey/entries">View entries</a>
+
+    {/if}
+    
+</body>
+</html>
+
+{/if}

@@ -1,0 +1,116 @@
+{embed="includes/.header"}
+
+{exp:channel:entries channel="promotions" url_title="nodramas" status="open|closed|unlisted"}
+
+<section class="content first-section">
+    <div class="container white-box clearfix" style="padding:0;">
+        
+        <div style="padding:20px 0 20px 20px;">
+            <div class="content-header clearfix" style="width:100%;">
+                <div class="content-header-copy">
+                    <h1 style="font-size:4em;margin:20px 0 0;"><span style="color:#96c11f;">No deposit?</span> No dramas.<sup><small>*</small></sup></h1>
+                </div>
+            </div>
+            
+            <div class="page-copy">
+                {promotion_copy}
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<section class="content">
+    <div class="container clearfix white-box">
+
+    {if status == "closed"}
+
+        <div class="content-header clearfix" style="width:100%;">
+            <div class="content-header-copy">
+                <h2 style="margin:20px 0 0;">Promotion Closed</h2>
+            </div>
+        </div>
+        
+        <div class="page-copy">
+            <p>This promotion has now closed. <br /><br />Keep an eye on our <a href="/news/promotions">promotions</a> page for your next chance to win.</p>
+        </div>
+
+    {if:elseif last_segment == 'thank-you'}
+
+        <div>
+            <h2>Thank you for registering your interest in HomeStart. A representative will be in touch soon.</h2>
+        </div>
+    
+        {rea}
+
+    {if:else}
+
+    {exp:freeform:form form_name="no_dramas" form:class="your_chance_to_win" return="/nodramas/thank-you" inline_errors="yes" prevent_duplicate_on="email" duplicate_redirect="/nodramas/error"}
+    
+    <div class="cols2 clearfix">
+    
+        <h2>Your Details</h2>
+    
+        <div class="pct50">
+        
+            <ul>
+                
+                <li>
+                <label>Name</label>
+                <input type="text" name="name" value="" id="name" maxlength="150" data-role="none" required>
+                </li>
+                
+                <li>
+                <label>Email</label>
+                <input type="email" name="email" value="" id="email" maxlength="150" data-role="none" required>
+                </li>
+                
+                <li>
+                <label>Phone</label>
+                <input type="tel" name="phone" value="" id="phone" maxlength="12" data-role="none" required>
+                </li>
+
+                <li>
+                <label>{freeform:label:address}</label>
+                {freeform:field:address attr:data-role="none"}
+                </li>
+
+            </ul>
+        
+        </div>
+
+        <div class="pct50">
+        
+            <ul>
+
+                <li>
+                    <label>{freeform:label:additional_comments_nodramas}</label>
+                    {freeform:field:additional_comments_nodramas attr:data-role="none"}
+                </li>
+
+                <li>
+                    <label>{freeform:label:hear_about_nodramas}</label>
+                    {freeform:field:hear_about_nodramas attr:data-role="none" attr:required="required"}
+                </li>
+                
+                {exp:snaptcha:field}
+                
+                <li>
+                <button class="btn-green" type="submit" name="submit" value="submit" data-role="none" onclick="_gaq.push(['_trackEvent', 'NoDramas', 'Register', 'Button',0,true]);">Register</button>
+                </li>
+            </ul>
+        
+        </div>
+        
+    </div>
+        
+    {/exp:freeform:form}
+
+	{/if}
+
+    </div>
+</section>
+
+{/exp:channel:entries}
+
+{embed="includes/.footer"}

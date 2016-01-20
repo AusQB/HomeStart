@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>HomeStart Survey</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0", user-scalable=no>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="stylesheet" href="/template/default_site/assets/css/fonts.css?v<?php echo time() ?>">
+<link rel="stylesheet" href="/template/default_site/assets/css/survey.css?v<?php echo time() ?>">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+</head>
+<body>
+
+{if segment_3 == ''}
+
+{embed='onlineclientsurvey/.entry_form'}
+
+{if:elseif segment_3 == 'handover_survey'}
+
+<div class="clearfix" style="background:#0078be;position:relative;">
+	<a href="/onlineclientsurvey/entries">
+		<img style="margin: 20px;" src="/template/default_site/assets/img/home-logo.png" width="165" height="70" alt="HomeStart"/>
+	</a>
+	<h1 style="color:#fff;position:absolute;top:0;right:0;padding:40px;margin:0;">Handover Survey</h1>
+</div>
+
+{embed='onlineclientsurvey/.handover_table' job='{segment_4}'}
+
+{if:elseif segment_3 == 'prestart_survey'}
+
+<div class="clearfix" style="background:#0078be;position:relative;">
+	<a href="/onlineclientsurvey/entries">
+		<img style="margin: 20px;" src="/template/default_site/assets/img/home-logo.png" width="165" height="70" alt="HomeStart"/>
+	</a>
+	<h1 style="color:#fff;position:absolute;top:0;right:0;padding:40px;margin:0;">Pre-Start Survey</h1>
+</div>
+
+{embed='onlineclientsurvey/.prestart_table' job='{segment_4}'}
+
+{/if}
+
+
+<!-- <table class="entries-table" cellspacing="0">
+<thead>
+	<tr class="row-header">
+		<th>Date</th>
+		<th>Job Number</th>
+		<th>Client Name</th>
+	</tr>
+</thead>
+<tbody>
+{exp:freeform:entries form_name='handover_survey' status='*' paginate='bottom' orderby='entry_date' sort='desc'}
+
+<tr class="{freeform:switch='row-light|row-dark'}">
+	<td>{freeform:entry_date format="%j %M %Y %g:%i %A"}</td>
+	<td>{freeform:field:job_number}</td>
+	<td>{freeform:field:client_name}</td>
+</tr>
+
+{freeform:paginate}
+<tr><td colspan='3' style="text-align:center;padding:20px;font-weight:bold;">
+    Page {freeform:current_page}
+    of {freeform:total_pages}
+    pages &nbsp;
+    {freeform:pagination_links}
+    </td></tr>
+{/freeform:paginate}
+
+{/exp:freeform:entries}
+</tbody>
+</table> -->
+
+</body>
+</html>

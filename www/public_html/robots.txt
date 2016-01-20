@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: http://homestart.net.au/sitemap/sitemap

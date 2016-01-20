@@ -1,0 +1,202 @@
+<?php
+    $desktop    = false;
+    $phone      = false;
+    $tablet     = false;
+    $phonefull  = false;
+    $body_class = '';
+?>
+{if '{exp:detect_mobile:isphone}'}
+<?php
+    if(!$this->EE->input->cookie('dontDoMob')) {
+        $phone = true;
+        $body_class = 'phone';
+    } else {
+        $phonefull = true;
+        $body_class = 'phonefull';
+    }
+?>
+{if:elseif '{exp:detect_mobile:istablet}'}
+<?php
+    $tablet = true; 
+    $body_class = 'tablet';
+?>
+{if:else}
+<?php
+    $desktop = true;
+    $body_class = 'desktop';
+?>
+{/if}
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]--><head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+{exp:seo_lite use_last_segment="y" default_title="{last_segment} - No Deposit Home Loans - {site_name}"}
+
+<!-- Mobile friendly stuff -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+
+{if '{exp:detect_mobile:isphone}'}
+<!-- Mobile Viewport -->
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+{if:elseif '{exp:detect_mobile:istablet}'}
+<!-- Tablet Viewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+{if:else}
+<!-- Desktop Viewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{/if}
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="HomeStart">
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="/template/default_site/assets/img/icons/favicon.ico">
+<!-- Standard iPhone --> 
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/template/default_site/assets/img/mobile_icons/apple-touch-icon-57x57.png" />
+<!-- Retina iPhone --> 
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/template/default_site/assets/img/mobile_icons/apple-touch-icon-144x144.png" />
+<!-- Standard iPad --> 
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/template/default_site/assets/img/mobile_icons/apple-touch-icon-72x72.png" />
+<!-- Retina iPad --> 
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/template/default_site/assets/img/mobile_icons/apple-touch-icon-114x114.png" />
+
+<!-- Apple Startup Image -->
+<link rel="apple-touch-startup-image" href="/template/default_site/assets/img/apple-touch-startup-image.png">
+<!-- Apple Startup Image - Retina -->
+<link rel="apple-touch-startup-image" href="/template/default_site/assets/img/apple-touch-startup-image-640x920.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)">
+<!-- Apple Startup Image - iPhone 5 -->
+<link rel="apple-touch-startup-image" href="/template/default_site/assets/img/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)">
+
+<!-- Style Sheets -->
+{exp:minimee:css}
+{if segment_1 == ''}<link rel="stylesheet" href="//vjs.zencdn.net/4.2.2/video-js.css">{/if}
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+<link rel="stylesheet" href="/template/default_site/assets/css/jquery.bxslider.css">
+<link rel="stylesheet" href="/template/default_site/assets/css/colorbox.css">
+<link rel="stylesheet" href="/template/default_site/assets/css/fonts.css">
+<link rel="stylesheet" href="/template/default_site/assets/css/normalize.min.css">
+<link rel="stylesheet" href="/template/default_site/assets/css/main.css?20140721">
+{/exp:minimee:css}
+
+<!-- Javascript Scripts -->
+<script src="/template/default_site/assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+{if '{exp:detect_mobile:isphone}'}
+
+<?php if(!$this->EE->input->cookie('dontDoMob')) { ?>
+<!-- Mobile Only -->
+{exp:minimee:css}
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile.structure-1.3.2.min.css">
+<link rel="stylesheet" href="/template/default_site/assets/css/mobile.css">
+{/exp:minimee:css}
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/template/default_site/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script>window.jQuery || document.write('<script src="/template/default_site/assets/js/vendor/jquery-ui.min.js"><\/script>')</script>
+
+<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+{exp:minimee:js}
+<script src="/template/default_site/assets/js/vendor/detectmobilebrowser.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1Vd2q1SxTf1BjwUalB8q1dbN8o83Ni6Q&sensor=true"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+<script src="http://vjs.zencdn.net/4.1/video.js"></script>
+<script src="/template/default_site/assets/js/vendor/vendor-pack.js"></script>
+{/exp:minimee:js}
+<!--<script>
+{embed="includes/init-swipeview"}
+</script>-->
+
+<?php } ?>
+
+{/if}
+
+<script>
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+<style>.video-js {padding-top: 56.25%}.vjs-fullscreen {padding-top: 0px}</style>
+
+</head>
+
+<!-- Start of Body -->
+<body class="<?php echo $body_class ?>">
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<![endif]-->
+
+{if '{exp:detect_mobile:isphone}'}
+<?php if($this->EE->input->cookie('dontDoMob')) { ?>
+<div class="mobile-return"><a href='{path="includes/mobile-redirect"}' data-ajax="false">Click here to return to mobile site</a></div>
+<?php } ?>
+{/if}
+
+<div data-role="page">
+
+    {embed="includes/menu-panel"}
+    
+    <div class="header-wrap" data-role="header" data-position="fixed" data-tap-toggle="false" role="banner">
+    
+        <div class="header">
+            
+            <div class="container clearfix">
+            
+                <div class="mobile-buttons clearfix">
+                
+                    <a href="#menu-panel" class="btn-menu"><img src="/template/default_site/assets/img/btn-menu.png" alt="" /></a>
+                    
+                    <a href="tel:+61892314567" class="btn-contact"><img src="/template/default_site/assets/img/btn-contact.png" alt="" /></a>
+                
+                </div>
+
+                <div class="clearfix">
+                
+                    <div class="logo"><a href="{path='site_index'}" data-role="none"><img src="/template/default_site/assets/img/home-logo.png" width="165" height="70" alt="home start logo"/></a></div>
+                    
+                    <div class="search-bar clearfix">
+                    {exp:search:simple_form no_result_page="/search/no-results" result_page="/search" form_id="search-form" search_in="entries" where="any"}
+                        <input type="text" name="keywords" id="keywords" maxlength="100" size="20" placeholder="Enter search criteria..." pattern=".{3,}" title="At least 3 characters required" required>
+                        <input type="submit" value="" class="submit" name="submit" id="search-button">
+                    {/exp:search:simple_form}
+                    </div>
+
+                </div>
+                
+                <div class="main-nav">
+                
+                    {exp:taxonomy:nav tree_id="1" display_root="no"}
+                        <a href="{node_url}" {if node_entry_template_group_name == segment_1}class="active-parent"{/if}>{node_title}</a> 
+                    {/exp:taxonomy:nav}
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+                
+        <div class="btt"><p>Back to top</p></div>
+    
+    </div>
+    
+    {breadcrumbs}
+    
+    <div class="wrapper clearfix" data-role="content" role="main">
+        
+        <div class="side-nav clearfix">
+            <ul>
+                <li class="btn-finance"><a href="/finance" title="Finance"><span>Finance</span></a></li>
+                <li class="btn-homes"><a href="/designs" title="Designs"><span>Homes</span></a></li>
+                <li class="btn-faq"><a href="/about-us/faq" title="FAQ"><span>Ask Us</span></a></li>
+                <li class="btn-contact"><a href="/contact-us">Contact</a></li>
+            </ul>
+        </div>

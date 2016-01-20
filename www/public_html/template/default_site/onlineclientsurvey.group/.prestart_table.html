@@ -1,0 +1,110 @@
+{exp:freeform:entries form_name='prestart_survey' search:job_number='{embed:job}' status='*' limit='1'}
+
+<table class="entry-table" cellspacing="0">
+
+	<tr class="row-dark">
+		<td colspan="2">Client Name</td>
+		<td colspan="4">{freeform:field:client_name}</td>
+	</tr>
+	<tr class="row-light">
+		<td colspan="2">{freeform:label:job_number}</td>
+		<td colspan="4">{freeform:field:job_number}</td>
+	</tr>
+	<tr class="row-dark">
+		<td colspan="2">{freeform:label:sales_consultant}</td>
+		<td colspan="4">{freeform:field:sales_consultant}</td>
+	</tr>
+	<tr class="row-light">
+		<td colspan="2">{freeform:label:contracts_administrator}</td>
+		<td colspan="4">{freeform:field:contracts_administrator}</td>
+	</tr>
+
+	<tr style="background:#96c11f;color:#fff;">
+		<th>Service Rating</th>
+		<th>Availability</th>
+		<th>Product Knowledge</th>
+		<th>Helpfulness &amp; Assistance</th>
+		<th>Responsiveness to Requests</th>
+		<th>Additional Comments</th>
+	</tr>
+	<tr class="row-dark">
+		<th>Sales Consultant</th>
+		<td>{freeform:field:sales_availability}</td>
+		<td>{freeform:field:sales_product_knowledge}</td>
+		<td>{freeform:field:sales_helpfulness_assistance}</td>
+		<td>{freeform:field:sales_responsiveness_to_requests}</td>
+		<td>{freeform:field:additional_comments_sales}</td>
+	</tr>
+	<tr class="row-light">
+		<th>Contracts Administrator</th>
+		<td>{freeform:field:contracts_administrator_availabilty}</td>
+		<td>{freeform:field:contracts_administrator_product_knowledge}</td>
+		<td>{freeform:field:contracts_administrator_helpfulness_assistance}</td>
+		<td>{freeform:field:contracts_administrator_responsiveness_to_requests}</td>
+		<td>{freeform:field:additional_comments_contracts_administrator}</td>
+	</tr>
+
+	<tr style="background:#96c11f;color:#fff;">
+		<th colspan="6">Pre-Start Survey</th>
+	</tr>
+
+	<tr class="row-dark">
+		<td colspan="2">{freeform:label:prestart_age}</td>
+		<td colspan="4">{freeform:field:prestart_age}</td>
+	</tr>
+	<tr class="row-light">
+		<td colspan="2">{freeform:label:marital_status}</td>
+		<td colspan="4">{freeform:field:marital_status}</td>
+	</tr>
+	<tr class="row-dark">
+		<td colspan="2">{freeform:label:prestart_number_of_children}</td>
+		<td colspan="4">{freeform:field:prestart_number_of_children}</td>
+	</tr>
+	<tr class="row-light">
+		<td colspan="2">{freeform:label:do_you_currently}</td>
+		<td colspan="4">{freeform:field:do_you_currently}</td>
+	</tr>
+	<tr class="row-dark">
+		<td colspan="2">{freeform:label:purpose_of_new_home}</td>
+		<td colspan="4">{freeform:field:purpose_of_new_home}</td>
+	</tr>
+	<tr class="row-light">
+		<td colspan="2">{freeform:label:are_you_a_first_home_buyer}</td>
+		<td colspan="4">{freeform:field:are_you_a_first_home_buyer}</td>
+	</tr>
+	<tr class="row-dark">
+		<td colspan="2">{freeform:label:if_no_have_you_ever_built_before}</td>
+		<td colspan="4">{freeform:field:if_no_have_you_ever_built_before}</td>
+	</tr>
+	<tr class="row-light">
+		<td colspan="2">{freeform:label:why_did_you_choose_to_build_with_homestart}</td>
+		<td colspan="4">{freeform:field:why_did_you_choose_to_build_with_homestart}</td>
+	</tr>
+	<tr class="row-dark">
+		<td colspan="2">{freeform:label:how_did_you_hear_about_homestart}</td>
+		<td colspan="4">{freeform:field:how_did_you_hear_about_homestart}</td>
+	</tr>
+	<tr class="row-light">
+		<td colspan="2">{freeform:label:which_websites_did_you_use_to_research_your_new_home}</td>
+		<td colspan="4">{freeform:field:which_websites_did_you_use_to_research_your_new_home}</td>
+	</tr>
+	<tr class="row-dark">
+		<td colspan="2">{freeform:label:do_you_regularly_read_any_of_the_following_newspapers}</td>
+		<td colspan="4">{freeform:field:do_you_regularly_read_any_of_the_following_newspapers}</td>
+	</tr>
+	<tr class="row-light">
+		<td colspan="2">{freeform:label:what_is_your_preferred_radio_station}</td>
+		<td colspan="4">{freeform:field:what_is_your_preferred_radio_station}</td>
+	</tr>
+
+</table>
+
+{if freeform:no_results}
+
+<h1 style="text-align:center;">Sorry, no results were found</h1>
+
+{embed='onlineclientsurvey/.entry_form'}
+
+{/if} 
+
+{/exp:freeform:entries}

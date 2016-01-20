@@ -1,0 +1,196 @@
+{embed="includes/.header"}
+
+{if segment_2 == ''}
+
+<section class="page-header-box first-section">
+	<div class="container white-box">
+	<div class="content-header-copy">
+	<h1>House and Land Packages</h1>
+	<p>HomeStart offers a comprehensive range of house and land packages across Perth. Our packages are created with first home buyers in mind; We have access to a wide range of new house and land packages to suit everyone’s needs and financial situation. With our new house and land packages available in all areas across Perth and operating as a one-stop-shop since 1988, we have the expertise to help you find a suitable block of land and build the home that you will love to live in.</p>
+    <p>Our Exclusive Home and land packages for first home buyers are limited in number and only available for short time only.</p>
+    <p><a href="/contact-us">Contact us</a> for further information on our exciting house and land packages.</p>
+	</div>
+	</div>
+</section>
+
+<section>
+    <div class="container clearfix" style="padding: 0;">
+    	
+        <ul id="package-list" class="home-list">
+    	{exp:channel:entries channel="packages" orderby="date" sort="asc" limit="3"}
+        
+        	<li class="white-box">
+            	<a href="{url_title_path='packages'}">
+                	<div class="info clearfix">
+                        <h3>The {title}</h3>
+                        <!-- <ul class="specs">
+                            <li class="bed">{beds}</li>
+                            <li class="bath">{baths}</li>
+                            <li class="car">{cars}</li>
+                        </ul> -->
+                    </div>
+                    {related_entries id="design"}
+                    <div class="image">
+                    {photos cover_only="yes"}
+                    <img src="{image:url:small}" alt="Home Design - The {title}" />
+                    {/photos}
+                    </div>
+                    {/related_entries}
+                    <h4>${exp:price_format price="{package_price}" decimals="0"}</h4>
+                </a>
+        	</li>
+        
+        {/exp:channel:entries}
+        </ul>
+        
+    </div>
+</section>
+
+<section>
+	<div class="container white-box">
+
+		<h2 style="margin: 10px 0 40px;">HomeStart packages are available in the following suburbs:</h2>
+
+		<div class="clear">
+
+			<div id="suburb-list" style="float: left;">
+				<ul class="finance-faq">
+				{exp:channel:entries channel="suburbs" orderby="title" sort="asc" dynamic="no"}
+				<li data-index="{absolute_count}" data-coords="{suburb_location}" data-suburb="{title}"><a href="#">{title}</a></li>
+				{/exp:channel:entries}
+				</ul>
+			</div>
+
+			<div style="width:50%;float:right;padding: 5px 0 0 20px;">
+				<div class="gmap" id="gmap-{last_segment}"></div>
+			</div>
+
+		</div>
+
+	</div>
+</section>
+
+<section class="content {segment_1} {segment_2} contact-bottom">
+    <div class="container white-box clearfix">
+    
+    {if last_segment == 'thank-you'}
+    <div>
+    	<h2>Thanks for contacting HomeStart. </h2>
+        <h4>One of our representatives will be in touch within 24 hours.</h4>
+    </div>
+    
+    {rea}
+    
+    {if:else}
+    
+    {exp:freeform:form form_name="contact_us" form:class="contact-form" return="contact-us/thank-you" inline_errors="yes" required="name|email|first_buyer|enquiry|hear_about"}
+    
+    <div class="cols2 clearfix">
+    
+    	<h2>Fill out the form below to send us a message</h2>
+    
+        <div class="pct50">
+        
+            <ul>
+            
+                <li>
+                <label>{freeform:label:name}</label>
+                {!--{freeform:field:name attr:data-role="none" attr:tabindex="1" attr:required}--}
+                <input type="text" name="name" value="" id="freeform_name" maxlength="150" data-role="none" tabindex="1" required>
+                {if freeform:error:name}
+                    <span class="error">{freeform:error:name}</span>
+                {/if}
+                </li>
+                
+                <li>
+                <label>{freeform:label:email}</label>
+                {!--{freeform:field:email attr:data-role="none" attr:tabindex="2"}--}
+                <input type="email" name="email" value="" id="freeform_email" maxlength="150" data-role="none" tabindex="2" required>
+                {if freeform:error:email}
+                    <span class="error">{freeform:error:email}</span>
+                {/if}
+                </li>
+                
+                <li>
+                <label>{freeform:label:phone}</label>
+                {!--{freeform:field:phone attr:data-role="none" attr:tabindex="3"}--}
+                <input type="tel" pattern="[0-9]*" title="Numbers only" name="phone" value="" id="freeform_phone" maxlength="12" data-role="none" tabindex="3" required>
+                {if freeform:error:phone}
+                    <span class="error">{freeform:error:phone}</span>
+                {/if}
+                </li>
+            
+            </ul>
+        
+        </div>
+        
+        <div class="pct50">
+        
+            <ul>
+             
+                <li>
+                <label>{freeform:label:enquiry}</label>
+                {!--{freeform:field:enquiry attr:data-role="none" attr:tabindex="4"}--}
+                <textarea name="enquiry" cols="50" rows="6" id="freeform_enquiry" data-role="none" tabindex="4" required></textarea>
+                {if freeform:error:enquiry}
+                    <span class="error">{freeform:error:enquiry}</span>
+                {/if}
+                </li>
+                
+            	<li class="drop-down">
+                <i class="icon-angle-down"></i>
+                <label>Suburb of interest</label>
+                {!--{freeform:field:suburb_of_interest attr:data-role="none" attr:tabindex="6" attr:required="required"}--}
+                <select name="suburb_of_interest" id="freeform_suburb_of_interest" data-role="none" tabindex="6" required="required">
+                <option value="">Please select one</option>
+                {exp:channel:entries channel="suburbs" orderby="title" sort="asc" dynamic="no"}
+				<option data-index="{absolute_count}" value="{title}">{title}</option>
+				{/exp:channel:entries}
+				</select>
+                {if freeform:error:suburb_of_interest}
+                    <span class="error">{freeform:error:suburb_of_interest}</span>
+                {/if}
+                </li>
+                
+            </ul>
+            
+        </div>
+        
+    </div>
+    
+    <div class="cols2 clearfix">
+    
+    	<div class="pct50">
+        &nbsp;
+        </div>
+        
+        <div class="pct50">
+        
+            <ul>
+            
+                <li>
+                    <button class="btn-green" type="submit" name="submit" value="submit" data-role="none" tabindex="7" onclick="_gaq.push(['_trackEvent', 'Contact', 'Submit', 'Contact'])">Contact HomeStart</button>
+                </li>
+            
+            </ul>
+        
+        	<!--<p class="call-us">or call us on <span>(08) 9231 4567</span></p>-->
+            
+        </div>
+    
+    </div>
+    
+    {freeform:field:page_origin}
+    
+    {/exp:freeform:form}
+    
+    {/if}
+    
+    </div>
+</section>
+
+{if:else}
+{embed="packages/view-more"}
+{/if}
+
+{embed="includes/.footer"}

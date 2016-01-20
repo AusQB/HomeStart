@@ -1,0 +1,99 @@
+{embed="includes/.header"}
+
+{if segment_2 != '' AND segment_2 != 'thank-you'}
+
+{exp:channel:entries channel="pages" limit="1" url_title="{last_segment}"}
+<section class="content first-section {segment_1}">
+    <div class="container white-box clearfix">
+    
+    	<div class="content-header {if url_title == 'zero-deposit'}image{/if} clearfix">
+            <div class="content-header-copy">
+                <h1>{if page_heading != ''}{page_heading}{if:else}{title}{/if}</h1>
+                {page_header_copy}
+            </div>
+            {if url_title == 'zero-deposit'}
+            <a href="/finance/first-home-owner-grant"><img src="/template/default_site/assets/img/10k.png" alt="" /></a>
+            {/if}
+        </div>
+        <div class="page-copy">
+        {page_copy}
+        </div>
+    
+    </div>
+</section>
+{/exp:channel:entries}
+
+{if:else}
+
+<section class="content first-section {segment_1} {segment_2} ">
+    <div class="container white-box clearfix">
+    
+    	<div class="content-header image clearfix">
+            <div class="content-header-copy">
+                {exp:channel:entries channel="pages" url_title="{segment_1}"}
+                <h1>{if page_heading != ''}{page_heading}{if:else}{title}{/if}</h1>
+                {page_header_copy}
+                {/exp:channel:entries}
+            </div>
+            <img src="/template/default_site/assets/img/btn-finance@2x.png" alt="" />
+        </div>
+    
+    	<ul class="finance-faq">
+    	{exp:channel:entries channel="finance" fixed_order="23|16|19|81|93|17|20|80"}
+        	{if url_title == 'how-much-can-i-borrow'}
+            <li><a href="/finance/loan-calculator">{title}</a></li>
+            {if:else}
+        	<li><a href="#{url_title}" rel="finance-faq" class="colorbox" data-transition="flip">{title}</a></li>
+            {/if}
+        {/exp:channel:entries}
+    	</ul>
+    
+    </div>
+</section>
+
+{if '{exp:detect_mobile:isnotmobile}' OR '{exp:detect_mobile:istablet}'}
+
+<div class="hidden">
+{exp:channel:entries channel="finance" fixed_order="23|16|19|81|93|17|20|80"}
+	<div class="finance-copy" id="{url_title}">
+        <h2>{title}</h2>
+        {finance_copy}
+        <div>
+        {if last_segment == "thank-you"}
+        <h3>Thanks for contacting HomeStart!</h3>
+		{rea}
+        {if:else}
+        {exp:freeform:form form_name="contact_us" form:class="finance-form" return="finance/thank-you" inline_errors="yes" required="name|phone"}
+            <div class="clearfix"><label>Name</label><input type="text" name="name" id="freeform_name" placeholder="Name" data-role="none" required></div>
+            <div class="clearfix"><label>Phone</label><input type="tel" name="phone" id="freeform_phone" placeholder="Phone" data-role="none" required></div>
+            <div class="clearfix"><label>Email</label><input type="email" name="email" id="freeform_email" placeholder="Email" data-role="none"></div>
+            <div class="clearfix"><button class="btn-green" type="submit" name="submit" value="submit" data-role="none">Submit</button></div>
+            {freeform:field:page_origin}
+        {/exp:freeform:form}
+        {/if}
+        </div>
+    </div>
+{/exp:channel:entries}
+</div>
+
+{/if}
+
+{/if}
+
+<section class="side-enquiry container clearfix">
+	
+    <div class="side-enquiry-main dog-man white-box">
+    
+    	{looking-for}
+        
+    </div>
+    
+    <div class="side-enquiry-form white-box">
+    
+        {enquiry-form}
+        
+    </div>
+    
+</section>
+
+{embed="includes/.footer"}

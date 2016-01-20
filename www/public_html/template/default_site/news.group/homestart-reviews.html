@@ -1,0 +1,60 @@
+{embed="includes/.header"}
+
+<section class="content first-section {segment_1}">
+
+	<div class="container white-box clearfix">
+    
+		{exp:channel:entries channel="pages" limit="1" url_title="{last_segment}"}
+    	<div class="content-header {last_segment} {if url_title == 'zero-deposit' OR url_title == 'homestart-reviews'}image{/if} clearfix">
+            <div class="content-header-copy">
+                <h1>{if page_heading != ''}{page_heading}{if:else}{title}{/if}</h1>
+                {page_header_copy}
+            </div>
+            <!-- <i class="icon-quote-right"></i> -->
+        </div>
+        <div class="page-copy">
+        {page_copy}
+        </div>
+        {/exp:channel:entries}
+
+		<div class="testimonials-container js-masonry" data-masonry-options='{ "columnWidth": ".grid-sizer", "itemSelector": ".testimonial", "gutter": ".gutter-sizer" }'>
+        	
+            <div class="grid-sizer"></div>
+            <div class="gutter-sizer"></div>
+        
+            {exp:channel:entries channel="testimonials"}
+            <div class="testimonial clearfix">
+                
+                <h3>{title}</h3>
+                <h4>{testimonial_suburb}</h4>
+                <div class="testimonial-copy">
+                <i class="icon-quote-left"></i>
+                {testimonial_copy}
+                <i class="icon-quote-right"></i>
+                </div>
+                
+            </div>
+            {/exp:channel:entries}
+        </div>
+        
+	</div>
+
+</section>
+
+<section class="side-enquiry container clearfix">
+	
+    <div class="side-enquiry-main dog-man white-box">
+    
+    	{looking-for}
+        
+    </div>
+    
+    <div class="side-enquiry-form white-box">
+    
+        {enquiry-form}
+        
+    </div>
+    
+</section>
+
+{embed="includes/.footer"}

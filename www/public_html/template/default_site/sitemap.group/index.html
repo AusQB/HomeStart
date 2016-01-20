@@ -1,0 +1,21 @@
+{embed="includes/.header"}
+
+<section>
+<div class="container white-box">
+<h1>Sitemap</h1>
+{exp:taxonomy:nav tree_id="1" display_root="no" ul_css_id="sitemap"}
+    <a href="{node_url}" {if node_entry_template_group_name == segment_1}class="active-parent"{/if}>{node_title}</a> 
+{/exp:taxonomy:nav}
+</div>
+</section>
+
+<section class="side-enquiry container clearfix">
+    <div class="side-enquiry-main dog-man white-box">
+    	{looking-for}
+    </div>
+    <div class="side-enquiry-form white-box">
+        {enquiry-form}
+    </div>
+</section>
+
+{embed="includes/.footer"}
