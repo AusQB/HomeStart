@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]--><head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+{exp:seo_lite use_last_segment="y" }
+
+
+<title>{exp:low_replace find="-" replace="SPACE"}{site_name}</title>
+<meta name='keywords' content='{meta_keywords}' />
+<meta name='description' content='{meta_description}' />
+<link rel='canonical' href='{site_url}' />
+{/exp:seo_lite}
+
+<!-- Mobile friendly stuff -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="/template/default_site/assets/img/icons/favicon.ico">
+<!-- Standard iPhone --> 
+<link rel="apple-touch-icon" sizes="57x57" href="/template/default_site/assets/img/mobile_icons/apple-touch-icon-57x57-precomposed.png" />
+<!-- Retina iPhone --> 
+<link rel="apple-touch-icon" sizes="114x114" href="/template/default_site/assets/img/mobile_icons/apple-touch-icon-144x144-precomposed.png" />
+<!-- Standard iPad --> 
+<link rel="apple-touch-icon" sizes="72x72" href="/template/default_site/assets/img/mobile_icons/apple-touch-icon-72x72-precomposed.png" />
+<!-- Retina iPad --> 
+<link rel="apple-touch-icon" sizes="144x144" href="/template/default_site/assets/img/mobile_icons/apple-touch-icon-114x114-precomposed.png" />
+
+<!-- Style Sheets -->
+<link rel="stylesheet" href="/template/default_site/assets/css/fonts.css">
+<link rel="stylesheet" href="/template/default_site/assets/css/normalize.min.css">
+<link rel="stylesheet" href="/template/default_site/assets/css/grid_system.css">
+<link rel="stylesheet" href="/template/default_site/assets/css/survey.css">
+<link rel="stylesheet" href="/template/default_site/assets/css/main.css">
+<link rel="stylesheet" href="/template/default_site/assets/css/media_queries.css">
+<link rel="stylesheet" href="/template/default_site/assets/css/reset.css">
+
+<?php
+if(!$this->EE->input->cookie('dontDoMob')){
+	echo '<link rel="stylesheet" href="/template/default_site/assets/css/mobile.css">';
+}
+?>
+
+<!-- Javascript Scripts -->
+<!--<script src="/template/default_site/assets/js/libs/modernizr-2.6.1.min.js"></script>-->
+<script src="/template/default_site/assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+<!-- Start of Body -->
+<body class="{embed:body_class}">
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<![endif]-->

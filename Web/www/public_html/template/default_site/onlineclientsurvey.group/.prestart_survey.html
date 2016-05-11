@@ -1,0 +1,216 @@
+{exp:freeform:form
+    form_name="prestart_survey"
+    form:id="prestart"
+    return="onlineclientsurvey/thank-you"
+    inline_errors="yes"
+    required="client_name|job_number|sales_consultant|contracts_administrator|prestart_age|marital_status|prestart_number_of_children|do_you_currently|purpose_of_new_home|are_you_a_first_home_buyer|if_no_have_you_ever_built_before|why_did_you_choose_to_build_with_homestart|sales_availability|sales_product_knowledge|sales_helpfulness_assistance|sales_responsiveness_to_requests|contracts_administrator_availabilty|contracts_administrator_product_knowledge|contracts_administrator_helpfulness_assistance|contracts_administrator_responsiveness_to_requests|how_did_you_hear_about_homestart|which_websites_did_you_use_to_research_your_new_home|do_you_regularly_read_any_of_the_following_newspapers|what_is_your_preferred_radio_station"
+}
+
+{if freeform:general_errors}
+<div class="row column">
+    <div class="alert callout">
+        <h4>There were some errors with your submission:</h4>
+        <ul>
+            {freeform:general_errors}
+            <li>{freeform:error_message}</li>
+            {/freeform:general_errors}
+        </ul>
+    </div>
+</div>
+{/if}
+
+<div class="row column" id="survey-js-errors" style="display:none;">
+    <div class="alert callout">
+        <h4>There were some errors with your submission. Check that all required fields have been entered.</h4>
+    </div>
+</div>
+
+<!-- NAME & JOB NUMBER -->
+<div class="row column">
+
+    <h3>Please enter your name and <strong>Job Number</strong></h3>
+
+    <fieldset>
+
+        <label>{freeform:label:client_name}<sup class="required-field">*</sup>
+            {if freeform:error:client_name}<span class="error">{freeform:error:client_name}</span>{/if}
+            {freeform:field:client_name attr:required="required"}
+        </label>
+
+        <label>{freeform:label:job_number}<sup class="required-field">*</sup>
+            {if freeform:error:job_number}<span class="error">{freeform:error:job_number}</span>{/if}
+            {freeform:field:job_number attr:required="required"}
+        </label>
+
+    </fieldset>
+
+</div>
+
+<!-- REPS NAME -->
+<div class="row column">
+
+    <h3>Please enter the names of your <strong>Respresentatives</strong></h3>
+
+    <fieldset>
+
+        <label>{freeform:label:sales_consultant}<sup class="required-field">*</sup>
+            {if freeform:error:sales_consultant}<span class="error">{freeform:error:sales_consultant}</span>{/if}
+            {freeform:field:sales_consultant attr:required="required"}
+        </label>
+
+        <label>{freeform:label:contracts_administrator}<sup class="required-field">*</sup>
+            {if freeform:error:contracts_administrator}<span class="error">{freeform:error:contracts_administrator}</span>{/if}
+            {freeform:field:contracts_administrator attr:required="required"}
+        </label>
+
+    </fieldset>
+
+</div>
+
+<!-- PRE-START SURVEY -->
+<div class="row column">
+
+    <h3>Pre-Start <strong>Survey</strong></h3>
+
+    <fieldset>
+
+        <label>{freeform:label:prestart_age}<sup class="required-field">*</sup></label>
+        {if freeform:error:prestart_age}<span class="error">{freeform:error:prestart_age}</span>{/if}
+        {freeform:field:prestart_age attr:required="required"}
+
+        <label>{freeform:label:marital_status}<sup class="required-field">*</sup></label>
+        {if freeform:error:marital_status}<span class="error">{freeform:error:marital_status}</span>{/if}
+        {freeform:field:marital_status attr:required="required"}
+
+        <label>{freeform:label:prestart_number_of_children}<sup class="required-field">*</sup></label>
+        {if freeform:error:prestart_number_of_children}<span class="error">{freeform:error:prestart_number_of_children}</span>{/if}
+        {freeform:field:prestart_number_of_children attr:required="required"}
+
+        <label>{freeform:label:do_you_currently}<sup class="required-field">*</sup></label>
+        {if freeform:error:do_you_currently}<span class="error">{freeform:error:do_you_currently}</span>{/if}
+        {freeform:field:do_you_currently attr:required="required"}
+
+        <label>{freeform:label:purpose_of_new_home}<sup class="required-field">*</sup></label>
+        {if freeform:error:purpose_of_new_home}<span class="error">{freeform:error:purpose_of_new_home}</span>{/if}
+        {freeform:field:purpose_of_new_home attr:required="required"}
+
+        <label>{freeform:label:are_you_a_first_home_buyer}<sup class="required-field">*</sup></label>
+        {if freeform:error:are_you_a_first_home_buyer}<span class="error">{freeform:error:are_you_a_first_home_buyer}</span>{/if}
+        {freeform:field:are_you_a_first_home_buyer attr:required="required"}
+
+        <label>{freeform:label:if_no_have_you_ever_built_before}<sup class="required-field">*</sup></label>
+        {if freeform:error:if_no_have_you_ever_built_before}<span class="error">{freeform:error:if_no_have_you_ever_built_before}</span>{/if}
+        {freeform:field:if_no_have_you_ever_built_before attr:required="required"}
+
+        <label>{freeform:label:why_did_you_choose_to_build_with_homestart}<sup class="required-field">*</sup>
+            {if freeform:error:why_did_you_choose_to_build_with_homestart}<span class="error">{freeform:error:why_did_you_choose_to_build_with_homestart}</span>{/if}
+            {freeform:field:why_did_you_choose_to_build_with_homestart attr:required="required"}
+        </label>
+
+    </fieldset>
+
+</div>
+
+<!-- RATE SERVICE: SALES CONSULTANT -->
+<div class="row column">
+
+    <h3>How would you rate the service you received from your <strong>Sales Consultant</strong>?</h3>
+
+    <fieldset>
+
+        <label>{freeform:label:sales_availability}<sup class="required-field">*</sup></label>
+        {if freeform:error:sales_availability}<span class="error">{freeform:error:sales_availability}</span>{/if}
+        {freeform:field:sales_availability attr:required="required"}
+
+        <label>{freeform:label:sales_product_knowledge}<sup class="required-field">*</sup></label>
+        {if freeform:error:sales_product_knowledge}<span class="error">{freeform:error:sales_product_knowledge}</span>{/if}
+        {freeform:field:sales_product_knowledge attr:required="required"}
+
+        <label>{freeform:label:sales_helpfulness_assistance}<sup class="required-field">*</sup></label>
+        {if freeform:error:sales_helpfulness_assistance}<span class="error">{freeform:error:sales_helpfulness_assistance}</span>{/if}
+        {freeform:field:sales_helpfulness_assistance attr:required="required"}
+
+        <label>{freeform:label:sales_responsiveness_to_requests}<sup class="required-field">*</sup></label>
+        {if freeform:error:sales_responsiveness_to_requests}<span class="error">{freeform:error:sales_responsiveness_to_requests}</span>{/if}
+        {freeform:field:sales_responsiveness_to_requests attr:required="required"}
+
+        <label>{freeform:label:additional_comments_sales}
+            {if freeform:error:additional_comments_sales}<span class="error">{freeform:error:additional_comments_sales}</span>{/if}
+            {freeform:field:additional_comments_sales}
+        </label>
+
+    </fieldset>
+
+</div>
+
+<!-- RATE SERVICE: CONTRACT ADMINISTRATOR -->
+<div class="row column">
+
+    <h3>How would you rate the service you received from your <strong>Contracts Administrator</strong>?</h3>
+
+    <fieldset>
+
+        <label>{freeform:label:contracts_administrator_availabilty}<sup class="required-field">*</sup></label>
+        {if freeform:error:contracts_administrator_availabilty}<span class="error">{freeform:error:contracts_administrator_availabilty}</span>{/if}
+        {freeform:field:contracts_administrator_availabilty attr:required="required"}
+
+        <label>{freeform:label:contracts_administrator_product_knowledge}<sup class="required-field">*</sup></label>
+        {if freeform:error:contracts_administrator_product_knowledge}<span class="error">{freeform:error:contracts_administrator_product_knowledge}</span>{/if}
+        {freeform:field:contracts_administrator_product_knowledge attr:required="required"}
+
+        <label>{freeform:label:contracts_administrator_helpfulness_assistance}<sup class="required-field">*</sup></label>
+        {if freeform:error:contracts_administrator_helpfulness_assistance}<span class="error">{freeform:error:contracts_administrator_helpfulness_assistance}</span>{/if}
+        {freeform:field:contracts_administrator_helpfulness_assistance attr:required="required"}
+
+        <label>{freeform:label:contracts_administrator_responsiveness_to_requests}<sup class="required-field">*</sup></label>
+        {if freeform:error:contracts_administrator_responsiveness_to_requests}<span class="error">{freeform:error:contracts_administrator_responsiveness_to_requests}</span>{/if}
+        {freeform:field:contracts_administrator_responsiveness_to_requests attr:required="required"}
+
+        <label>{freeform:label:additional_comments_contracts_administrator}
+            {if freeform:error:additional_comments_contracts_administrator}<span class="error">{freeform:error:additional_comments_contracts_administrator}</span>{/if}
+            {freeform:field:additional_comments_contracts_administrator}
+        </label>
+
+    </fieldset>
+
+</div>
+
+<!-- ADDITIONAL QUESTIONS -->
+<div class="row column">
+
+    <h3>A few more <strong>Questions</strong></h3>
+
+    <fieldset>
+
+        <label>{freeform:label:how_did_you_hear_about_homestart}<sup class="required-field">*</sup>
+            {if freeform:error:how_did_you_hear_about_homestart}<span class="error">{freeform:error:how_did_you_hear_about_homestart}</span>{/if}
+            {freeform:field:how_did_you_hear_about_homestart attr:required="required"}
+        </label>
+
+        <label>{freeform:label:which_websites_did_you_use_to_research_your_new_home}<sup class="required-field">*</sup>
+            {if freeform:error:which_websites_did_you_use_to_research_your_new_home}<span class="error">{freeform:error:which_websites_did_you_use_to_research_your_new_home}</span>{/if}
+            {freeform:field:which_websites_did_you_use_to_research_your_new_home attr:required="required"}
+        </label>
+
+        <label>{freeform:label:do_you_regularly_read_any_of_the_following_newspapers}<sup class="required-field">*</sup>
+            {if freeform:error:do_you_regularly_read_any_of_the_following_newspapers}<span class="error">{freeform:error:do_you_regularly_read_any_of_the_following_newspapers}</span>{/if}
+            {freeform:field:do_you_regularly_read_any_of_the_following_newspapers attr:required="required"}
+        </label>
+
+        <label>{freeform:label:what_is_your_preferred_radio_station}<sup class="required-field">*</sup>
+            {if freeform:error:what_is_your_preferred_radio_station}<span class="error">{freeform:error:what_is_your_preferred_radio_station}</span>{/if}
+            {freeform:field:what_is_your_preferred_radio_station attr:required="required"}
+        </label>
+
+    </fieldset>
+
+</div>
+
+{exp:snaptcha:field}
+<div id="summary"></div>
+
+<div class="row column text-right">
+    <button class="large success button" type="submit" name="submit" value="Submit">Submit</button>
+</div>
+
+{/exp:freeform:form}

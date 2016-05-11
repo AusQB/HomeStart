@@ -1,0 +1,209 @@
+{exp:freeform:form
+    form_name="handover_survey"
+    form:id="handover"
+    return="onlineclientsurvey/thank-you"
+    inline_errors="yes"
+    required="client_name|job_number|sales_representative|supervisor|client_liaison_officer|supervisor_availability|supervisor_product_knowledge|supervisor_helpfulness_assistance|supervisor_responsiveness_to_requests|availability_client_officer|product_knowledge_client_officer|helpfulness_assistance_client_officer|responsiveness_to_requests_client_officer|quality_of_construction|would_you_consider_building_with_us_again|would_you_recommend_our_company_to_other_homebuyers|contact_email|contact_phone|contact_mobile"
+}
+
+{if freeform:general_errors}
+<div class="row column">
+    <div class="alert callout">
+        <h3>There were some errors with your submission:</h3>
+        <ul>
+            {freeform:general_errors}
+            <li>{freeform:error_message}</li>
+            {/freeform:general_errors}
+        </ul>
+    </div>
+</div>
+{/if}
+
+<div class="row column" id="survey-js-errors" style="display:none;">
+    <div class="alert callout">
+        <h4>There were some errors with your submission. Check that all required fields have been entered.</h4>
+    </div>
+</div>
+
+<!-- NAME & JOB NUMBER -->
+<div class="row column">
+
+    <h3>Please enter your name and <strong>Job Number</strong></h3>
+
+    <fieldset>
+
+        <label>{freeform:label:client_name}<sup class="required-field">*</sup>
+            {if freeform:error:client_name}<span class="error">{freeform:error:client_name}</span>{/if}
+            {freeform:field:client_name attr:required="required"}
+        </label>
+
+        <label>{freeform:label:job_number}<sup class="required-field">*</sup>
+            {if freeform:error:job_number}<span class="error">{freeform:error:job_number}</span>{/if}
+            {freeform:field:job_number attr:required="required"}
+        </label>
+
+    </fieldset>
+
+</div>
+
+<!-- REPS NAME -->
+<div class="row column">
+
+    <h3>Please enter the names of your <strong>Respresentatives</strong></h3>
+
+    <fieldset>
+
+        <label>{freeform:label:sales_representative}<sup class="required-field">*</sup>
+            {if freeform:error:sales_representative}<span class="error">{freeform:error:sales_representative}</span>{/if}
+            {freeform:field:sales_representative attr:required="required"}
+        </label>
+
+        <label>{freeform:label:supervisor}<sup class="required-field">*</sup>
+            {if freeform:error:supervisor}<span class="error">{freeform:error:supervisor}</span>{/if}
+            {freeform:field:supervisor attr:required="required"}
+        </label>
+
+        <label>{freeform:label:client_liaison_officer}<sup class="required-field">*</sup>
+            {if freeform:error:client_liaison_officer}<span class="error">{freeform:error:client_liaison_officer}</span>{/if}
+            {freeform:field:client_liaison_officer attr:required="required"}
+        </label>
+
+    </fieldset>
+
+</div>
+
+<!-- RATE SERVICE: SUPERVISOR -->
+<div class="row column">
+
+    <h3>How would you rate the service you received from your <strong>Supervisor</strong>?</h3>
+
+    <fieldset>
+
+        <label>{freeform:label:supervisor_availability}<sup class="required-field">*</sup></label>
+        {if freeform:error:supervisor_availability}<span class="error">{freeform:error:supervisor_availability}</span>{/if}
+        {freeform:field:supervisor_availability attr:required="required"}
+
+        <label>{freeform:label:supervisor_product_knowledge}<sup class="required-field">*</sup></label>
+        {if freeform:error:supervisor_product_knowledge}<span class="error">{freeform:error:supervisor_product_knowledge}</span>{/if}
+        {freeform:field:supervisor_product_knowledge attr:required="required"}
+
+        <label>{freeform:label:supervisor_helpfulness_assistance}<sup class="required-field">*</sup></label>
+        {if freeform:error:supervisor_helpfulness_assistance}<span class="error">{freeform:error:supervisor_helpfulness_assistance}</span>{/if}
+        {freeform:field:supervisor_helpfulness_assistance attr:required="required"}
+
+        <label>{freeform:label:supervisor_responsiveness_to_requests}<sup class="required-field">*</sup></label>
+        {if freeform:error:supervisor_responsiveness_to_requests}<span class="error">{freeform:error:supervisor_responsiveness_to_requests}</span>{/if}
+        {freeform:field:supervisor_responsiveness_to_requests attr:required="required"}
+
+        <label>{freeform:label:additional_comments_supervisor}
+            {if freeform:error:additional_comments_supervisor}<span class="error">{freeform:error:additional_comments_supervisor}</span>{/if}
+            {freeform:field:additional_comments_supervisor}
+        </label>
+
+    </fieldset>
+
+</div>
+
+<!-- RATE SERVICE: Client Liaison Officer -->
+<div class="row column">
+
+    <h3>How would you rate the service you received from your <strong>Client Liaison Officer</strong>?</h3>
+
+    <fieldset>
+
+        <label>{freeform:label:availability_client_officer}<sup class="required-field">*</sup></label>
+        {if freeform:error:availability_client_officer}<span class="error">{freeform:error:availability_client_officer}</span>{/if}
+        {freeform:field:availability_client_officer attr:required="required"}
+
+        <label>{freeform:label:product_knowledge_client_officer}<sup class="required-field">*</sup></label>
+        {if freeform:error:product_knowledge_client_officer}<span class="error">{freeform:error:product_knowledge_client_officer}</span>{/if}
+        {freeform:field:product_knowledge_client_officer attr:required="required"}
+
+        <label>{freeform:label:helpfulness_assistance_client_officer}<sup class="required-field">*</sup></label>
+        {if freeform:error:helpfulness_assistance_client_officer}<span class="error">{freeform:error:helpfulness_assistance_client_officer}</span>{/if}
+        {freeform:field:helpfulness_assistance_client_officer attr:required="required"}
+
+        <label>{freeform:label:responsiveness_to_requests_client_officer}<sup class="required-field">*</sup></label>
+        {if freeform:error:responsiveness_to_requests_client_officer}<span class="error">{freeform:error:responsiveness_to_requests_client_officer}</span>{/if}
+        {freeform:field:responsiveness_to_requests_client_officer attr:required="required"}
+
+        <label>{freeform:label:additional_comments_client_officer}
+            {if freeform:error:additional_comments_client_officer}<span class="error">{freeform:error:additional_comments_client_officer}</span>{/if}
+            {freeform:field:additional_comments_client_officer}
+        </label>
+
+    </fieldset>
+
+</div>
+
+<!-- RATE: OVERALL CONSTRUCTION -->
+<div class="row column">
+
+    <h3>How would you rate the <strong>overall construction</strong> of your home?</h3>
+
+    <fieldset>
+
+        <label>{freeform:label:quality_of_construction}<sup class="required-field">*</sup></label>
+        {if freeform:error:quality_of_construction}<span class="error">{freeform:error:quality_of_construction}</span>{/if}
+        {freeform:field:quality_of_construction attr:required="required"}
+
+        <label>{freeform:label:would_you_consider_building_with_us_again}<sup class="required-field">*</sup></label>
+        {if freeform:error:would_you_consider_building_with_us_again}<span class="error">{freeform:error:would_you_consider_building_with_us_again}</span>{/if}
+        {freeform:field:would_you_consider_building_with_us_again attr:required="required"}
+
+        <label>{freeform:label:would_you_recommend_our_company_to_other_homebuyers}<sup class="required-field">*</sup></label>
+        {if freeform:error:would_you_recommend_our_company_to_other_homebuyers}<span class="error">{freeform:error:would_you_recommend_our_company_to_other_homebuyers}</span>{/if}
+        {freeform:field:would_you_recommend_our_company_to_other_homebuyers attr:required="required"}
+
+        <h5>Would you like to provide us with a testimonial?</h5>
+        <label>{freeform:label:your_experience}
+        {if freeform:error:your_experience}<span class="error">{freeform:error:your_experience}</span>{/if}
+        {freeform:field:your_experience attr:required="required"}
+        </label>
+
+        <label>{freeform:label:please_add_any_further_comments}
+            {if freeform:error:please_add_any_further_comments}<span class="error">{freeform:error:please_add_any_further_comments}</span>{/if}
+            {freeform:field:please_add_any_further_comments}
+        </label>
+
+    </fieldset>
+
+</div>
+
+<div class="row column">
+
+    <h3>Please enter your <strong>contact details</strong></h3>
+
+    <fieldset>
+
+        <label>{freeform:label:contact_email}<sup class="required-field">*</sup>
+        {if freeform:error:contact_email}<span class="error">{freeform:error:contact_email}</span>{/if}
+        {freeform:field:contact_email attr:required="required"}
+        </label>
+
+        <label>{freeform:label:contact_phone}<sup class="required-field">*</sup>
+        {if freeform:error:contact_phone}<span class="error">{freeform:error:contact_phone}</span>{/if}
+        {freeform:field:contact_phone attr:required="required"}
+        </label>
+
+        <label>{freeform:label:contact_mobile}<sup class="required-field">*</sup>
+        {if freeform:error:contact_mobile}<span class="error">{freeform:error:contact_mobile}</span>{/if}
+        {freeform:field:contact_mobile attr:required="required"}
+        </label>
+
+        <label>{freeform:label:what_is_your_preferred_method_of_contact}</label>
+        {if freeform:error:what_is_your_preferred_method_of_contact}<span class="error">{freeform:error:what_is_your_preferred_method_of_contact}</span>{/if}
+        {freeform:field:what_is_your_preferred_method_of_contact attr:required="required"}
+
+    </fieldset>
+
+</div>
+
+{exp:snaptcha:field}
+<div id="summary"></div>
+
+<div class="row column text-right">
+    <button class="large success button" type="submit" name="submit" value="Submit">Submit</button>
+</div>
+
+{/exp:freeform:form}

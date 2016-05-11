@@ -1,0 +1,190 @@
+{layout="news/.layout"}
+
+{exp:channel:entries channel="pages" limit="1" url_title="{segment_1}"}
+<div class="row">
+
+    <div class="medium-8 columns">
+
+        <div class="page-copy top">
+
+            <h1>{if page_heading != ''}{page_heading}{if:else}{title}{/if}</h1>
+
+            <div class="lead">{page_header_copy}</div>
+
+            {page_copy}
+
+        </div>
+
+    </div>
+
+    <div class="medium-4 columns">
+
+        <img class="hover-gif" data-src="hsrep" src="{assets}/img/hsrep.gif" alt="" />
+
+    </div>
+
+</div>
+{/exp:channel:entries}
+
+<div class="row">
+
+    <div class="large-12 columns">
+
+        {if last_segment == 'thank-you'}
+
+        	<h2>Thanks for contacting HomeStart. </h2>
+            <h4>One of our representatives will be in touch within 24 hours.</h4>
+
+        {rea}
+
+        {if:else}
+
+        {exp:freeform:form form_name="contact_us" form:id="contact-form" return="contact-us/thank-you" inline_errors="yes" required="name|email|first_buyer|enquiry|hear_about|postcode"}
+
+        <div class="callout">
+
+        <div class="row">
+
+            <div class="medium-6 columns">
+
+                <div class="row column">
+
+                    <label>{freeform:label:name}
+                        {if freeform:error:name}<span class="error">{freeform:error:name}</span>{/if}
+                        {freeform:field:name}
+                    </label>
+
+                </div>
+
+                <div class="row column">
+
+                    <label>{freeform:label:email}
+                        {if freeform:error:email}<span class="error">{freeform:error:email}</span>{/if}
+                        {freeform:field:email}
+                    </label>
+
+                </div>
+
+                <div class="row column">
+
+                    <label>{freeform:label:phone}
+                        {if freeform:error:phone}<span class="error">{freeform:error:phone}</span>{/if}
+                        {freeform:field:phone}
+                    </label>
+
+                </div>
+
+            </div>
+
+            <div class="medium-6 columns">
+
+                <div class="row column">
+
+                    <label>{freeform:label:postcode}
+                        {if freeform:error:postcode}<span class="error">{freeform:error:postcode}</span>{/if}
+                        {freeform:field:postcode}
+                    </label>
+
+                </div>
+
+                <div class="row column">
+
+                    <label>{freeform:label:enquiry}
+                        {if freeform:error:enquiry}<span class="error">{freeform:error:enquiry}</span>{/if}
+                        {freeform:field:enquiry attr:rows="3"}
+                    </label>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="medium-6 columns">
+
+                <div class="row">
+
+                    <div class="medium-6 columns">
+
+                        <label>{freeform:label:first_buyer}
+                            {if freeform:error:first_buyer}<span class="error">{freeform:error:first_buyer}</span>{/if}
+                            {freeform:field:first_buyer}
+                        </label>
+
+                    </div>
+
+                    <div class="medium-6 columns">
+
+                        <label>{freeform:label:hear_about}
+                            {if freeform:error:hear_about}<span class="error">{freeform:error:hear_about}</span>{/if}
+                            {freeform:field:hear_about}
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="medium-6 columns">
+
+                <div class="row">
+
+                    <div class="large-6 columns"></div>
+
+                    <div class="large-6 medium-12 columns">
+
+                        <button class="large expanded success button" type="submit" name="submit" onclick="_gaq.push(['_trackEvent', 'Contact', 'Submit', 'Contact'])">Contact HomeStart</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        </div>
+
+        {/exp:freeform:form}
+
+        {/if}
+
+    </div>
+
+</div>
+
+<div class="row">
+
+    <div class="medium-8 columns">
+
+        <div class="gmap rounded-box" id="gmap-contact" data-coords="-31.9606212,115.87101849999999"></div>
+
+    </div>
+
+    <div class="medium-4 columns">
+
+    	<div id="locations">
+
+            <div class="location-button head-office current" data-coords="-31.9606212,115.87101849999999" data-title="Head Office" data-street="6 Bennett Street" data-suburb="East Perth, WA 6004" data-phone="+61(8) 6461 5300" data-fax="+61(8) 6461 5301">
+                <h4 class="location-title">Head Office</h4>
+                <p>6 Bennett Street,<br>
+                East Perth, WA 6004</p>
+                <p><strong>P:</strong> +61(8) 6461 5300<br>
+                <strong>F:</strong> +61(8) 6461 5301<br>
+                <strong>E:</strong> <a href="mailto:info@homestart.net.au" onclick="_gaq.push(['_trackEvent', 'Contact', 'Submit', 'email'])">info@homestart.net.au</a></p>
+            </div>
+
+            <div class="location-button regional-display-north" data-coords="-31.883017,115.804371" data-title="Regional Information Centre - North" data-street="555 Karrinyup Road" data-suburb="Stirling, WA 6021">
+                <h4 class="location-title">Regional Information Centre - North</h4>
+                <p>555 Karrinyup Road,<br>
+                Stirling, WA 6021</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

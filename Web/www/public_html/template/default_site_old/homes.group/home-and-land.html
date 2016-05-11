@@ -1,0 +1,284 @@
+<?php
+
+if($this->EE->input->cookie('filter_results_home_and_land')) {
+    
+    $filter = unserialize($this->EE->input->cookie('filter_results_home_and_land'));
+
+}
+
+if($this->EE->input->post('reset')) {
+
+    $filter = array(
+        'Any',
+        'Any',
+        '1',
+        '1',
+        '0',
+        '500000'
+    );
+
+    $this->EE->functions->set_cookie('filter_results_home_and_land', serialize($filter), time()+60*60);
+
+}
+
+if($this->EE->input->post('submit')) {
+
+    $filter = array(
+        $this->EE->input->post('location'),
+        $this->EE->input->post('frontage'),
+        $this->EE->input->post('beds'),
+        $this->EE->input->post('baths'),
+        $this->EE->input->post('min-price'),
+        $this->EE->input->post('max-price')
+    );
+
+    $this->EE->functions->set_cookie('filter_results_home_and_land', serialize($filter), time()+60*60);
+
+}
+
+?>
+
+{embed="includes/.header"}
+
+{if segment_3 == '' OR {exp:segment_search keyword="/P\d+/" segments="last" regex="yes"}}
+
+<section class="page-header-box first-section {segment_1}">
+	<div class="container clearfix page-header-box-nav">
+    
+    	{exp:taxonomy:nav tree_id="2" display_root="no" ul_css_class="page-tabs" node_active_class="active" url_title="{segment_1}"}
+            <a href="{node_url}" data-transition="slide">{node_title}</a> 
+        {/exp:taxonomy:nav}
+        
+    </div>
+    <div class="content-header image container white-box clearfix">
+        <div class="content-header-copy">
+            {exp:channel:entries channel="pages" limit="1" url_title="{segment_2}"}
+            <h1>{if page_heading != ''}{page_heading}{if:else}{title}{/if}</h1>
+            {page_header_copy}
+            {/exp:channel:entries}
+        </div>
+        <img src="/template/default_site/assets/img/btn-homes@2x.png" alt="" />
+    </div>
+</section>
+
+<section class="content {segment_1} {segment_2}">
+    <div class="homes-container container clearfix white-box">
+    
+        <div class="homes-list-container clearfix">
+            <ul class="homes-list clearfix">
+            
+            {exp:channel:entries channel="packages" orderby="title" sort="asc" limit="8" paginate="bottom" dynamic="no 
+            <?php 
+                	if(isset($filter[0])) {
+                        if($filter[0] == 'North of the River') { echo 'category="7"'; }
+                        if($filter[0] == 'South of the River') { echo 'category="8"'; }
+                        echo ' ';
+                    }
+                    
+                    if(isset($filter[1])) {
+                    	switch ($filter[1]) {
+                        	case 'Any':
+                                break;
+                            case '200-300':
+                            	echo 'search:block_size="=10|11|12"';
+                                break;
+                            case '300-400':
+                            	echo 'search:block_size="=13|14"';
+                                break;
+                            case '400-500':
+                            	echo 'search:block_size="=15|16"';
+                                break;
+                        }
+                        echo ' ';
+                    }
+                    
+                    if(isset($filter[2])) {
+                    	switch ($filter[2]) {
+                        	case '1':
+                            	echo 'search:beds="=1|2|3|4|5"';
+                                break;
+                            case '2':
+                            	echo 'search:beds="=2|3|4|5"';
+                                break;
+                            case '3':
+                            	echo 'search:beds="=3|4|5"';
+                                break;
+                            case '4':
+                            	echo 'search:beds="=4|5"';
+                                break;
+                            case '5':
+                            	echo 'search:beds="=5"';
+                                break;
+                        }
+                        echo ' ';
+                    }
+                    
+                    if(isset($filter[3])) {
+                    	switch ($filter[3]) {
+                        	case '1':
+                            	echo 'search:baths="=1|2|3|4|5"';
+                                break;
+                            case '2':
+                            	echo 'search:baths="=2|3|4|5"';
+                                break;
+                            case '3':
+                            	echo 'search:baths="=3|4|5"';
+                                break;
+                            case '4':
+                            	echo 'search:baths="=4|5"';
+                                break;
+                            case '5':
+                            	echo 'search:baths="=5"';
+                                break;
+                        }
+                        echo ' ';
+                    }
+                    
+                    if(isset($filter[4]) && isset($filter[5])) {
+                    	
+                    }
+                    
+            ?>}
+            
+            	{if no_results}
+                
+                	<p>There are no designs which match your search criteria.
+                
+                {/if}
+            
+                <li>
+                	<a href="{url_title_path='homes/home-and-land'}">
+                        {if relative_date < 7}
+                        <div class="ribbon"></div>
+                        {/if}
+                        <div class="homes-list-image">
+                        {related_entries id="design"}
+                            {photos cover_only="yes"}
+                            <img src="{image:url:small}" alt="The {title}" />
+                            {/photos}
+                        {/related_entries}
+                        </div>
+                        <div class="homes-list-details clearfix">
+                            <div class="homes-list-details-left">
+                                <h3>The {title}</h3>
+                                <p>{suburb}</p>
+                            </div>
+                            <div class="homes-list-details-right clearfix">
+                                <ul class="bbc clearfix">
+                                {related_entries id="design"}
+                                    <li class="bed">{beds}</li>
+                                    <li class="bath">{baths}</li>
+                                    <li class="car">{cars}</li>
+                                {/related_entries}
+                                </ul>
+                                <p class="homes-list-price">${exp:number_formatter:format decimals='0'}{package_price}{/exp:number_formatter:format}</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                
+                {paginate}
+                	</ul>
+                    <div class="pagination clearfix">
+                    	<ul>
+                            <li class="pagination-button">
+                            {if previous_page}<a href="{auto_path}">{/if}
+                            <i class="icon-angle-left"></i>
+                            {if previous_page}</a>{/if}
+                            </li>
+                        	<li><p>{current_page} of {total_pages}</p></li>
+                            <li class="pagination-button">
+                            {if next_page}<a href="{auto_path}">{/if}
+                            <i class="icon-angle-right"></i>
+                            {if next_page}</a>{/if}
+                            </li>
+                        </ul>
+                    </div>
+                {/paginate}
+                
+            {/exp:channel:entries}
+            
+        </div>
+        
+        <div class="side-pane">
+        
+        	<div class="filter-results white-box clearfix">
+            
+            	<div class="container-header clearfix">
+                    <h3>Filter Results</h3>
+                    <a href="#">See All</a>
+                </div>
+                
+                <form action="/homes/home-and-land" method="post">
+                <ul>
+                    <li>
+                        <label for="location">Location</label>
+                        <select name="location" id="location" data-role="none">
+                        	<option value="Any" <?php if(isset($filter[0]) && $filter[0] == 'Any') echo 'selected'; ?>>Any</option>
+                        	<option value="North of the River" <?php if(isset($filter[0]) && $filter[0] == 'North of the River') echo 'selected'; ?>>North of the River</option>
+                        	<option value="South of the River" <?php if(isset($filter[0]) && $filter[0] == 'South of the River') echo 'selected'; ?>>South of the River</option>
+                        </select>
+                    </li>
+                    <li>
+                    	<label>Block Size</label>
+                    	<select name="block" data-role="none">
+                        	<option value="Any" <?php if(isset($filter[1]) && $filter[1] == 'Any') echo 'selected'; ?>>Any</option>
+                        	<option value="200-300" <?php if(isset($filter[1]) && $filter[1] == '200-300') echo 'selected'; ?>>200-300m<sup>2</sup></option>
+                        	<option value="300-400" <?php if(isset($filter[1]) && $filter[1] == '300-400') echo 'selected'; ?>>300-400m<sup>2</sup></option>
+                        	<option value="400-500" <?php if(isset($filter[1]) && $filter[1] == '400-500') echo 'selected'; ?>>400-500m<sup>2</sup></option>
+                        </select>
+                    </li>
+                    <li>
+                    	<label>Bedrooms</label>
+                    	<select name="beds" data-role="none">
+                        	<option value="1" <?php if(isset($filter[2]) && $filter[2] == '1') echo 'selected'; ?>>1+</option>
+                            <option value="2" <?php if(isset($filter[2]) && $filter[2] == '2') echo 'selected'; ?>>2+</option>
+                            <option value="3" <?php if(isset($filter[2]) && $filter[2] == '3') echo 'selected'; ?>>3+</option>
+                            <option value="4" <?php if(isset($filter[2]) && $filter[2] == '4') echo 'selected'; ?>>4+</option>
+                            <option value="5" <?php if(isset($filter[2]) && $filter[2] == '5') echo 'selected'; ?>>5+</option>
+                        </select>
+                    </li>
+                    <li>
+                    	<label>Bathrooms</label>
+                        <select name="baths" data-role="none">
+                        	<option value="1" <?php if(isset($filter[3]) && $filter[3] == '1') echo 'selected'; ?>>1+</option>
+                            <option value="2" <?php if(isset($filter[3]) && $filter[3] == '2') echo 'selected'; ?>>2+</option>
+                            <option value="3" <?php if(isset($filter[3]) && $filter[3] == '3') echo 'selected'; ?>>3+</option>
+                            <option value="4" <?php if(isset($filter[3]) && $filter[3] == '4') echo 'selected'; ?>>4+</option>
+                            <option value="5" <?php if(isset($filter[3]) && $filter[3] == '5') echo 'selected'; ?>>5+</option>
+                        </select>
+                    </li>
+                    <li class="slider">
+                        <div class="clearfix">
+                            <label>Price</label>
+                            <input type="text" name="min-price" id="min-price" value="<?php if(isset($filter[4])) { echo $filter[4]; } else { echo '0'; } ?>">
+                            <input type="text" name="max-price" id="max-price" value="<?php if(isset($filter[5])) { echo $filter[5]; } else { echo '500000'; } ?>">
+                        </div>
+                        <div class="noUiSlider"></div>
+                        <!--<select data-role="none">
+                        	<option value="foo">foo</option>
+                        </select>-->
+                    </li>
+                    <li class="button"><button name="submit" type="submit" value="submit" data-role="none">Submit</button></li>
+                    <li class="button"><button name="reset" type="submit" value="reset" id="filter-results-reset" data-role="none" action="/homes/home-and-land">Reset</button></li>
+                </ul>
+                </form>
+            
+            </div>
+            
+            <div class="enquiry-form white-box">
+            
+                {enquiry-form}
+            
+            </div>
+        
+        </div>
+    
+    </div>
+</section>
+
+{if:else}
+{embed="homes/view-more" segment="{segment_2}"}
+{/if}
+
+{embed="includes/.footer"}

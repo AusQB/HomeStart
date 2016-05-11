@@ -1,0 +1,70 @@
+{embed="includes/.header"}
+
+<section class="content first-section {segment_1}">
+    <div class="container white-box clearfix">
+    
+    	<div class="content-header {if last_segment == 'about-us' OR last_segment == 'homestart-difference'}image{/if} clearfix">
+            <div class="content-header-copy">
+                <h1>Search Results</h1>
+            </div>
+        </div>
+
+        <div class="page-copy">
+        {exp:search:search_results}
+        <div class="result">
+            {if channel_short_name == "pages" }
+            	{if url_title == "about-us" || url_title == "designs" || url_title == "news" || url_title == "finance" || url_title == "contact-us"} 
+                	<h4><a href="/{url_title}">{title}</a></h4>
+				{if:else}
+            		<h4><a href="{exp:taxonomy:node_url entry_id='{entry_id}' tree_id='1'}">{title}</a></h4>
+                {/if}
+            {if:elseif channel_short_name == "finance"}
+            	<h4><a href="/finance">{title}</a></h4>
+            {if:else}
+            	<h4><a href="{auto_path}">{title}</a></h4>
+            {/if}
+            
+            {if photos}
+                {photos cover_only="yes"}
+                    <a href="{auto_path}"><img src="{image:url:small}" alt="The {title}" /></a>
+                {/photos}
+            {/if}
+            
+            <p>{excerpt}</p>
+            
+        </div>
+		{/exp:search:search_results}
+        </div>
+        
+    </div>
+</section>
+
+
+<section class="side-enquiry container clearfix">
+	
+    <div class="side-enquiry-main dog-man white-box">
+    
+    	<h2>Know what you're looking for?</h2>
+        
+        <ul>
+            <li><a href="/finance/loan-calculator">Loan Calculator</a></li>
+            <li><a href="#">Government Incentives</a></li>
+            <li><a href="/finance/zero-deposit">Zero Deposit</a></li>
+            <li><a href="#">Shared Ownership</a></li>
+            <li><a href="#">Low Deposit HomeLoans</a></li>
+            <li><a href="/contact-us">Ask us a question</a></li>
+            <li><a href="/contact-us">Request an Appointment</a></li>
+    	</ul>
+        
+    </div>
+    
+    <div class="side-enquiry-form white-box">
+    
+        {enquiry-form}
+        
+    </div>
+    
+</section>
+
+
+{embed="includes/.footer"}

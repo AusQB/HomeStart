@@ -1,0 +1,76 @@
+{embed="includes/.header"}
+
+{if segment_2 == '' AND segment_2 != 'promotions'}
+
+<section class="side-enquiry container first-section clearfix {segment_1}">
+    {exp:channel:entries channel="pages" limit="1" url_title="{last_segment}"}
+        <div class="side-enquiry-main white-box">
+        
+            <div class="content-header clearfix">
+                <div class="content-header-copy">
+                    <h1>{if page_heading != ''}{page_heading}{if:else}{title}{/if}</h1>
+                    {!--{page_header_copy}--}
+                </div>
+            </div>
+            
+        	<img class="hover-gif wife-cat-gif" data-src="wife-cat" src="/template/default_site/assets/img/wife-cat.gif" alt="" />
+                        
+        </div>
+    {/exp:channel:entries}
+
+    <div class="side-enquiry-form enquiry-form white-box">
+    {exp:channel:entries channel="pages" limit="1" url_title="e-news-subscribe"}
+            <h3>{title}</h3>
+            <p>{page_header_copy}</p>
+            {subscribe}
+    {/exp:channel:entries}
+    </div>
+    
+</section>
+
+<section class="content {segment_1} news-list">
+
+	<div class="container white-box clearfix">
+
+        {exp:channel:entries channel="news" limit="8" paginate="bottom"}
+        <div class="news-list-item clearfix">
+            
+            {if news_image == ''}
+            <a class="green" href="/news/{url_title}"><img src="/template/default_site/assets/img/news-image-placeholder.png" alt="" /></a>
+            {if:else}
+            {news_image}
+            <a class="green" href="/news/{url_title}"><img src="{image:url:small}" alt="{title}" /></a>
+            {/news_image}
+            {/if}
+            
+            <div class="news-item-header">
+            
+            	<h3><a href="/news/{url_title}">{title}</a></h3>
+                <p class="article-date">{entry_date format="%F %j, %Y"}</p>
+                
+            </div>
+            
+            <div class="news-text clearfix">
+                
+                <div class="news-summary">
+                {news_summary}
+                </div>
+                
+                <a class="green" href="/news/{url_title}">Read More <i class="icon-circle-arrow-right"></i></a>
+            
+            </div>
+            
+        </div>
+        {/exp:channel:entries}
+        
+	</div>
+
+</section>
+
+{if:else}
+
+{embed="news/article" segment="{segment_2}"}
+
+{/if}
+    
+{embed="includes/.footer"}

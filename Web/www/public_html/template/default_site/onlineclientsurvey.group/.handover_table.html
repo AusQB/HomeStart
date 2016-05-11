@@ -1,0 +1,110 @@
+{exp:freeform:entries form_name='handover_survey' search:job_number='{embed:job}' status='*' limit='1'}
+
+<table class="entry-table" cellspacing="0">
+
+	<tr class="row-dark">
+		<td colspan="2">Client Name</td>
+		<td colspan="4">{freeform:field:client_name}</td>
+	</tr>
+	<tr class="row-light">
+		<td colspan="2">{freeform:label:job_number}</td>
+		<td colspan="4">{freeform:field:job_number}</td>
+	</tr>
+	<tr class="row-dark">
+		<td colspan="2">{freeform:label:sales_representative}</td>
+		<td colspan="4">{freeform:field:sales_representative}</td>
+	</tr>
+	<tr class="row-light">
+		<td colspan="2">{freeform:label:supervisor}</td>
+		<td colspan="4">{freeform:field:supervisor}</td>
+	</tr>
+	<tr class="row-dark">
+		<td colspan="2">{freeform:label:client_liaison_officer}</td>
+		<td colspan="4">{freeform:field:client_liaison_officer}</td>
+	</tr>
+
+	<tr style="background:#96c11f;color:#fff;">
+		<th>Service Rating</th>
+		<th>Availability</th>
+		<th>Product Knowledge</th>
+		<th>Helpfulness &amp; Assistance</th>
+		<th>Responsiveness to Requests</th>
+		<th>Additional Comments</th>
+	</tr>
+	<tr class="row-dark">
+		<th>Supervisor</th>
+		<td>{freeform:field:supervisor_availability}</td>
+		<td>{freeform:field:supervisor_product_knowledge}</td>
+		<td>{freeform:field:supervisor_helpfulness_assistance}</td>
+		<td>{freeform:field:supervisor_responsiveness_to_requests}</td>
+		<td>{freeform:field:additional_comments_supervisor}</td>
+	</tr>
+	<tr class="row-light">
+		<th>Client Liaison Officer</th>
+		<td>{freeform:field:availability_client_officer}</td>
+		<td>{freeform:field:product_knowledge_client_officer}</td>
+		<td>{freeform:field:helpfulness_assistance_client_officer}</td>
+		<td>{freeform:field:responsiveness_to_requests_client_officer}</td>
+		<td>{freeform:field:additional_comments_client_officer}</td>
+	</tr>
+
+	<tr style="background:#96c11f;color:#fff;">
+		<th colspan="6">Overall Construction Rating</th>
+	</tr>
+
+	<tr class="row-dark">
+		<td colspan="2">{freeform:label:quality_of_construction}</td>
+		<td colspan="4">{freeform:field:quality_of_construction}</td>
+	</tr>
+	<tr class="row-light">
+		<td colspan="2">{freeform:label:would_you_consider_building_with_us_again}</td>
+		<td colspan="4">{freeform:field:would_you_consider_building_with_us_again}</td>
+	</tr>
+	<tr class="row-dark">
+		<td colspan="2">{freeform:label:would_you_recommend_our_company_to_other_homebuyers}</td>
+		<td colspan="4">{freeform:field:would_you_recommend_our_company_to_other_homebuyers}</td>
+	</tr>
+	<tr class="row-light">
+		<td colspan="2">{freeform:label:provide_testimonial}</td>
+		<td colspan="4">{freeform:field:provide_testimonial}</td>
+	</tr>
+	<tr class="row-dark">
+		<td colspan="2">{freeform:label:your_experience}</td>
+		<td colspan="4">{freeform:field:your_experience}</td>
+	</tr>
+	<tr class="row-light">
+		<td colspan="2">{freeform:label:please_add_any_further_comments}</td>
+		<td colspan="4">{freeform:field:please_add_any_further_comments}</td>
+	</tr>
+
+	<tr style="background:#96c11f;color:#fff;">
+		<th colspan="6">Contact Details</th>
+	</tr>
+
+	<tr class="row-dark">
+		<td colspan="2">{freeform:label:contact_email}</td>
+		<td colspan="4">{freeform:field:contact_email}</td>
+	</tr>
+	<tr class="row-light">
+		<td colspan="2">{freeform:label:contact_phone}</td>
+		<td colspan="4">{freeform:field:contact_phone}</td>
+	</tr>
+	<tr class="row-dark">
+		<td colspan="2">{freeform:label:contact_mobile}</td>
+		<td colspan="4">{freeform:field:contact_mobile}</td>
+	</tr>
+	<tr class="row-light">
+		<td colspan="2">{freeform:label:what_is_your_preferred_method_of_contact}</td>
+		<td colspan="4">{freeform:field:what_is_your_preferred_method_of_contact}</td>
+	</tr>
+</table>
+
+{if freeform:no_results}
+
+<h1 style="text-align:center;">Sorry, no results were found</h1>
+
+{embed='onlineclientsurvey/.entry_form'}
+
+{/if} 
+
+{/exp:freeform:entries}

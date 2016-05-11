@@ -1,0 +1,134 @@
+{layout="_includes/.html-layout"}
+
+{exp:channel:entries channel="promotions" url_title="nodramas" status="open|closed|unlisted"}
+
+<div class="row">
+
+    <div class="large-12 columns">
+
+        <div class="page-copy top">
+
+            <h1><span class="green">No deposit?</span> No dramas.<sup><small>*</small></sup></h1>
+
+            <div class="lead">{promotion_copy}</div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="large-12 columns">
+
+    {if status == "closed"}
+
+        <div class="content-header">
+            <div class="content-header-copy">
+                <h2>Promotion Closed</h2>
+            </div>
+        </div>
+
+        <div class="page-copy">
+            <p>This promotion has now closed. <br /><br />Keep an eye on our <a href="{path='news/promotions'}">promotions</a> page for your next chance to win.</p>
+        </div>
+
+    {if:elseif last_segment == 'thank-you'}
+
+        <div>
+            <h2>Thank you for registering your interest in HomeStart. A representative will be in touch soon.</h2>
+        </div>
+
+        {rea}
+
+    {if:else}
+
+    {exp:freeform:form form_name="no_dramas" form:class="your_chance_to_win" return="/nodramas/thank-you" inline_errors="yes"}
+
+        <h2>Your Details</h2>
+
+        <div class="medium-6 columns">
+
+            <div class="row column">
+
+                <label>Name
+                    {if freeform:error:name}<span class="error">{freeform:error:name}</span>{/if}
+                    <input type="text" name="name" value="" id="name" maxlength="150" data-role="none" required>
+                </label>
+
+            </div>
+
+            <div class="row column">
+
+                <label>Email
+                    {if freeform:error:email}<span class="error">{freeform:error:email}</span>{/if}
+                    <input type="email" name="email" value="" id="email" maxlength="150" data-role="none" required>
+                </label>
+
+            </div>
+
+            <div class="row column">
+
+                <label>Phone
+                    {if freeform:error:phone}<span class="error">{freeform:error:phone}</span>{/if}
+                    <input type="tel" name="phone" value="" id="phone" maxlength="12" data-role="none" required>
+                </label>
+
+            </div>
+
+            <div class="row column">
+
+                <label>{freeform:label:address}
+                    {if freeform:error:address}<span class="error">{freeform:error:address}</span>{/if}
+                    {freeform:field:address attr:data-role="none"}
+                </label>
+
+            </div>
+
+        </div>
+
+        <div class="medium-6 columns">
+
+            <div class="row column">
+
+                <label>{freeform:label:additional_comments_nodramas}
+                    {freeform:field:additional_comments_nodramas}
+                </label>
+
+            </div>
+
+            <div class="row column">
+
+                <label>{freeform:label:hear_about_nodramas}
+                    {freeform:field:hear_about_nodramas attr:required="required"}
+                </label>
+
+            </div>
+
+            <div class="row column">
+
+                <label>{freeform:label:address}
+                    {if freeform:error:address}<span class="error">{freeform:error:address}</span>{/if}
+                    {freeform:field:address attr:data-role="none"}
+                </label>
+
+            </div>
+
+            <div class="row column text-right">
+
+                <button class="large success button" type="submit" name="submit" onclick="_gaq.push(['_trackEvent', 'NoDramas', 'Register', 'Button',0,true]);">Register</button>
+
+            </div>
+
+            {exp:snaptcha:field}
+
+        </div>
+
+    {/exp:freeform:form}
+
+    {/if}
+
+    </div>
+</div>
+
+{/exp:channel:entries}

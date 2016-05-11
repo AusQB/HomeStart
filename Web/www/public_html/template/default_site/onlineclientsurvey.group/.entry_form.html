@@ -1,0 +1,13 @@
+<div class="row">
+	<div class="medium-4 medium-offset-4 columns">
+	<form id="entry-search" action="" method="POST" onsubmit="this.action='{site_url}/onlineclientsurvey/entries/'+this.survey.value+'/'+this.job_number.value;">
+			<input type="hidden" name="csrf_token" value="{csrf_token}">
+		<input type="text" name="job_number" placeholder="Job Number" required>
+		<select name="survey">
+			<option value="prestart_survey">Pre-Start Survey</option>
+			<option value="handover_survey">Handover Survey</option>
+		</select>
+		<button class="large success button" type="submit" name="search" value="Search">Search</button>
+	</form>
+	</div>
+</div>

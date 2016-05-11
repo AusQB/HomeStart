@@ -1,0 +1,226 @@
+{exp:freeform:form
+    form_name="handover_survey"
+    form:id="handover"
+    return="/onlineclientsurvey/thank_you"
+}
+
+    <!-- NAME & JOB NUMBER -->
+    <h2>Please enter your name and <span class="bold">Job Number</span></h2>
+
+    <fieldset>
+        <div>
+        <label><h4>{freeform:label:client_name}<span class="required">*</span></h4></label>
+        <input type="text" name="client_name" value="" required/>
+        </div>
+
+        <div>
+        <label><h4>{freeform:label:job_number}<span class="required">*</span></h4></label>
+        <input type="text" name="job_number" value="" required/>
+        </div>
+    </fieldset>
+
+	<!-- REPS NAME -->
+    <h2>Please enter the names of your <span class="bold">Representatives</span></h2>
+
+    <fieldset class="rate-service">
+        <!--<div>
+        <label><h4>{freeform:label:contracts_administrator}<span class="required">*</span></h4></label>
+        <input type="text" name="contracts_administrator" value="" required/>
+        </div>-->
+
+        <div>
+        <label><h4>{freeform:label:sales_representative}<span class="required">*</span></h4></label>
+        <input type="text" name="sales_representative" value="" required/>
+        </div>
+
+        <div>
+        <label><h4>{freeform:label:supervisor}<span class="required">*</span></h4></label>
+        <input type="text" name="supervisor" value="" required/>
+        </div>
+
+        <div><label><h4>{freeform:label:client_liaison_officer}<span class="required">*</span></h4></label>
+        <input type="text" name="client_liaison_officer" value="" required/>
+		</div>
+	</fieldset>
+
+
+	<!-- RATE SERVICE: CONTRACT ADMINISTRATOR -->
+    <!--<h2>How would you rate the service you received from your <span class="bold">Contracts Administrator</span>?</h2>
+
+    <fieldset class="rate-service">
+        <div><label><h4>{freeform:label:contracts_administrator_availabilty}<span class="required">*</span></h4></label>
+        {freeform:field:contracts_administrator_availabilty}
+        <div class="clearfix"></div>
+        </div>
+
+        <div>
+        <label><h4>{freeform:label:contracts_administrator_product_knowledge}<span class="required">*</span></h4></label>
+        {freeform:field:contracts_administrator_product_knowledge}
+        <div class="clearfix"></div>
+        </div>
+
+        <div><label><h4>{freeform:label:contracts_administrator_helpfulness_assistance}<span class="required">*</span></h4></label>
+        {freeform:field:contracts_administrator_helpfulness_assistance}
+        <div class="clearfix"></div>
+        </div>
+
+        <div><label><h4>{freeform:label:contracts_administrator_responsiveness_to_requests}<span class="required">*</span></h4></label>
+        {freeform:field:contracts_administrator_responsiveness_to_requests}
+        <div class="clearfix"></div>
+        </div>
+
+        <div><label><h4>{freeform:label:additional_comments_contracts_administrator}</h4></label>
+        {freeform:field:additional_comments_contracts_administrator}
+        <div class="clearfix"></div>
+        </div>
+	</fieldset>-->
+
+
+	<!-- RATE SERVICE: SUPERVISOR -->
+    <h2>How would you rate the service you received from your <span class="bold">Supervisor</span>?</h2>
+
+    <fieldset>
+    	<div>
+        <label><h4>{freeform:label:supervisor_availability}<span class="required">*</span></h4></label>
+        {freeform:field:supervisor_availability}
+        <!-- <div class="clearfix"></div> -->
+        </div>
+
+		<div>
+        <label><h4>{freeform:label:supervisor_product_knowledge}<span class="required">*</span></h4></label>
+        {freeform:field:supervisor_product_knowledge}
+        <!-- <div class="clearfix"></div> -->
+        </div>
+
+        <div>
+        <label><h4>{freeform:label:supervisor_helpfulness_assistance}<span class="required">*</span></h4></label>
+        {freeform:field:supervisor_helpfulness_assistance}
+        <!-- <div class="clearfix"></div> -->
+        </div>
+
+        <div>
+        <label><h4>{freeform:label:supervisor_responsiveness_to_requests}<span class="required">*</span></h4></label>
+        {freeform:field:supervisor_responsiveness_to_requests}
+        <!-- <div class="clearfix"></div> -->
+		</div>
+
+        <div>
+        <!-- <label><h4>{freeform:label:additional_comments_supervisor}</h4></label> -->
+        <label><h4>Please write your own comments below</h4></label>
+        {freeform:field:additional_comments_supervisor}
+        <!-- <div class="clearfix"></div> -->
+        </div>
+	</fieldset>
+
+
+	<!-- RATE SERVICE: Client Liaison Officer -->
+    <h2>How would you rate the service you received from your <span class="bold">Client Liaison Officer</span>?</h2>
+
+	<fieldset>
+    	<div>
+        <label><h4>{freeform:label:availability_client_officer}<span class="required">*</span></h4></label>
+        {freeform:field:availability_client_officer}
+        <!-- <div class="clearfix"></div> -->
+		</div>
+
+        <div>
+        <label><h4>{freeform:label:product_knowledge_client_officer}<span class="required">*</span></h4></label>
+        {freeform:field:product_knowledge_client_officer}
+        <!-- <div class="clearfix"></div> -->
+		</div>
+
+        <div>
+        <label><h4>{freeform:label:helpfulness_assistance_client_officer}<span class="required">*</span></h4></label>
+        {freeform:field:helpfulness_assistance_client_officer}
+        <!-- <div class="clearfix"></div> -->
+		</div>
+
+        <div>
+        <label><h4>{freeform:label:responsiveness_to_requests_client_officer}<span class="required">*</span></h4></label>
+        {freeform:field:responsiveness_to_requests_client_officer}
+        <!-- <div class="clearfix"></div> -->
+		</div>
+
+        <div>
+        <!-- <label><h4>{freeform:label:additional_comments_client_officer}</h4></label> -->
+        <label><h4>Please write your own comments below</h4></label>
+        {freeform:field:additional_comments_client_officer}
+        <!-- <div class="clearfix"></div> -->
+        </div>
+	</fieldset>
+
+
+	<!-- RATE: OVERALL CONSTRUCTION -->
+    <h2>How would you rate the <span class="bold">overall construction</span> of your home?</h2>
+	<fieldset>
+    	<div>
+       	<label><h4>{freeform:label:quality_of_construction}<span class="required">*</span></h4></label>
+        {freeform:field:quality_of_construction}
+        <!-- <div class="clearfix"></div> -->
+		</div>
+
+        <div>
+        <label><h4>{freeform:label:would_you_consider_building_with_us_again}<span class="required">*</span></h4></label>
+        {freeform:field:would_you_consider_building_with_us_again}
+        <!-- <div class="clearfix"></div> -->
+		</div>
+
+        <div>
+        <label><h4>{freeform:label:would_you_recommend_our_company_to_other_homebuyers}<span class="required">*</span></h4></label>
+        {freeform:field:would_you_recommend_our_company_to_other_homebuyers}
+        <!-- <div class="clearfix"></div> -->
+		</div>
+
+        <div>
+        <label><h4>{freeform:label:provide_testimonial}</h4></label>
+        {freeform:field:provide_testimonial}
+        <!-- <div class="clearfix"></div> -->
+        </div>
+
+        <div>
+            <h3 style="color:#0464AE">Would you like to provide us with a testimonial?</h3>
+            <label><h4>Please choose from one of the following examples</h4></label>
+            <!-- <label><h4>{freeform:label:your_experience}<span class="required">*</span></h4></label>  -->
+        {freeform:field:your_experience}
+        <!-- <div class="clearfix"></div> -->
+        </div>
+
+        <div>
+        <!-- <label><h4>{freeform:label:please_add_any_further_comments}</h4></label>  -->
+        <label><h4>Please write your own comments below</h4></label>
+        {freeform:field:please_add_any_further_comments}
+		</div>
+
+        <!-- <div>
+        {freeform:field:termites}
+        <label class="checkbox"><h4>{freeform:label:termites}</h4></label>
+        <div class="clearfix"></div>
+        </div> -->
+	</fieldset>
+
+    <h2>Please enter your <span class="bold">contact details</span></h2>
+    <fieldset>
+    	<div>
+       	<label><h4>{freeform:label:contact_email}<span class="required">*</span></h4></label>
+        <input type="text" name="contact_email" value="" required/>
+        </div>
+        <div>
+        <label><h4>{freeform:label:contact_phone}<span class="required">*</span></h4></label>
+        <input type="text" name="contact_phone" value="" required/>
+        </div>
+        <div>
+        <label><h4>{freeform:label:contact_mobile}<span class="required">*</span></h4></label>
+        <input type="text" name="contact_mobile" value="" required/>
+        </div>
+        <div>
+        <label><h4>{freeform:label:what_is_your_preferred_method_of_contact}</h4></label>
+        {freeform:field:what_is_your_preferred_method_of_contact}
+        <!-- <div class="clearfix"></div> -->
+        </div>
+    </fieldset>
+
+{exp:snaptcha:field}
+<div id="summary"></div>
+<input type="submit" name="submit" value="Submit" class="btn-green" />
+
+{/exp:freeform:form}

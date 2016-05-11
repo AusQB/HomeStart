@@ -1,0 +1,53 @@
+        <div id="homes-list-container" class="clearfix">
+            <ul id="homes-list" class="clearfix">
+            {exp:channel:entries channel="designs" orderby="title" sort="asc" limit="8" paginate="bottom"}
+            
+                <li>
+                	<a href="{url_title_path='designs/index'}">
+                        {if relative_date < 7}
+                        <div class="ribbon"></div>
+                        {/if}
+                        <div class="homes-list-image">
+                            {photos cover_only="yes"}
+                            <img src="{image:url:small}" alt="The {title}" />
+                            {/photos}
+                        </div>
+                        <div class="homes-list-details clearfix">
+                            <div class="homes-list-details-left">
+                                <h3>The {title}</h3>
+                                <p>{home_location}</p>
+                            </div>
+                            <div class="homes-list-details-right clearfix">
+                                <ul class="bbc clearfix">
+                                    <li class="bed">{beds}</li>
+                                    <li class="bath">{baths}</li>
+                                    <li class="car">{cars}</li>
+                                </ul>
+                                <p class="homes-list-price">Package price - ${exp:number_formatter:format decimals='0'}{price}{/exp:number_formatter:format}</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                
+                {paginate}
+                	</ul>
+                    <div class="pagination clearfix">
+                    	<ul>
+                            <li class="pagination-button">
+                            {if previous_page}<a href="{auto_path}">{/if}
+                            <i class="icon-angle-left"></i>
+                            {if previous_page}</a>{/if}
+                            </li>
+                        	<li><p>{current_page} of {total_pages}</p></li>
+                            <li class="pagination-button">
+                            {if next_page}<a href="{auto_path}">{/if}
+                            <i class="icon-angle-right"></i>
+                            {if next_page}</a>{/if}
+                            </li>
+                        </ul>
+                    </div>
+                {/paginate}
+                
+            {/exp:channel:entries}
+            
+        </div>

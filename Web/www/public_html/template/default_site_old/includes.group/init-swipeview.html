@@ -1,0 +1,46 @@
+function initSwipeview() {
+
+var	carousel,
+	el,
+	i,
+	page,
+	slides = [
+	
+		{!--{exp:channel:entries channel="packages" orderby="date" sort="asc" limit="6" backspace="1"}
+		'<div class="slide-container"><div class="slide white-box"><a href="{url_title_path='homes/home-and-land'}"><div class="info clearfix"><p class="price">${exp:number_formatter:format decimals='0'}{package_price}{/exp:number_formatter:format}</p><ul class="specs">{related_entries id="design"}<li class="bed">{beds}</li><li class="bath">{baths}</li><li class="car">{cars}</li>{/related_entries}</ul></div>{related_entries id="design"}<div class="image">{photos cover_only="yes"}<img src="{image:url:small}" alt="The {title}" />{/photos}</div>{/related_entries}</a></div></div>',{/exp:channel:entries}--}
+        
+        {exp:channel:entries channel="designs" orderby="date" sort="asc" limit="5" backspace="1"}
+		'<div class="slide-container"><div class="slide white-box"><a href="{url_title_path='designs'}"><div class="info clearfix"><h3>The {title}</h3><ul class="specs"><li class="bed">{beds}</li><li class="bath">{baths}</li><li class="car">{cars}</li></ul></div><div class="image">{photos cover_only="yes"}<img src="{image:url:small}" alt="The {title}" />{/photos}</div></a></div></div>',{/exp:channel:entries}
+	
+	];
+
+carousel = new SwipeView('.swipe', {
+	numberOfPages: slides.length,
+	hastyPageFlip: true
+});
+
+// Load initial data
+for (i=0; i<3; i++) {
+	page = i==0 ? slides.length-1 : i-1;
+
+	el = document.createElement('span');
+	el.innerHTML = slides[page];
+	carousel.masterPages[i].appendChild(el)
+}
+
+carousel.onFlip(function () {
+	var el,
+		upcoming,
+		i;
+
+	for (i=0; i<3; i++) {
+		upcoming = carousel.masterPages[i].dataset.upcomingPageIndex;
+
+		if (upcoming != carousel.masterPages[i].dataset.pageIndex) {
+			el = carousel.masterPages[i].querySelector('span');
+			el.innerHTML = slides[upcoming];
+		}
+	}
+});
+
+}

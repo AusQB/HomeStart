@@ -1,0 +1,64 @@
+{layout="home-loans/.layout"}
+
+{exp:channel:entries channel="pages" limit="1" url_title="{segment_2}"}
+<div class="row">
+
+    <div class="large-12 columns">
+
+        <div class="page-copy top">
+
+            <h1>{if page_heading != ''}{page_heading}{if:else}{title}{/if}</h1>
+
+            <div class="lead">{page_header_copy}</div>
+
+            {page_copy}
+
+        </div>
+
+    </div>
+
+</div>
+{/exp:channel:entries}
+
+<div class="row">
+
+    <div class="large-12 columns">
+
+    {if last_segment == 'thank-you'}
+
+    <h2>Thanks for contacting HomeStart.</h2>
+    <h3>We'll be in touch soon to let you know what kind of loan you can apply for.</h3>
+
+    {rea}
+
+    {if:else}
+
+    <div class="callout">
+
+    {exp:freeform:composer form_name="loan_calculator" return="{current_path}/thank-you"}
+
+    </div>
+
+    {/if}
+
+    </div>
+
+</div>
+
+{if last_segment == "thank-you"}
+<div class="row" data-equalizer data-equalize-on="medium">
+
+    <div class="medium-8 columns">
+
+        {looking_for}
+
+    </div>
+
+    <div class="medium-4 columns">
+
+        {enquiry_form}
+
+    </div>
+
+</div>
+{/if}

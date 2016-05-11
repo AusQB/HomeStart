@@ -1,0 +1,46 @@
+{embed="includes/.header"}
+
+{if segment_2 == '' OR segment_2 == 'designs' OR segment_2 == 'home-and-land' OR {exp:segment_search keyword="/P\d+/" segments="last" regex="yes"}}
+
+<section class="page-header-box {segment_1}">
+	<div class="container clearfix page-header-box-nav">
+    
+    	{exp:taxonomy:nav tree_id="2" display_root="no" ul_css_class="page-tabs" node_active_class="active" url_title="{segment_1}"}
+            <a href="{node_url}">{node_title}</a> 
+        {/exp:taxonomy:nav}
+        
+        <!--<div class="breadcrumbs">
+            <ul id="breadcrumbs">
+            {exp:crumbly:breadcrumbs}
+                <li><a href="{breadcrumb_url}">{breadcrumb_title}</a></li>
+            {/exp:crumbly:breadcrumbs}
+            </ul>
+        </div>-->
+        
+    </div>
+    <div class="content-header container white-box clearfix">
+        <div class="content-header-copy">
+            {exp:channel:entries channel="pages" limit="1" url_title="{segment_2}"}
+            <h1>{if page_heading != ''}{page_heading}{if:else}{title}{/if}</h1>
+            {page_header_copy}
+            {/exp:channel:entries}
+        </div>
+        <img src="/template/default_site/assets/img/btn-homes@2x.png" alt="" />
+    </div>
+</section>
+
+{if segment_2 == 'designs'}
+
+{embed="homes/.designs"}
+
+{if:elseif segment_2 == 'home-and-land'}
+
+{embed="homes/.home-and-land"}
+
+{/if}
+
+{if:else}
+{embed="homes/view-more" segment="{segment_2}"}
+{/if}
+    
+{embed="includes/.footer"}

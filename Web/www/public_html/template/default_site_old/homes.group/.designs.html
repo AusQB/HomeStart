@@ -1,0 +1,139 @@
+{embed="includes/.header"}
+
+{if segment_2 == '' OR segment_2 == 'designs' OR segment_2 == 'home-and-land' OR {exp:segment_search keyword="/P\d+/" segments="last" regex="yes"}}
+
+<section class="content {segment_1} {segment_2}">
+    <div id="homes-container" class="container clearfix white-box">
+    
+        <div id="homes-list-container" class="clearfix">
+            <ul id="homes-list" class="clearfix">
+            
+            {exp:channel:entries channel="designs" orderby="title" sort="asc" limit="8" paginate="bottom" dynamic="no"}
+            
+                <li>
+                	<a href="{url_title_path='homes/designs'}">
+                        <div class="homes-list-image">
+                            {photos cover_only="yes"}
+                            <img src="{image:url:small}" alt="The {title}" />
+                            {/photos}
+                        </div>
+                        <div class="homes-list-details clearfix">
+                            <div class="homes-list-details-left">
+                                <h3>The {title}</h3>
+                            </div>
+                            <div class="homes-list-details-right clearfix">
+                                <ul class="bbc clearfix">
+                                    <li class="bed">{beds}</li>
+                                    <li class="bath">{baths}</li>
+                                    <li class="car">{cars}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                
+                {paginate}
+                	</ul>
+                    <div class="pagination clearfix">
+                    	<ul>
+                            <li class="pagination-button">
+                            {if previous_page}<a href="{auto_path}">{/if}
+                            <i class="icon-angle-left"></i>
+                            {if previous_page}</a>{/if}
+                            </li>
+                        	<li><p>{current_page} of {total_pages}</p></li>
+                            <li class="pagination-button">
+                            {if next_page}<a href="{auto_path}">{/if}
+                            <i class="icon-angle-right"></i>
+                            {if next_page}</a>{/if}
+                            </li>
+                        </ul>
+                    </div>
+                {/paginate}
+                
+            {/exp:channel:entries}
+            
+        </div>
+        
+        <div id="side-pane">
+        
+        	<div id="filter-results" class="white-box clearfix">
+            
+            	<div class="container-header clearfix">
+                    <h3>Filter Results</h3>
+                    <a href="#">See All</a>
+                </div>
+                
+                <form action="/" method="post">
+                <ul>
+                    <li>
+                        <label for="location">Location</label>
+                        <select name="location" id="location" data-role="none">
+                        	<option value="Any">Any</option>
+                        	<option value="North of the River">North of the River</option>
+                        	<option value="South of the River">South of the River</option>
+                        </select>
+                    </li>
+                    <li>
+                    	<label>Type of Home</label>
+                    	<select data-role="none">
+                        	<option value="Any">Any</option>
+                        	<option value="House">House</option>
+                        	<option value="Apartment">Apartment</option>
+                        	<option value="Villa">Villa</option>
+                        </select>
+                    </li>
+                    <li>
+                    	<label>Bedrooms</label>
+                    	<select data-role="none">
+                        	<option value="1">1+</option>
+                            <option value="2">2+</option>
+                            <option value="3">3+</option>
+                            <option value="4">4+</option>
+                            <option value="5">5+</option>
+                        </select>
+                    </li>
+                    <!--<li>
+                    	<label>Bathrooms</label>
+                        <select data-role="none">
+                        	<option value="1">1+</option>
+                            <option value="2">2+</option>
+                            <option value="3">3+</option>
+                            <option value="4">4+</option>
+                            <option value="5">5+</option>
+                        </select>
+                    </li>-->
+                    <li class="slider">
+                        <div class="clearfix">
+                            <label>Price</label>
+                            <input type="text" name="min-price" id="min-price" value="0">
+                            <input type="text" name="max-price" id="max-price" value="500000">
+                        </div>
+                        <div class="noUiSlider"></div>
+                        <!--<select data-role="none">
+                        	<option value="foo">foo</option>
+                        </select>-->
+                    </li>
+                    <li class="button"><button name="submit" type="submit" data-role="none">Submit</button></li>
+                    <li class="button"><button name="submit" type="reset" id="filter-results-reset" data-role="none">Reset</button></li>
+                </ul>
+                </form>
+            
+            </div>
+            
+            <div class="enquiry-form white-box">
+            
+                {enquiry-form}
+            
+            </div>
+        
+        </div>
+    
+    </div>
+</section>
+
+{if:else}
+{embed="homes/view-more" segment="{segment_2}"}
+{/if}
+
+{embed="includes/.footer"}

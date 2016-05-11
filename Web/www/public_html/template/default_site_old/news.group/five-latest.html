@@ -1,0 +1,22 @@
+<ul class="five-latest">
+{exp:channel:entries channel="news" limit="5" dynamic="no"}
+
+<li>
+    <a class="clearfix" href="/news/{url_title}">
+    	{if news_image == ''}
+        <img src="/template/default_site/assets/img/news-image-placeholder.png" alt="" />
+        {if:else}
+        {news_image}
+        <img src="{image:url:small}" alt="{title}" />
+        {/news_image}
+        {/if}
+        <div>
+            <h3>{title}</h3>
+            <p class="article-date">{entry_date format="%F %j, %Y"}</p>
+        </div>
+        <i class="icon-align-left"></i>
+    </a>
+</li>
+
+{/exp:channel:entries}
+</ul>

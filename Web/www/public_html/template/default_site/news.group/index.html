@@ -1,0 +1,95 @@
+{layout="news/.layout"}
+
+{if segment_2 == '' OR {exp:segment_search keyword="/P\d+/" segments="last" regex="yes"} AND segment_2 != 'promotions'}
+
+<div class="row" data-equalizer data-equalize-on="medium">
+
+    <div class="medium-7 columns">
+
+        <div class="clearfix" data-equalizer-watch>
+
+            <h1 class="float-left">HomeStart News</h1>
+            
+        	<img class="float-right hover-gif" data-src="woman_cat_baby" src="{assets}/img/woman_cat_baby.gif" alt="" />
+
+        </div>
+
+    </div>
+
+    <div class="medium-5 columns">
+
+        <div class="callout" data-equalizer-watch>
+
+            <h4>E-News Subscribe</h4>
+            <p>Subscribe here to receive our e-newsletter informing you of all our latest News and Promotions.</p>
+            {subscribe}
+
+        </div>
+
+    </div>
+    
+</div>
+
+<div class="row">
+
+    <div class="large-12 columns">
+
+        <div id="latest-news" class="row">
+        {exp:channel:entries channel="news" limit="5" paginate="bottom"}
+
+        <div class="large-12 columns">
+            <div class="latest news-item rounded-box">
+                <div class="row">
+                    <div class="large-3 medium-4 columns">
+                        <img class="thumbnail" src="{if news_image == ''}{assets}/img/news_image_placeholder.png{if:else}{news_image}{image:url:small}{/news_image}{/if}" alt="" />
+                    </div>
+                    <div class="large-9 medium-8 columns">
+                        <a href="{url_title_path='news/index'}"><h3 class="news-title">{title}</h3></a>
+                        <p class="news-date">{entry_date format="%F %j, %Y"}</p>
+                        {news_summary}
+                        <a class="news-read-more float-right" href="{url_title_path='news/index'}">Read more <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {paginate}
+        <ul class="pagination text-center" role="navigation" aria-label="Pagination">
+        {pagination_links page_padding="2"}
+
+            {first_page}
+                <li><a href="{pagination_url}" class="page-first">First Page</a></li>
+            {/first_page}
+
+            {previous_page}
+                <li><a href="{pagination_url}" class="page-previous">Previous Page</a></li>
+            {/previous_page}
+
+            {page}
+                <li><a href="{pagination_url}" class="page-{pagination_page_number} {if current_page}current{/if}">{pagination_page_number}</a></li>
+            {/page}
+
+            {next_page}
+                <li><a href="{pagination_url}" class="page-next">Next Page</a></li>
+            {/next_page}
+
+            {last_page}
+                <li><a href="{pagination_url}" class="page-last">Last Page</a></li>
+            {/last_page}
+
+        {/pagination_links}
+        </ul>
+        {/paginate}
+
+        {/exp:channel:entries}
+        </div>
+        
+	</div>
+
+</div>
+
+{if:else}
+
+{embed="news/article" segment="{segment_2}"}
+
+{/if}

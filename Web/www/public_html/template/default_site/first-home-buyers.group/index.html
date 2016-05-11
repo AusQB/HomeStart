@@ -1,0 +1,25 @@
+{layout="first-home-buyers/.layout"}
+
+{exp:channel:entries channel="pages" limit="1" url_title="{last_segment}"}
+<div class="row">
+    <div class="large-12 columns">
+
+        <div class="page-copy top">
+            <h1>{if page_heading != ''}{page_heading}{if:else}{title}{/if}</h1>
+            <div class="lead">{page_header_copy}</div>
+            {page_copy}
+        </div>
+
+    </div>
+</div>
+
+{/exp:channel:entries}
+
+<div class="row" data-equalizer data-equalize-on="medium">
+    <div class="medium-8 columns">
+        {looking_for}
+    </div>
+    <div class="medium-4 columns">
+        {enquiry_form}
+    </div>
+</div>

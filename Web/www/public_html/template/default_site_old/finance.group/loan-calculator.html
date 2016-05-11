@@ -1,0 +1,353 @@
+{embed="includes/.header"}
+
+{exp:channel:entries channel="pages" limit="1" url_title="{last_segment}"}
+<section class="content first-section {segment_1}">
+    <div class="container white-box clearfix hsrep">
+    
+    	<div class="content-header image clearfix">
+            <div class="content-header-copy">
+                <h1>{if page_heading != ''}{page_heading}{if:else}{title}{/if}</h1>
+                {page_header_copy}
+            </div>
+        </div>
+        
+        <div class="page-copy">
+        {page_copy}
+        </div>
+    
+    </div>
+</section>
+{/exp:channel:entries}
+
+<section class="content {segment_1} {segment_2}">
+    <div class="container white-box clearfix">
+    
+    {if last_segment == 'thank-you'}
+    <div>
+    	<h2>Thanks for contacting HomeStart.</h2>
+        <h3>We'll be in touch soon to let you know how we can help you get a home of your own.</h3>
+    </div>
+    
+	{rea}
+
+    {if:else}
+    
+    {exp:freeform:form form_name="loan_calculator" form:class="loan-calculator" return="finance/loan-calculator/thank-you" inline_errors="yes" required="name|email|phone|occupation|gross_weekly_income"}
+    
+    <div class="cols2 clearfix">
+    
+    	<h2>Your Details</h2>
+    
+        <div class="pct50">
+        
+            <ul>
+            
+                <li>
+                <label>{freeform:label:name}</label>
+                <input type="text" name="name" value="" id="freeform_name" maxlength="150" data-role="none" required>
+                {if freeform:error:name}
+                    <strong>{freeform:error:name}</strong>
+                {/if}
+                </li>
+                
+                <li>
+                <label>{freeform:label:email}</label>
+                <input type="email" name="email" value="" id="freeform_email" maxlength="150" data-role="none" required>
+                {if freeform:error:email}
+                    <strong>{freeform:error:email}</strong>
+                {/if}
+                </li>
+                
+                <li>
+                <label>{freeform:label:phone}</label>
+                <input type="tel" name="phone" value="" id="freeform_phone" maxlength="12" data-role="none" required>
+                {if freeform:error:phone}
+                    <strong>{freeform:error:phone}</strong>
+                {/if}
+                </li>
+                
+                <li>
+                <label>{freeform:label:address}</label>
+                {freeform:field:address attr:data-role="none"}
+                {if freeform:error:address}
+                    <strong>{freeform:error:address}</strong>
+                {/if}
+                </li>
+                
+                <li>
+                <label>{freeform:label:postcode}</label>
+                {freeform:field:postcode attr:data-role="none"}
+                {if freeform:error:postcode}
+                    <strong>{freeform:error:postcode}</strong>
+                {/if}
+                </li>
+                
+                <li>
+                <label>{freeform:label:first_buyer}</label>
+                <ul style="list-style:none; padding:0;" data-role="none">
+                    <li>
+                    <input type="radio" name="first_buyer" id="freeform_first_buyer_1" value="Yes" checked="checked">&nbsp;&nbsp;
+                    <label for="freeform_first_buyer_1">Yes</label>
+                    </li>
+                    <li>
+                    <input type="radio" name="first_buyer" id="freeform_first_buyer_2" value="No">&nbsp;&nbsp;
+                    <label for="freeform_first_buyer_2">No</label>
+                    </li>
+                </ul>
+                {if freeform:error:first_buyer}
+                    <span class="error">{freeform:error:first_buyer}</span>
+                {/if}
+                </li>
+            
+            </ul>
+        
+        </div>
+        
+        <div class="pct50">
+        
+            <ul>
+            
+            	<li class="drop-down">
+                <i class="icon-angle-down"></i>
+                <label>{freeform:label:age}</label>
+                {freeform:field:age attr:data-role="none"}
+                {if freeform:error:age}
+                    <strong>{freeform:error:age}</strong>
+                {/if}
+                </li>
+                
+                <li>
+                <label>{freeform:label:number_of_children}</label>
+                {freeform:field:number_of_children attr:data-role="none"}
+                {if freeform:error:number_of_children}
+                    <strong>{freeform:error:number_of_children}</strong>
+                {/if}
+                </li>
+            
+            </ul>
+            
+            <h2 style="height:56px;">Partner's Details</h2>
+            
+            <ul>
+            
+            	<li>
+                <label>{freeform:label:partners_name}</label>
+                {freeform:field:partners_name attr:data-role="none"}
+                {if freeform:error:partners_name}
+                    <strong>{freeform:error:partners_name}</strong>
+                {/if}
+                </li>
+                
+                <li>
+                <label>{freeform:label:partners_phone}</label>
+                <input type="tel" name="partners_phone" value="" id="freeform_partners_phone" maxlength="10" data-role="none">
+                {if freeform:error:partners_phone}
+                    <strong>{freeform:error:partners_phone}</strong>
+                {/if}
+                </li>
+                
+            </ul>
+            
+        </div>
+        
+    </div>
+    
+    <div class="cols2 clearfix">
+    
+    	<h2>Your Income</h2>
+    
+    	<div class="pct50">
+        
+        	<ul>
+            
+            	<li>
+                <label>{freeform:label:occupation}</label>
+                <input type="text" name="occupation" value="" id="freeform_occupation" maxlength="150" data-role="none" required>
+                {if freeform:error:occupation}
+                    <strong>{freeform:error:occupation}</strong>
+                {/if}
+                </li>
+                
+                <li>
+                <label>{freeform:label:length_of_service}</label>
+                {freeform:field:length_of_service attr:data-role="none"}
+                {if freeform:error:length_of_service}
+                    <strong>{freeform:error:length_of_service}</strong>
+                {/if}
+                </li>
+                
+                <li class="currency">
+                <i class="icon-usd"></i>
+                <label>{freeform:label:gross_weekly_income}</label>
+                <input type="text" name="gross_weekly_income" value="" id="freeform_gross_weekly_income" maxlength="150" data-role="none" required>
+                {if freeform:error:gross_weekly_income}
+                    <strong>{freeform:error:gross_weekly_income}</strong>
+                {/if}
+                </li>
+                
+                <li class="currency">
+                <i class="icon-usd"></i>
+                <label>{freeform:label:bonuses}</label>
+                {freeform:field:bonuses attr:data-role="none"}
+                {if freeform:error:bonuses}
+                    <strong>{freeform:error:bonuses}</strong>
+                {/if}
+                </li>
+                
+                <li class="currency">
+                <i class="icon-usd"></i>
+                <label>{freeform:label:other_income}</label>
+                {freeform:field:other_income attr:data-role="none"}
+                {if freeform:error:other_income}
+                    <strong>{freeform:error:other_income}</strong>
+                {/if}
+                </li>
+
+                <li>
+                <label>{freeform:label:do_you_have_savings}</label>
+                {freeform:field:do_you_have_savings attr:data-role="none"}
+                {if freeform:error:do_you_have_savings}
+                    <strong>{freeform:error:do_you_have_savings}</strong>
+                {/if}
+                </li>
+                
+            </ul>
+        
+        </div>
+        
+        <div class="pct50">
+        
+        	<ul>
+            
+            	<li class="currency">
+                <i class="icon-usd"></i>
+                <label>{freeform:label:partners_income}</label>
+                {freeform:field:partners_income attr:data-role="none"}
+                {if freeform:error:partners_income}
+                    <strong>{freeform:error:partners_income}</strong>
+                {/if}
+                </li>
+                
+                <li class="currency">
+                <i class="icon-usd"></i>
+                <label>{freeform:label:car_loan}</label>
+                {freeform:field:car_loan attr:data-role="none"}
+                {if freeform:error:car_loan}
+                    <strong>{freeform:error:car_loan}</strong>
+                {/if}
+                </li>
+                
+                <li class="currency">
+                <i class="icon-usd"></i>
+                <label>{freeform:label:personal_loan}</label>
+                {freeform:field:personal_loan attr:data-role="none"}
+                {if freeform:error:personal_loan}
+                    <strong>{freeform:error:personal_loan}</strong>
+                {/if}
+                </li>
+                
+                <li class="currency">
+                <i class="icon-usd"></i>
+                <label>{freeform:label:credit_card}</label>
+                {freeform:field:credit_card attr:data-role="none"}
+                {if freeform:error:credit_card}
+                    <strong>{freeform:error:credit_card}</strong>
+                {/if}
+                </li>
+                
+                <li class="currency">
+                <i class="icon-usd"></i>
+                <label>{freeform:label:other_owing}</label>
+                {freeform:field:other_owing attr:data-role="none"}
+                {if freeform:error:other_owing}
+                    <strong>{freeform:error:other_owing}</strong>
+                {/if}
+                </li>
+
+                <li>
+                    <ul>
+                        <li class="drop-down">
+                        <i class="icon-angle-down"></i>
+                        <label>{freeform:label:hear_about}</label>
+                        {freeform:field:hear_about attr:data-role="none" attr:required="required"}
+                        <!-- <select name="hear_about" id="freeform_hear_about" data-role="none" required="required">
+                            <option value="">Please select one</option>
+                            <option value="Realestate.com.au">Realestate.com.au</option>
+                            <option value="Reiwa.com.au">Reiwa.com.au</option>
+                            <option value="Radio">Radio</option>
+                            <option value="TV">TV</option>
+                            <option value="Google">Google</option>
+                            <option value="Regional Centre">Regional Centre</option>
+                            <option value="Shopping Centre">Shopping Centre</option>
+                            <option value="Exhibitions">Exhibitions</option>
+                            <option value="Friend">Friend</option>
+                            <option value="Newspaper">Newspaper</option>
+                        </select> -->
+                        {if freeform:error:hear_about}
+                            <strong>{freeform:error:hear_about}</strong>
+                        {/if}
+                        </li>
+                    </ul>
+                </li>
+                
+            </ul>
+            
+        </div>
+    
+    </div>
+    
+    <div class="cols2 clearfix">
+
+        <hr style="border-color:#f5f5f5;">
+
+        <div class="pct50" style="padding: 10px;">
+            <span>
+                <input style="display:inline;float:left;margin:2px 12px 2px 2px;" type="checkbox" name="terms" required>
+                I have read and agree to HomeStart's <a href="/privacy-policy" target="_blank">Privacy Policy</a>
+            </span>
+        </div>
+
+        <div class="pct50" style="padding: 10px;">
+            <button class="btn-green" type="submit" name="submit" value="submit" data-role="none">Contact HomeStart</button>
+        </div>
+
+    </div>
+    
+    {freeform:field:page_origin}
+    
+    {/exp:freeform:form}
+    
+    {/if}
+    
+    </div>
+</section>
+
+{if last_segment == "thank-you"}
+<section class="side-enquiry container clearfix">
+	
+    <div class="side-enquiry-main dog-man white-box">
+    
+    	<h2>Know what you're looking for?</h2>
+        
+        <ul>
+            <li><a href="/finance/loan-calculator">Loan Calculator</a></li>
+            <li><a href="#">Government Incentives</a></li>
+            <li><a href="/finance/zero-deposit">Zero Deposit</a></li>
+            <li><a href="#">Shared Ownership</a></li>
+            <li><a href="#">Low Deposit HomeLoans</a></li>
+            <li><a href="/contact-us">Ask us a question</a></li>
+            <li><a href="/contact-us">Request an Appointment</a></li>
+    	</ul>
+        
+    </div>
+    
+    <div class="side-enquiry-form white-box">
+    
+        {enquiry-form}
+        
+    </div>
+    
+</section>
+{/if}
+    
+{embed="includes/.footer"}

@@ -1,0 +1,47 @@
+{embed="includes/.header"}
+
+{exp:channel:entries channel="pages" limit="1" url_title="{last_segment}"}
+<section class="content first-section {segment_1}">
+    <div class="container white-box clearfix">
+    
+    	<div class="content-header {if last_segment == 'about-us' OR last_segment == 'homestart-difference'}image{/if} clearfix">
+            <div class="content-header-copy">
+                <h1>{if page_heading != ''}{page_heading}{if:else}{title}{/if}</h1>
+                {page_header_copy}
+            </div>
+            {if last_segment == 'about-us' OR last_segment == 'homestart-difference'}
+            <img src="/template/default_site/assets/img/logo-house.png" alt="" />
+            {/if}
+        </div>
+
+        {if last_segment == "e-news-subscribe"}
+            <div class="e-subscribe">
+                {subscribe}
+            </div>
+        {/if}
+
+        <div class="page-copy clearfix {last_segment}">
+        {page_copy}
+        </div>
+        
+    </div>
+</section>
+{/exp:channel:entries}
+
+<section class="side-enquiry container clearfix">
+	
+    <div class="side-enquiry-main dog-man white-box">
+    
+    	{looking-for}
+        
+    </div>
+    
+    <div class="side-enquiry-form white-box">
+    
+        {enquiry-form}
+        
+    </div>
+    
+</section>
+
+{embed="includes/.footer"}

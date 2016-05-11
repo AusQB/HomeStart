@@ -1,0 +1,75 @@
+{if last_segment == 'thank-you'}
+<div>
+    <h2>Thanks for submitting your application. We'll be in touch soon.</h2>
+</div>
+{if:else}
+
+{exp:freeform:form form_name="employment_form" form:class="employment-form" return="about-us/employment/thank-you" inline_errors="yes" required="name|email|resume"}
+    
+<div class="clearfix">
+
+    <h2>Fill out the form below to send us your application</h2>
+    
+    <div class="cols2 clearfix">
+    
+    	<div class="pct50">
+            <ul>
+            
+                <li>
+                <label>{freeform:label:name}</label>
+                {freeform:field:name attr:data-role="none"}
+                {if freeform:error:name}
+                    <span class="error">{freeform:error:name}</span>
+                {/if}
+                </li>
+                
+                <li>
+                <label>{freeform:label:email}</label>
+                {freeform:field:email attr:data-role="none"}
+                {if freeform:error:email}
+                    <span class="error">{freeform:error:email}</span>
+                {/if}
+                </li>
+            
+            </ul>
+        </div>
+        
+        <div class="pct50">
+        	<ul>
+                
+                <li>
+                <label>{freeform:label:cover_letter}</label>
+                {freeform:field:cover_letter attr:data-role="none"}
+                {if freeform:error:cover_letter}
+                    <span class="error">{freeform:error:cover_letter}</span>
+                {/if}
+                </li>
+                
+                <li>
+                <label>{freeform:label:resume}</label>
+                {freeform:field:resume attr:data-role="none"}
+                {if freeform:error:resume}
+                    <span class="error">{freeform:error:resume}</span>
+                {/if}
+                </li>
+            
+            </ul>
+        </div>
+        
+    </div>
+    
+    <div>
+        <ul>
+            <li>
+                <button class="btn-green" type="submit" name="submit" value="submit" data-role="none">Send</button>
+            </li>
+        </ul>
+    </div>
+    
+</div>
+
+{freeform:field:page_origin}
+
+{/exp:freeform:form}
+
+{/if}

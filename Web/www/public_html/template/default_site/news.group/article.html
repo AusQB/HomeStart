@@ -1,0 +1,84 @@
+
+<div class="row">
+
+    <div class="large-8 columns">
+    {exp:channel:entries channel="news" url_title="{embed:segment}" limit="1" dynamic="no"}
+        
+        <h1 class="news-title">{title}</h1>
+        <p class="news-date">Posted on {entry_date format="%F %j, %Y"}</p>
+        
+        <div class="news-image">
+        	
+            {if show_image != 'No'}
+            <img class="thumbnail" src="{if news_image == ''}{assets}/img/news_image_placeholder.png{if:else}{news_image}{image:url:large}{/news_image}{/if}" alt="" />
+            {/if}
+        
+        </div>
+        
+        <div class="news-body">
+        
+            {news_body}
+            
+            {exp:channel_videos:videos entry_id="{entry_id}"}
+            	<div class="video-container">
+            	{video:embed_code}
+                </div>
+            {/exp:channel_videos:videos}
+        
+        </div>
+          
+    {/exp:channel:entries}
+    </div>
+    
+    <div class="large-4 columns">
+
+        <div class="callout">
+        
+        	<h4>More News</h4>
+
+            {exp:channel:entries channel="news" limit="5" dynamic="no" url_title="not {last_segment}"}
+            <div class="row">
+                <div class="large-12 columns">
+                    <a class="more news-item" href="{url_title_path='news/index'}">
+                        <div class="row">
+                            <div class="small-4 columns">
+                                <img class="news-thumb" src="{if news_image == ''}{assets}/img/news_image_placeholder.png{if:else}{news_image}{image:url:small}{/news_image}{/if}" alt="" />
+                            </div>
+                            <div class="small-8 columns">
+                                <h5 class="news-title">{title}</h5>
+                                <div class="clearfix">
+                                    <p class="news-date float-left">{entry_date format="%F %j, %Y"}</p>
+                                    <i class="fa fa-arrow-circle-right float-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {/exp:channel:entries}
+            
+            <div class="clearfix">
+                <a class="float-right" href="/news">Browse all news</a>
+            </div>
+
+        </div>
+        
+    </div>
+    
+</div>
+
+<div class="row" data-equalizer data-equalize-on="medium">
+
+    <div class="medium-8 columns">
+    
+        {looking_for}
+        
+    </div>
+
+    <div class="medium-4 columns">
+    
+        {enquiry_form}
+        
+    </div>
+    
+</div>

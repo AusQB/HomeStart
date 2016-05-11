@@ -1,0 +1,242 @@
+<?php
+$input = new EE_Input;
+
+if($input->set_cookie('filter_results_designs')) {
+    $filter = unserialize($input->cookie('filter_results_designs'));
+}
+
+if($input->post('reset')) {
+    $input->delete_cookie('filter_results_designs');
+}
+
+if($input->post('submit')) {
+    $filter = array(
+        $input->post('frontage'),
+        $input->post('beds'),
+        $input->post('baths')
+    );
+    $input->set_cookie('filter_results_designs', serialize($filter), time()+60*60);
+}
+?>
+
+{layout="home-designs/.layout"}
+
+{if segment_2 == '' OR {exp:segment_search keyword="/P\d+/" segments="last" regex="yes"}}
+
+{exp:channel:entries channel="pages" limit="1" url_title="{segment_1}"}
+<div class="row">
+
+    <div class="large-12 columns">
+
+        <div class="page-copy top">
+
+            <h1>{if page_heading != ''}{page_heading}{if:else}{title}{/if}</h1>
+
+            <div class="lead">{page_header_copy}</div>
+
+            {page_copy}
+
+        </div>
+
+    </div>
+
+</div>
+{/exp:channel:entries}
+
+<div class="row pos-rel">
+
+    <div id="home-designs-bg" class="show-for-large"></div>
+
+    <div class="large-9 large-push-3 columns">
+
+        <div id="home-designs" class="row small-up-1 medium-up-2">
+
+            {exp:channel:entries channel="designs" orderby="title" sort="asc" limit="10" paginate="bottom" dynamic="no"
+            <?php
+                if(isset($filter[0])) {
+                    switch ($filter[0]) {
+                        case 'Any':
+                            break;
+                        case '5-9':
+                            echo 'search:frontage="=5|6|7|8|9"';
+                            break;
+                        case '10-12':
+                            echo 'search:frontage="=10|11|12"';
+                            break;
+                        case '13-14':
+                            echo 'search:frontage="=13|14"';
+                            break;
+                        case '15-16':
+                            echo 'search:frontage="=15|16"';
+                            break;
+                        case '17-18':
+                            echo 'search:frontage="=17|18"';
+                            break;
+                    }
+                    echo ' ';
+                }
+
+                if(isset($filter[1])) {
+                    switch ($filter[1]) {
+                        case 'Any':
+                            echo 'search:beds="=3|4"';
+                            break;
+                        case '3':
+                            echo 'search:beds="=3"';
+                            break;
+                        case '4':
+                            echo 'search:beds="=4"';
+                            break;
+                    }
+                    echo ' ';
+                }
+
+                if(isset($filter[2])) {
+                    switch ($filter[2]) {
+                        case '1':
+                            echo 'search:baths="=1|2|3|4|5"';
+                            break;
+                        case '2':
+                            echo 'search:baths="=2|3|4|5"';
+                            break;
+                        case '3':
+                            echo 'search:baths="=3|4|5"';
+                            break;
+                        case '4':
+                            echo 'search:baths="=4|5"';
+                            break;
+                        case '5':
+                            echo 'search:baths="=5"';
+                            break;
+                    }
+                    echo ' ';
+                }
+            ?>}
+
+            {if no_results}
+
+                <h4 class="no-results">There are no designs which match your search criteria.</h4>
+
+            {/if}
+
+            <div class="column">
+
+                <a class="home-design rounded-box" href="{url_title_path='home-designs/index'}">
+                    <div class="home-design-image">
+                        {photos cover_only="yes"}
+                        <img src="{image:url:small}" alt="" />
+                        {/photos}
+                    </div>
+                    <div class="home-design-details pos-rel clearfix">
+                        <h3 class="home-design-title float-left">The {title}</h3>
+                        <ul class="bbc float-right">
+                            <li class="bed">{beds}</li>
+                            <li class="bath">{baths}</li>
+                            <li class="car">{cars}</li>
+                        </ul>
+                    </div>
+                </a>
+
+            </div>
+
+            {if count == total_results}
+            </div>
+            {/if}
+
+            {paginate}
+            <ul class="pagination text-center" role="navigation" aria-label="Pagination">
+            {pagination_links page_padding="2"}
+
+                {first_page}
+                    <li><a href="{pagination_url}" class="page-first">First Page</a></li>
+                {/first_page}
+
+                {previous_page}
+                    <li><a href="{pagination_url}" class="page-previous">Previous Page</a></li>
+                {/previous_page}
+
+                {page}
+                    <li><a href="{pagination_url}" class="page-{pagination_page_number} {if current_page}current{/if}">{pagination_page_number}</a></li>
+                {/page}
+
+                {next_page}
+                    <li><a href="{pagination_url}" class="page-next">Next Page</a></li>
+                {/next_page}
+
+                {last_page}
+                    <li><a href="{pagination_url}" class="page-last">Last Page</a></li>
+                {/last_page}
+
+            {/pagination_links}
+            </ul>
+            {/paginate}
+
+            {/exp:channel:entries}
+
+    </div>
+
+    <div class="large-3 large-pull-9 columns">
+
+        <div class="row">
+
+            <div class="large-12 medium-6 columns">
+
+                <div class="callout">
+
+                    <h4>Filter Results</h4>
+
+                    <form action="/home-designs" method="post">
+
+                        <div class="row">
+                            <div class="medium-12 columns">
+                                <label>Frontage
+                                    <select name="frontage">
+                                        <option value="Any" <?php if(isset($filter[0]) && $filter[0] == 'Any') echo 'selected'; ?>>Any</option>
+                                        <option value="10-12" <?php if(isset($filter[0]) && $filter[0] == '10-12') echo 'selected'; ?>>10-12m</option>
+                                        <option value="13-14" <?php if(isset($filter[0]) && $filter[0] == '13-14') echo 'selected'; ?>>13-14m</option>
+                                        <option value="15-16" <?php if(isset($filter[0]) && $filter[0] == '15-16') echo 'selected'; ?>>15-16m</option>
+                                        <option value="17-18" <?php if(isset($filter[0]) && $filter[0] == '17-18') echo 'selected'; ?>>17-18m</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="medium-12 columns">
+                                <label>Bedrooms
+                                    <select name="beds">
+                                        <option value="Any" <?php if(isset($filter[1]) && $filter[1] == 'Any') echo 'selected'; ?>>Any</option>
+                                        <option value="3" <?php if(isset($filter[1]) && $filter[1] == '3') echo 'selected'; ?>>3</option>
+                                        <option value="4" <?php if(isset($filter[1]) && $filter[1] == '4') echo 'selected'; ?>>4</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="medium-12 columns">
+                                <button class="large expanded button success" name="submit" type="submit" value="submit">Submit</button>
+                            </div>
+                            <div class="medium-12 columns">
+                                <button class="expanded button secondary" name="reset" type="submit" value="reset">Reset</button>
+                            </div>
+                        </div>
+                        <input type="hidden" name="csrf_token" value="{csrf_token}">
+                    </form>
+
+                </div>
+
+            </div>
+
+            <div class="large-12 medium-6 columns">
+
+                {enquiry_form}
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{if:else}
+{embed="home-designs/view-more"}
+{/if}

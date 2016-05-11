@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to Crucial</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title><?php echo $_SERVER['HTTP_HOST'];?> | Hosted by Crucial</title>
+<meta name="Generator" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="http://www.crucial.com.au/templates/crucial/favicon.ico" />
+<body style="background-colour:#f8f8f8;">
+<section>
+    <div class="row">
+        <div class="sixteen columns" style="text-align:center;font-family:Arial;">
+        <br/><br/>
+            <a href="http://www.crucial.com.au/"><img src="/img-sys/crucial_sh_header.png" alt="Crucial"/></a>
+                <h1>This is the temporary webpage for</br>
+                <strong><script language="JavaScript">
+                    document.write (location.protocol + "//" + location.hostname)
+                </script></strong>
+                </h1>
+                <p>If this is not your current default landing page or if your account is suspended, please contact us via our <a href="https://help.crucial.com.au/hc/en-gb">Help Centre</a> or by calling 1300 884 839 (Monday - Friday, 9AM - 5PM GMT+10).<p>
+                <p>Web Hosting | Reseller Hosting | Virtual Servers | Domain Names | SSL</p>
+                <p><a href="http://www.crucial.com.au/">www.crucial.com.au</a> | <a href="http://www.crucial.com.au/blog/">Broadcast Blog</a></p>
+        </div>
+    </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,51 @@
+{layout="about-us/.layout"}
+
+{exp:channel:entries channel="pages" limit="1" url_title="{last_segment}"}
+<div class="row">
+
+    <div class="large-12 columns">
+
+        <div class="page-copy top">
+                
+            <h1>{if page_heading != ''}{page_heading}{if:else}{title}{/if}</h1>
+            
+            {page_header_copy}
+
+            {page_copy}
+
+        </div>
+
+    </div>
+
+</div>
+{/exp:channel:entries}
+
+<div class="row">
+
+    <div class="large-12 columns">
+
+        <div class="row small-up-1 medium-up-2 large-up-3" data-equalizer data-equalize-by-row="true">
+
+            {exp:channel:entries channel="testimonials"}
+            <div class="column">
+
+                <div class="testimonial callout" data-equalizer-watch>
+                
+                    <h3 class="testimonial-name">{title}</h3>
+                    <h4 class="testimonial-location">{testimonial_suburb}</h4>
+                    <div class="testimonial-copy">
+                    <i class="fa fa-quote-left"></i>
+                    {testimonial_copy}
+                    <i class="fa fa-quote-right"></i>
+                    </div>
+
+                </div>
+                
+            </div>
+            {/exp:channel:entries}
+
+        </div>
+
+    </div>
+
+</div>

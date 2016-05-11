@@ -1,0 +1,34 @@
+{layout="sitemap/.layout"}
+
+<div class="row">
+
+    <div class="large-12 columns">
+
+		<h1>Sitemap</h1>
+
+		{exp:taxonomy:nav tree_id="5" ul_css_id="sitemap" ul_css_class="no-bullet" display_root="no"}
+            <li>
+                <a href="{node_url}">{node_title}</a>
+                {children}
+            </li>
+        {/exp:taxonomy:nav}
+
+	</div>
+
+</div>
+
+<div class="row" data-equalizer data-equalize-on="medium">
+
+    <div class="medium-8 columns">
+
+        {looking_for}
+
+    </div>
+
+    <div class="medium-4 columns">
+
+        {enquiry_form}
+
+    </div>
+
+</div>

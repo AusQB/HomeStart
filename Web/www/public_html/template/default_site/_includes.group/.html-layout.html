@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {if layout:title}
+        <title>{layout:title}</title>
+    {if:else}
+        {exp:seo_lite use_last_segment="yes"}
+    {/if}
+
+    {layout:meta}
+
+    <link rel="shortcut icon" href="{assets}/img/icons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{assets}/img/icons/apple-touch-icon.png">
+
+    {layout:css}
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{assets}/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css">
+    <link rel="stylesheet" href="{assets}/css/lity.min.css">
+    <link rel="stylesheet" href="{assets}/css/main.css">
+
+    {if '{exp:detect_mobile:isphone}'}
+    <link rel="stylesheet" href="{assets}/css/mobile.css">
+    {/if}
+
+    {layout:head_js}
+
+    <script src="{assets}/js/lib/modernizr.js"></script>
+    <script src="{assets}/js/analytics.js"></script>
+</head>
+<body class="{layout:body_class}">
+
+<div id="header">
+    <div class="row">
+        <div class="medium-6 columns">
+            <a id="logo" href="{site_url}">
+                <img src="{assets}/img/homestart_logo.png" alt="HomeStart" />
+            </a>
+        </div>
+        <div class="medium-6 columns">
+            {exp:search:simple_form no_result_page="/search/no-results" result_page="/search" form_id="search-form" search_in="entries" where="any"}
+            <div class="input-group">
+                <span class="input-group-label show-for-sr">Search</span>
+                <input class="input-group-field" type="text" name="keywords" maxlength="100" size="20" placeholder="Enter search criteria..." pattern=".{3,}" title="At least 3 characters required" required>
+                <div class="input-group-button">
+                    <button type="submit" class="success button"><i class="fa fa-search"></i><span class="show-for-sr">Search</span></button>
+                </div>
+            </div>
+            {/exp:search:simple_form}
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-12 columns">
+            <a id="menu-btn"><i class="fa fa-bars"></i></a>
+            <nav>
+                {exp:taxonomy:nav tree_id="5" ul_css_id="main-menu" ul_css_class="vertical medium-horizontal menu" ul_css_class:level_2="nested vertical menu" display_root="no"}
+                    <li class="{if node_has_children}has-children {/if}{node_active_class}">
+                        <a href="{node_url}">{node_title}{if node_has_children}<span class="expand-button"></span>{/if}</a>
+                        {children}
+                    </li>
+                {/exp:taxonomy:nav}
+            </nav>
+        </div>
+    </div>
+</div>
+
+{if segment_1 != ''}
+<div class="breadcrumbs-container top">
+{breadcrumbs}
+</div>
+{/if}
+
+<div id="contents">
+    <div class="row">
+        <div class="large-12 columns">
+            {layout:contents}
+        </div>
+    </div>
+</div>
+
+{if segment_1 != ''}
+<div class="breadcrumbs-container bottom">
+    {breadcrumbs}
+    <div class="tuft left"></div>
+    <div class="tuft right"></div>
+</div>
+{/if}
+
+<div id="footer">
+    <div class="row">
+        <div id="footer-info" class="large-6 medium-8 small-12 columns">
+            <div class="row">
+                <div class="small-4 columns">
+                    <p>Contact</p>
+                    <ul>
+                        <li>info@homestart.net.au</li>
+                        <li>(08) 6461 5300</li>
+                        <li><a href="/contact-us">Contact us today</a></li>
+                    </ul>
+                </div>
+                <div class="small-4 columns">
+                    <p>Address</p>
+                    <ul>
+                        <li>Level 1</li>
+                        <li>6 Bennett Street</li>
+                        <li>East Perth WA 6004</li>
+                    </ul>
+                </div>
+                <div class="small-4 columns">
+                    <p>Links</p>
+                    <!-- {exp:taxonomy:nav tree_id="3" display_root="no"}
+                        <li><a href="{node_url}">{node_title}</a></li>
+                    {/exp:taxonomy:nav} -->
+                    <ul>
+                        <li><a href="/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="/disclaimer">Disclaimer</a></li>
+                        <li><a href="#e-news-subscribe" data-lity>E-News Subscribe</a></li>
+                    </ul>
+                    <div id="e-news-subscribe" class="callout lity-hide">
+                        <div class="row column">
+                            <h2>E-News Subscribe</h2>
+                            <h4>Fill in the form to receive regular news from HomeStart</h4>
+                        </div>
+                        {subscribe}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="large-6 medium-4 small-12 columns">
+            <div class="row">
+                <div class="large-6 medium-12 small-6 columns large-text-center medium-text-right small-text-left">
+                    <a class="large button success" href="/contact-us">Make an enquiry</a>
+                </div>
+                <div class="large-6 medium-12 small-6 columns text-right">
+                    <a id="sitemap-btn" href="/sitemap">Sitemap</a>
+                    <p id="copyright">&copy; {site_name} {current_time format="%Y"}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{assets}/js/lib/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1Vd2q1SxTf1BjwUalB8q1dbN8o83Ni6Q"></script>
+<script src="{assets}/js/lib/detectmobilebrowser.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
+<script src="{assets}/js/lib/lity.min.js"></script>
+<script src="{assets}/js/lib/foundation.min.js"></script>
+
+{layout:js_lib}
+
+<script src="{assets}/js/main.js"></script>
+
+{layout:foot_js}
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "LocalBusiness",
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "East Perth",
+        "addressRegion": "Western Australia",
+        "postalCode": "6004",
+        "streetAddress": "6 Bennett Street"
+    },
+    "description": "At HomeStart we make first home ownership easy. We can assist you with government grants, incentives, competitive finance and the perfect block of land too.",
+    "name": "HomeStart",
+    "telephone": "08-6461-5300"
+}
+</script>
+
+<script>
+// (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+// (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+// m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+// })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+// ga('create', 'UA-9954473-1', 'auto');
+// ga('send', 'pageview');
+// var _gaq = _gaq || [];
+// _gaq.push(['_setAccount', 'UA-9954473-1']);
+// _gaq.push(['_trackPageview']);
+</script>
+
+</body>
+</html>

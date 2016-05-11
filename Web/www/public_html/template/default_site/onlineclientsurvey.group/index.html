@@ -1,0 +1,38 @@
+{layout="onlineclientsurvey/.layout"}
+
+{if segment_2 == ''}
+<div>
+    <h1 class="green">Hello,</h1>
+    <h2>Please take a moment to complete our Survey...</h2>
+    <a href="/onlineclientsurvey/prestart-survey" class="large success button">Pre-Start Survey</a>
+    <a href="/onlineclientsurvey/handover-survey" class="large success button">Handover Survey</a>
+    <img class="dog-man" src="{assets}/img/dog_man.png" alt="HomeStart Survey" />
+</div>
+{if:elseif segment_2 == "handover-survey"}
+    {layout:set name="title"}Handover Survey{/layout:set}
+    {layout:set name="foot_js"}
+    <script>
+    $(document).ready(function() {
+        if($(document).find('.error').length) { $('#survey-js-errors').show(); console.log('1'); }
+    });
+    </script>
+    {/layout:set}
+    {embed="onlineclientsurvey/.handover_survey"}
+{if:elseif segment_2 == "prestart-survey"}
+    {layout:set name="title"}Pre-Start Survey{/layout:set}
+    {layout:set name="foot_js"}
+    <script>
+    $(document).ready(function() {
+        if($(document).find('.error').length) { $('#survey-js-errors').show(); console.log('1'); }
+    });
+    </script>
+    {/layout:set}
+    {embed="onlineclientsurvey/.prestart_survey"}
+{if:elseif segment_2 == "thank-you"}
+<div class="thankyou">
+    <h1>Thank you!</h1>
+    <h2>We appreciate you taking the time to complete our survey.</h2>
+    <img class="dog-man" src="{assets}/img/dog_man.png" alt="HomeStart Survey"/>
+    <a href="/onlineclientsurvey" class="large success button">Begin new survey</a>
+</div>
+{/if}

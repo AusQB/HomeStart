@@ -1,0 +1,136 @@
+{embed="includes/.landing-header"}
+
+<section class="content">
+
+	<div class="container white-box">
+
+		<div class="content-header image clearfix">
+
+			<div class="content-header-copy small-normal" style="max-width:550px;">
+				{if last_segment == 'thank-you'}
+		    	<h1>Thank you for your referral!</h1>
+		    	<h2>HomeStart will be in touch soon.</h2>
+		    	<a class="btn-green" href="/offers/refer-a-friend" style="display:inline-block;padding:15px 20px;margin:40px 0 0 0;">Refer another friend</a>
+		    	{if:else}
+                <h1>Refer a friend and receive $1,000!</h1>
+                <p>If you know someone who wants a home of their own, or someone who wants the best advice - let us know. If we end up helping a friend of yours into a home of their own, we’ll reward you with a <strong>$1000</strong> thank you.</p>
+				<p><strong>Hurry, this offer is only open for a limited time!</strong></p>
+				{/if}
+            </div>
+
+            <img src="{assets}/img/new_family.png" alt="" style="max-width:320px;" />
+
+		</div>
+
+		{if segment_3 == ''}
+
+		<div class="form" style="padding:20px 0;">
+
+		    {exp:freeform:form form_name="refer_a_friend_edm" return="/offers/refer-a-friend/thank-you" inline_errors="yes"}
+
+		    <div class="cols2 clearfix">
+
+			    <div class="pct50">
+
+			    	<ul>
+				    	<li>
+				    		<label class="required">{freeform:label:your_first_name}</label>
+				    		{freeform:field:your_first_name attr:data-role="none" attr:required="required"}
+				    		{if freeform:error:your_first_name}<span class="error">{freeform:error:your_first_name}</span>{/if}
+				    	</li>
+				    	<li>
+				    		<label class="required">{freeform:label:your_last_name}</label>
+				    		{freeform:field:your_last_name attr:data-role="none" attr:required="required"}
+				    		{if freeform:error:your_last_name}<span class="error">{freeform:error:your_last_name}</span>{/if}
+				    	</li>
+				    	<li>
+				    		<label class="required">{freeform:label:phone}</label>
+				    		{freeform:field:phone attr:type="tel" attr:required="required" attr:pattern="[0-9]{8,12}" attr:minlength="8" attr:minlength="12"}
+				    		{if freeform:error:phone}<span class="error">{freeform:error:phone}</span>{/if}
+				    	</li>
+				    	<li>
+				    		<label>{freeform:label:email}</label>
+				    		{freeform:field:email attr:type="email" attr:data-role="none"}
+				    		{if freeform:error:email}<span class="error">{freeform:error:email}</span>{/if}
+				    	</li>
+			    	</ul>
+
+			    </div>
+
+			    <div class="pct50">
+
+			    	<ul>
+				    	<li>
+				    		<label class="required">{freeform:label:friends_first_name}</label>
+				    		{freeform:field:friends_first_name attr:data-role="none" attr:required="required"}
+				    		{if freeform:error:friends_first_name}<span class="error">{freeform:error:friends_first_name}</span>{/if}
+				    	</li>
+				    	<li>
+				    		<label class="required">{freeform:label:friends_last_name}</label>
+				    		{freeform:field:friends_last_name attr:data-role="none" attr:required="required"}
+				    		{if freeform:error:friends_last_name}<span class="error">{freeform:error:friends_last_name}</span>{/if}
+				    	</li>
+				    	<li>
+				    		<label class="required">Friend's Phone</label>
+				    		{freeform:field:referee_phone attr:type="tel" attr:required="required" attr:pattern="[0-9]{8,12}" attr:minlength="8" attr:minlength="12" attr:title="Must be a number between 8 and 12"}
+				    		{if freeform:error:referee_phone}<span class="error">{freeform:error:referee_phone}</span>{/if}
+				    	</li>
+				    	<li>
+				    		<label>Friend's Email</label>
+				    		{freeform:field:referee_email attr:type="email" attr:data-role="none"}
+				    		{if freeform:error:referee_email}<span class="error">{freeform:error:referee_email}</span>{/if}
+				    	</li>
+			    	</ul>
+
+			    </div>
+
+		    </div>
+
+		    <div class="cols2 clearfix">
+
+			    <div class="pct50">
+
+				    <ul>
+				    	<li>
+				    		<label class="required">{freeform:label:your_homestart_address}</label>
+				    		{freeform:field:your_homestart_address attr:data-role="none" attr:required="required"}
+				    		{if freeform:error:your_homestart_address}<span class="error">{freeform:error:your_homestart_address}</span>{/if}
+				    	</li>
+				    </ul>
+
+			    </div>
+
+		    </div>
+
+		    <hr style="border-color:#f5f5f5;padding:0 0 10px 0;">
+
+		    <div class="cols2 clearfix">
+
+			    <div class="pct50" style="padding:0 0 20px 0;">
+
+	                <span style="display:inline;padding:0 0 0 10px;">I have read and agree to HomeStart's <a href="http://homestart.net.au/uploads/pdfs/Refer_a_Friend_TCs_Nov_14.pdf" target="_blank">Terms &amp; Conditions</a></span>
+	                <input style="display:inline;float:left;margin:2px;" type="checkbox" name="terms" required="required">
+
+			    </div>
+
+			    <div class="pct50">
+
+					<button class="btn-green" type="submit" name="submit" value="submit" data-role="none">Refer a Friend</button>
+
+			    </div>
+
+		    </div>
+
+			{exp:snaptcha:field}
+
+		    {/exp:freeform:form}
+
+		</div>
+
+		{/if}
+    
+    </div>
+
+</section>
+
+{embed="includes/.landing-footer"}

@@ -1,0 +1,147 @@
+{layout="home-loans/.layout"}
+
+{exp:channel:entries channel="pages" limit="1" url_title="{if segment_2 != '' AND segment_2 != 'thank-you'}{segment_2}{if:else}{segment_1}{/if}"}
+<div class="row">
+
+    <div class="large-12 columns">
+
+        <div class="page-copy top">
+
+            <h1>{if page_heading != ''}{page_heading}{if:else}{title}{/if}</h1>
+
+            <div class="lead">{page_header_copy}</div>
+
+            {page_copy}
+
+        </div>
+
+    </div>
+
+</div>
+{/exp:channel:entries}
+
+{if segment_2 == '' OR last_segment == 'thank-you'}
+
+<div class="row">
+
+    <div class="large-12 columns">
+
+        {if last_segment == 'thank-you'}
+        <h2>Thanks for contacting HomeStart. </h2>
+        <h4>One of our representatives will be in touch within 24 hours.</h4>
+        {/if}
+
+        <div id="home-loans-faq">
+
+            <div class="row small-up-1 medium-up-2">
+
+            	{exp:channel:entries channel="finance" fixed_order="23|16|19|81|93|17|20|80"}
+                <div class="column">
+                	<a class="large expanded secondary button" data-toggle="finance-modal-{count}">{title}</a>
+                </div>
+                {/exp:channel:entries}
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{exp:channel:entries channel="finance" fixed_order="23|16|19|81|93|17|20|80"}
+<? $count = {count}; $total = {total_results}; ?>
+<div class="large reveal" id="finance-modal-{count}" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
+    <div class="row">
+        <div class="large-12 columns">
+            <h2>{title}</h2>
+            {finance_copy}
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-12 columns">
+            {if last_segment == "thank-you"}
+            <h3>Thanks for contacting HomeStart!</h3>
+        	{rea}
+            {if:else}
+            {exp:freeform:form form_name="contact_us" return="/home-loans/thank-you" inline_errors="yes" required="name|phone"}
+            <div class="row">
+                <div class="medium-6 columns">
+                    <label><span class="show-for-sr">{freeform:label:name}</span>
+                        {freeform:field:name attr:required="required" attr:placeholder="Name"}
+                    </label>
+                    <label><span class="show-for-sr">{freeform:label:phone}</span>
+                        {freeform:field:phone attr:required="required" attr:placeholder="Phone" attr:type="tel"}
+                    </label>
+                </div>
+                <div class="medium-6 columns">
+                    <label><span class="show-for-sr">{freeform:label:email}</span>
+                        {freeform:field:email attr:placeholder="Email" attr:type="email"}
+                    </label>
+                    <button class="large success button float-right" type="submit" name="submit" value="submit">Submit</button>
+                    {freeform:field:page_origin}
+                {/exp:freeform:form}
+                </div>
+            </div>
+            {/if}
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-12 columns">
+            <div class="clearfix">
+                <a class="secondary button float-left" data-open="finance-modal-<?= $count-1<1?$total:$count-1; ?>">Previous</a>
+                <a class="secondary button float-right" data-open="finance-modal-<?= $count+1>$total?1:$count+1; ?>">Next</a>
+            </div>
+        </div>
+    </div>
+    <button class="close-button" data-close aria-label="Close reveal" type="button">
+        <span aria-hidden="true"><i class="fa fa-times"></i></span>
+    </button>
+</div>
+{/exp:channel:entries}
+
+<div class="row small-up-1 medium-up-3">
+
+    <div class="column">
+        <a href="/home-loans/zero-deposit-home-loans" class="large expanded success button">Zero Deposit Home Loans</a>
+    </div>
+
+    <div class="column">
+        <a href="/home-loans/low-deposit-home-loans" class="large expanded success button">Low Deposit Home Loans</a>
+    </div>
+
+    <div class="column">
+        <a href="/home-loans/home-loan-calculator" class="large expanded success button">Home Loan Calculator</a>
+    </div>
+
+</div>
+
+{if:else}
+
+<div class="row">
+
+    <div class="medium-6 columns">
+
+        <a href="/home-loans/home-loan-calculator" class="large expanded success button">Home Loan Calculator</a>
+
+    </div>
+
+</div>
+
+{/if}
+
+<div class="row" data-equalizer data-equalize-on="medium">
+
+    <div class="medium-8 columns">
+
+        {looking_for}
+
+    </div>
+
+    <div class="medium-4 columns">
+
+        {enquiry_form}
+
+    </div>
+
+</div>

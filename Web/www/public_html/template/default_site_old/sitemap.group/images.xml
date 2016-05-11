@@ -1,0 +1,1031 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <url>
+    <loc>http://homestart.net.au/</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/template/default_site/assets/img/slide-5.jpg</image:loc>
+        <image:title>slide</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/template/default_site/assets/img/slide-1.jpg</image:loc>
+        <image:title>slide</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/template/default_site/assets/img/slide-2.jpg</image:loc>
+        <image:title>slide</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/template/default_site/assets/img/slide-3.jpg</image:loc>
+        <image:title>slide</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/template/default_site/assets/img/slide-4.jpg</image:loc>
+        <image:title>slide</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/44/escape__small.jpg</image:loc>
+        <image:title>Home Design - The Cove</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/template/default_site/assets/img/new_family.png</image:loc>
+        <image:title></image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/60/the_sanctuary__small.jpg</image:loc>
+        <image:title>Home Design - The Sanctuary</image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/news/promotions</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/promotions/91/promotion1-2__medium.png</image:loc>
+        <image:title>Quarterly Survey Competition</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/promotions/90/promotion2-2__medium.png</image:loc>
+        <image:title>Refer a Friend</image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/designs/cove</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/44/escape__large.jpg</image:loc>
+        <image:title>The Cove</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/44/_dsc7188__large.jpg</image:loc>
+        <image:title>The Cove</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/44/_dsc7192__large.jpg</image:loc>
+        <image:title>The Cove</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/44/_dsc7160__large.jpg</image:loc>
+        <image:title>The Cove</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/44/_dsc7174__large.jpg</image:loc>
+        <image:title>The Cove</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/44/escape__large.png</image:loc>
+        <image:title></image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/news</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/template/default_site/assets/img/wife-cat.gif</image:loc>
+        <image:title></image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/131/img_32691__small.jpg</image:loc>
+        <image:title>Congratulations to Craig - The lucky winner of our win your rent competition</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/130/winner_pic_1__small.jpg</image:loc>
+        <image:title>Quarterly Survey Prize Draw</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/128/trent_kimpton__nicole_1yr_winner_2015__small.jpg</image:loc>
+        <image:title>Many wonderful surprises for Trent</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/122/welcome_home__small.jpg</image:loc>
+        <image:title>Welcome Home - September Edition #2</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/116/welcome_home__small.jpg</image:loc>
+        <image:title>Welcome Home - August edition</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/115/helen_winner__small.jpg</image:loc>
+        <image:title>Horray for Helen!</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/114/hia_portrait__small.jpg</image:loc>
+        <image:title>HomeStart - a proud supporter of Western Australian Apprentices</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/111/west-real-estate-program__small.jpg</image:loc>
+        <image:title>HomeStart feature on The West Real Estate Program</image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/finance/first-home-owner-grant</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/template/default_site/assets/img/10k.png</image:loc>
+        <image:title></image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/news/Win-your-rent-paid-congratulations-craig</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/131/img_32691__large.jpg</image:loc>
+        <image:title>Congratulations to Craig - The lucky winner of our win your rent competition</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/131/img_32691__small.jpg</image:loc>
+        <image:title>Congratulations to Craig - The lucky winner of our win your rent competition</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/130/winner_pic_1__small.jpg</image:loc>
+        <image:title>Quarterly Survey Prize Draw</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/128/trent_kimpton__nicole_1yr_winner_2015__small.jpg</image:loc>
+        <image:title>Many wonderful surprises for Trent</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/122/welcome_home__small.jpg</image:loc>
+        <image:title>Welcome Home - September Edition #2</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/116/welcome_home__small.jpg</image:loc>
+        <image:title>Welcome Home - August edition</image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/news/quarterly-survey-prize-draw</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/130/winner_pic_1__large.jpg</image:loc>
+        <image:title>Quarterly Survey Prize Draw</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/131/img_32691__small.jpg</image:loc>
+        <image:title>Congratulations to Craig - The lucky winner of our win your rent competition</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/130/winner_pic_1__small.jpg</image:loc>
+        <image:title>Quarterly Survey Prize Draw</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/128/trent_kimpton__nicole_1yr_winner_2015__small.jpg</image:loc>
+        <image:title>Many wonderful surprises for Trent</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/122/welcome_home__small.jpg</image:loc>
+        <image:title>Welcome Home - September Edition #2</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/116/welcome_home__small.jpg</image:loc>
+        <image:title>Welcome Home - August edition</image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/about-us</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/template/default_site/assets/img/logo-house.png</image:loc>
+        <image:title></image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/news/the-west-real-estate-program</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/131/img_32691__small.jpg</image:loc>
+        <image:title>Congratulations to Craig - The lucky winner of our win your rent competition</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/130/winner_pic_1__small.jpg</image:loc>
+        <image:title>Quarterly Survey Prize Draw</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/128/trent_kimpton__nicole_1yr_winner_2015__small.jpg</image:loc>
+        <image:title>Many wonderful surprises for Trent</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/122/welcome_home__small.jpg</image:loc>
+        <image:title>Welcome Home - September Edition #2</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/116/welcome_home__small.jpg</image:loc>
+        <image:title>Welcome Home - August edition</image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/news/lucky-finalists-of-a-chance-to-win-250000</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/115/helen_winner__large.jpg</image:loc>
+        <image:title>Horray for Helen!</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/131/img_32691__small.jpg</image:loc>
+        <image:title>Congratulations to Craig - The lucky winner of our win your rent competition</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/130/winner_pic_1__small.jpg</image:loc>
+        <image:title>Quarterly Survey Prize Draw</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/128/trent_kimpton__nicole_1yr_winner_2015__small.jpg</image:loc>
+        <image:title>Many wonderful surprises for Trent</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/122/welcome_home__small.jpg</image:loc>
+        <image:title>Welcome Home - September Edition #2</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/116/welcome_home__small.jpg</image:loc>
+        <image:title>Welcome Home - August edition</image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/designs</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/27/the-aberdeen__small.jpg</image:loc>
+        <image:title>Home Design - The Aberdeen</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/25/the-accolade__small.jpg</image:loc>
+        <image:title>Home Design - The Accolade</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/28/the-armada__small.jpg</image:loc>
+        <image:title>Home Design - The Armada</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/29/the-avenue__small.jpg</image:loc>
+        <image:title>Home Design - The Avenue</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/30/the-bahamas__small.jpg</image:loc>
+        <image:title>Home Design - The Bahamas</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/31/the-bennett__small.jpg</image:loc>
+        <image:title>Home Design - The Bennett</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/32/the-brisbane__small.jpg</image:loc>
+        <image:title>Home Design - The Brisbane</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/117/_dsc7344__small.jpg</image:loc>
+        <image:title>Home Design - The Brooklyn</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/66/ultimate__small.jpg</image:loc>
+        <image:title>Home Design - The Cocoon</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/44/escape__small.jpg</image:loc>
+        <image:title>Home Design - The Cove</image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/designs/armada</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/28/the-armada__large.jpg</image:loc>
+        <image:title>The Armada</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/28/armada3__large.jpg</image:loc>
+        <image:title>The Armada</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/28/armada5__large.jpg</image:loc>
+        <image:title>The Armada</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/28/low_res_001__large.jpg</image:loc>
+        <image:title>The Armada</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/28/low_res_003__large.jpg</image:loc>
+        <image:title>The Armada</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/28/armada__large.png</image:loc>
+        <image:title></image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/designs/brooklyn</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/117/_dsc7344__large.jpg</image:loc>
+        <image:title>The Brooklyn</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/117/_dsc7081__large.jpg</image:loc>
+        <image:title>The Brooklyn</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/117/_dsc7204__large.jpg</image:loc>
+        <image:title>The Brooklyn</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/117/_dsc7238__large.jpg</image:loc>
+        <image:title>The Brooklyn</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/117/_dsc7242__large.jpg</image:loc>
+        <image:title>The Brooklyn</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/117/brooklyn_for_website__large.jpg</image:loc>
+        <image:title></image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/designs/brisbane</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/32/the-brisbane__large.jpg</image:loc>
+        <image:title>The Brisbane</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/32/brisbane__large.png</image:loc>
+        <image:title></image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/designs/gramercy</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/48/gamercy__large.jpg</image:loc>
+        <image:title>The Gramercy</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/48/_dsc3574__large.jpg</image:loc>
+        <image:title>The Gramercy</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/48/_dsc3370__large.jpg</image:loc>
+        <image:title>The Gramercy</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/48/_dsc3459__large.jpg</image:loc>
+        <image:title>The Gramercy</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/48/_dsc3475__large.jpg</image:loc>
+        <image:title>The Gramercy</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/48/gramercy__large.png</image:loc>
+        <image:title></image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/designs/miami</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/51/_dsc7384__large.jpg</image:loc>
+        <image:title>The Miami</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/51/_dsc6208__large.jpg</image:loc>
+        <image:title>The Miami</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/51/_dsc7266__large.jpg</image:loc>
+        <image:title>The Miami</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/51/_dsc7283__large.jpg</image:loc>
+        <image:title>The Miami</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/51/_dsc7296__large.jpg</image:loc>
+        <image:title>The Miami</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/51/inspiration__large.png</image:loc>
+        <image:title></image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/designs/independence</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/50/independence__large.jpg</image:loc>
+        <image:title>The Independence</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/50/independence__large.png</image:loc>
+        <image:title></image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/designs/onslow</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/56/onslow__large.jpg</image:loc>
+        <image:title>The Onslow</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/56/onslow__large.png</image:loc>
+        <image:title></image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/designs/london</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/119/london01__large.jpg</image:loc>
+        <image:title>The London</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/119/london_for_website__large.jpg</image:loc>
+        <image:title></image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/designs/bahamas</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/30/the-bahamas__large.jpg</image:loc>
+        <image:title>The Bahamas</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/30/bahamas__large.png</image:loc>
+        <image:title></image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/designs/accolade</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/25/the-accolade__large.jpg</image:loc>
+        <image:title>The Accolade</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/25/accolade1__large.jpg</image:loc>
+        <image:title>The Accolade</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/25/accolade2__large.jpg</image:loc>
+        <image:title>The Accolade</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/25/accolade3__large.jpg</image:loc>
+        <image:title>The Accolade</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/25/accolade4__large.jpg</image:loc>
+        <image:title>The Accolade</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/25/accolade5__large.jpg</image:loc>
+        <image:title>The Accolade</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/25/accolade__large.png</image:loc>
+        <image:title></image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/designs/milligan</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/54/miligan-4__large.jpg</image:loc>
+        <image:title>The Milligan</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/54/milligan__large.png</image:loc>
+        <image:title></image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/designs/aberdeen</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/27/the-aberdeen__large.jpg</image:loc>
+        <image:title>The Aberdeen</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/27/aberdeen__large.png</image:loc>
+        <image:title></image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/contact-us</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/template/default_site/assets/img/hsrep.gif</image:loc>
+        <image:title></image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/finance/zero-deposit</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/template/default_site/assets/img/10k.png</image:loc>
+        <image:title></image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/news/welcome-home-august-edition</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/116/welcome_home__large.jpg</image:loc>
+        <image:title>Welcome Home - August edition</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/news/article_2.jpg</image:loc>
+        <image:title></image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/news/article_3.jpg</image:loc>
+        <image:title></image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/news/article_4.jpg</image:loc>
+        <image:title></image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/news/article_5.jpg</image:loc>
+        <image:title></image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/131/img_32691__small.jpg</image:loc>
+        <image:title>Congratulations to Craig - The lucky winner of our win your rent competition</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/130/winner_pic_1__small.jpg</image:loc>
+        <image:title>Quarterly Survey Prize Draw</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/128/trent_kimpton__nicole_1yr_winner_2015__small.jpg</image:loc>
+        <image:title>Many wonderful surprises for Trent</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/122/welcome_home__small.jpg</image:loc>
+        <image:title>Welcome Home - September Edition #2</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/116/welcome_home__small.jpg</image:loc>
+        <image:title>Welcome Home - August edition</image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/designs/liberty</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/53/liberty-222__large.jpg</image:loc>
+        <image:title>The Liberty</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/53/liberty__large.png</image:loc>
+        <image:title></image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/finance</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/template/default_site/assets/img/btn-finance@2x.png</image:loc>
+        <image:title></image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/news/homestart-a-proud-supporter-of-western-australian-apprentices</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/114/hia_portrait__large.jpg</image:loc>
+        <image:title>HomeStart - a proud supporter of Western Australian Apprentices</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/131/img_32691__small.jpg</image:loc>
+        <image:title>Congratulations to Craig - The lucky winner of our win your rent competition</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/130/winner_pic_1__small.jpg</image:loc>
+        <image:title>Quarterly Survey Prize Draw</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/128/trent_kimpton__nicole_1yr_winner_2015__small.jpg</image:loc>
+        <image:title>Many wonderful surprises for Trent</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/122/welcome_home__small.jpg</image:loc>
+        <image:title>Welcome Home - September Edition #2</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/116/welcome_home__small.jpg</image:loc>
+        <image:title>Welcome Home - August edition</image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/designs/fairweather-3x2</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/45/fairweather__large.jpg</image:loc>
+        <image:title>The Fairweather</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/45/fairweather-3x2__large.png</image:loc>
+        <image:title></image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/designs/P0</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/27/the-aberdeen__small.jpg</image:loc>
+        <image:title>Home Design - The Aberdeen</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/25/the-accolade__small.jpg</image:loc>
+        <image:title>Home Design - The Accolade</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/28/the-armada__small.jpg</image:loc>
+        <image:title>Home Design - The Armada</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/29/the-avenue__small.jpg</image:loc>
+        <image:title>Home Design - The Avenue</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/30/the-bahamas__small.jpg</image:loc>
+        <image:title>Home Design - The Bahamas</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/31/the-bennett__small.jpg</image:loc>
+        <image:title>Home Design - The Bennett</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/32/the-brisbane__small.jpg</image:loc>
+        <image:title>Home Design - The Brisbane</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/117/_dsc7344__small.jpg</image:loc>
+        <image:title>Home Design - The Brooklyn</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/66/ultimate__small.jpg</image:loc>
+        <image:title>Home Design - The Cocoon</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/44/escape__small.jpg</image:loc>
+        <image:title>Home Design - The Cove</image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/designs/empire1</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/42/ecstacy__large.jpg</image:loc>
+        <image:title>The Empire</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/42/ecstacy__large.png</image:loc>
+        <image:title></image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/designs/sanctuary</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/60/the_sanctuary__large.jpg</image:loc>
+        <image:title>The Sanctuary</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/60/_dsc2512__large.jpg</image:loc>
+        <image:title>The Sanctuary</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/60/_dsc2612__large.jpg</image:loc>
+        <image:title>The Sanctuary</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/60/_dsc2647__large.jpg</image:loc>
+        <image:title>The Sanctuary</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/60/_dsc2482__large.jpg</image:loc>
+        <image:title>The Sanctuary</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/60/sanctuary__large.jpg</image:loc>
+        <image:title></image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/designs/bennett</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/31/the-bennett__large.jpg</image:loc>
+        <image:title>The Bennett</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/31/bennett__large.png</image:loc>
+        <image:title></image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/designs/retreat</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/57/retreat__large.jpg</image:loc>
+        <image:title>The Retreat</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/57/retreat__large.png</image:loc>
+        <image:title></image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/designs/st-quentin</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/64/st-quentin__large.jpg</image:loc>
+        <image:title>The St Quentin</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/64/st-quentin__large.png</image:loc>
+        <image:title></image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/designs/venice</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/121/the-montelago__large.jpg</image:loc>
+        <image:title>The Venice</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/121/venice_website__large.jpg</image:loc>
+        <image:title></image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/designs/paris</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/120/the-fairweather__large.jpg</image:loc>
+        <image:title>The Paris</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/120/paris_website__large.jpg</image:loc>
+        <image:title></image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/designs/rhapsody</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/58/rhapsody__large.jpg</image:loc>
+        <image:title>The Rhapsody</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/58/rhapsody__large.png</image:loc>
+        <image:title></image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/designs/rodeo</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/59/rodeo__large.jpg</image:loc>
+        <image:title>The Rodeo</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/59/rodeo__large.png</image:loc>
+        <image:title></image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/designs/saville</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/62/saville__large.jpg</image:loc>
+        <image:title>The Saville</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/62/saville__large.png</image:loc>
+        <image:title></image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/news/welcome-home-september-edition-2</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/122/welcome_home__large.jpg</image:loc>
+        <image:title>Welcome Home - September Edition #2</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/uploads/cover_letters/_DSC4875.jpg</image:loc>
+        <image:title></image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/uploads/cover_letters/minestrone.jpg</image:loc>
+        <image:title></image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/uploads/cover_letters/HOM-Family(HSRep01)-April2014-CMYK.jpg</image:loc>
+        <image:title></image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/uploads/cover_letters/paintedpots.jpg</image:loc>
+        <image:title></image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/131/img_32691__small.jpg</image:loc>
+        <image:title>Congratulations to Craig - The lucky winner of our win your rent competition</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/130/winner_pic_1__small.jpg</image:loc>
+        <image:title>Quarterly Survey Prize Draw</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/128/trent_kimpton__nicole_1yr_winner_2015__small.jpg</image:loc>
+        <image:title>Many wonderful surprises for Trent</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/122/welcome_home__small.jpg</image:loc>
+        <image:title>Welcome Home - September Edition #2</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/116/welcome_home__small.jpg</image:loc>
+        <image:title>Welcome Home - August edition</image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/designs/cocoon</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/66/ultimate__large.jpg</image:loc>
+        <image:title>The Cocoon</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/66/_dsc6648__large.jpg</image:loc>
+        <image:title>The Cocoon</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/66/_dsc7114__large.jpg</image:loc>
+        <image:title>The Cocoon</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/66/_dsc7131__large.jpg</image:loc>
+        <image:title>The Cocoon</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/66/_dsc7152__large.jpg</image:loc>
+        <image:title>The Cocoon</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/66/ultimate__large.png</image:loc>
+        <image:title></image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/designs/avenue</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/29/the-avenue__large.jpg</image:loc>
+        <image:title>The Avenue</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/29/avenue__large.png</image:loc>
+        <image:title></image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/news/many-wonderful-surprises-for-trent</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/128/trent_kimpton__nicole_1yr_winner_2015__large.jpg</image:loc>
+        <image:title>Many wonderful surprises for Trent</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/131/img_32691__small.jpg</image:loc>
+        <image:title>Congratulations to Craig - The lucky winner of our win your rent competition</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/130/winner_pic_1__small.jpg</image:loc>
+        <image:title>Quarterly Survey Prize Draw</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/128/trent_kimpton__nicole_1yr_winner_2015__small.jpg</image:loc>
+        <image:title>Many wonderful surprises for Trent</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/122/welcome_home__small.jpg</image:loc>
+        <image:title>Welcome Home - September Edition #2</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/116/welcome_home__small.jpg</image:loc>
+        <image:title>Welcome Home - August edition</image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>http://homestart.net.au/designs/mypad</loc>
+    <lastmod>2015-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/photos/55/mypad__large.jpg</image:loc>
+        <image:title>The MyPad</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>http://homestart.net.au/images/uploads/homes/floorplans/55/my-pad__large.png</image:loc>
+        <image:title></image:title>
+      </image:image>
+  </url>
+</urlset>

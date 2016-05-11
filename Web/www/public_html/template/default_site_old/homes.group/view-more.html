@@ -1,0 +1,233 @@
+{if embed:segment == 'designs'}
+
+{exp:channel:entries channel="designs" url_title="{segment_3}" limit="1" dynamic="no"}
+
+<section class="view-more">
+    <div class="container white-box clearfix">
+    
+    	<div class="view-more-header clearfix">
+            <div class="view-more-title">
+                <h1>The {title}</h1>
+            </div>
+            <div class="view-more-bbc clearfix">
+            	<ul class="bbc">
+                    <li class="bed">{beds}</li>
+                    <li class="bath">{baths}</li>
+                    <li class="car">{cars}</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="view-more-slider">
+        
+        	<ul {photos}{if "{image:total}" == 1}class="no-slider"{/if}{/photos}>
+        		{photos}
+                <li><img src="{image:url:large}" alt="The {title}" /></li>
+                {/photos}
+            </ul>
+            
+            <!--{photos cover_only="yes"}
+            <img src="{image:url:large}" alt="The {title}" />
+            {/photos}-->
+        
+        </div>
+    
+    </div>
+</section>
+
+<section class="side-enquiry container clearfix">
+	
+    <div class="view-more-details side-enquiry-main white-box clearfix">
+    
+    	<div class="clearfix">
+    
+            <div class="view-more-details-description">
+        
+                <h4>Frontage: <span class="green">{frontage}m</span> <span class="small">(front access design)</span></h4>
+                
+                <div class="view-more-description">
+                {description}
+                </div>
+            
+            </div>
+            
+            <div class="view-more-details-specifications">
+            
+            	<h4 class="green">Specifications:</h4>
+            	<ul>
+            	{specifications}
+                	<li><p>{item}</p></li>
+                {/specifications}
+            	</ul>
+            
+            </div>
+            
+        </div>
+
+        <div class="clearfix">
+        <a class="btn-grey" href="/template/default_site/assets/uploads/specifications-sheet-standard.pdf" target="_blank">Standard Inclusions</a>
+        
+        <a class="btn-grey view-floorplan" href="#view-floorplan">View Floorplan</a>
+		</div>
+                
+        <div class="hidden">
+        
+        	<div id="view-floorplan">
+        
+        	{floorplan}
+            <img src="{image:url:large}" alt="" />
+            {/floorplan}
+            
+            </div>
+        
+        </div>
+    
+    </div>
+    
+    <div class="side-enquiry-form white-box">
+    
+        {enquiry-form}
+        
+    </div>
+    
+    <img class="dog-tilted" src="/template/default_site/assets/img/dog-tilted.png" alt="" />
+    
+</section>
+    
+{/exp:channel:entries}
+
+{if:elseif embed:segment == 'home-and-land'}
+
+{exp:channel:entries channel="packages" url_title="{segment_3}" limit="1" dynamic="no"}
+
+<section class="view-more">
+    <div class="container white-box clearfix">
+    
+    	<div class="view-more-header clearfix">
+            <div class="view-more-title">
+                <h1>The {title}</h1>
+            </div>
+            <div class="view-more-bbc clearfix">
+            	<ul class="bbc">
+		{related_entries id="design"}
+                    <li class="bed">{beds}</li>
+                    <li class="bath">{baths}</li>
+                    <li class="car">{cars}</li>
+		{/related_entries}
+                </ul>
+            </div>
+        </div>
+        
+        <div class="view-more-slider clearfix">
+        {related_entries id="design"}
+        	<ul>
+        		{photos}
+                <li><img src="{image:url:large}" alt="The {title}" /></li>
+                {/photos}
+            </ul>
+		{/related_entries}
+            
+            <!--{photos cover_only="yes"}
+            <img src="{image:url:large}" alt="The {title}" />
+            {/photos}-->
+        
+        </div>
+    
+    </div>
+</section>
+
+<section class="side-enquiry container clearfix">
+	
+    <div class="view-more-details side-enquiry-main white-box clearfix">
+    
+    <div class="package-details">
+    	<div class="clearfix">
+    		<h4 class="block-size">Block Size: <span class="green">{block_size}m<sup>2</sup></span></h4>
+        	<h4 class="package-price"><span class="green">${exp:number_formatter:format decimals='0'}{package_price}{/exp:number_formatter:format}</span></h4>
+        </div>
+        
+        <div class="view-more-description">
+        	{package_details}
+        </div>
+     </div>
+        
+        <div class="design-details clearfix">
+        	
+            {related_entries id="design"}
+            
+            <h2>About The {title}</h2>
+    
+            <div class="view-more-details-description">
+        
+                <h4>Frontage: <span class="green">{frontage}m</span> <span class="small">(front access design)</span></h4>
+                
+                <div class="view-more-description">
+                {description}
+                </div>
+            
+            </div>
+            
+            <div class="view-more-details-specifications">
+            
+            	<h4 class="green">Specifications:</h4>
+            	<ul>
+            	{specifications}
+                	<li><p>{item}</p></li>
+                {/specifications}
+            	</ul>
+            </div>
+            
+            {/related_entries}
+            
+        </div>
+        
+        <!--<div class="view-more-description">
+        	{package_details}
+            
+        	{related_entries id="design"}
+                <h4>Frontage: {frontage}m <span>(front access design)</span></h4>
+                
+                <div class="view-more-description">
+                {description}
+                </div>
+			{/related_entries}
+        </div>-->
+        
+        <div class="clearfix">
+        <a class="btn-grey" href="/template/default_site/assets/uploads/specifications-sheet-standard.pdf" target="_blank">Standard Inclusions</a>
+        
+        <a class="btn-grey view-floorplan" href="#view-floorplan">View Floorplan</a>
+        </div>
+        
+        <div class="hidden">
+        
+        	<div id="view-floorplan">
+        	{related_entries id="design"}
+        	{floorplan}
+            <img src="{image:url:large}" alt="" />
+            {/floorplan}
+            {/related_entries}
+            </div>
+        
+        </div>
+    
+    </div>
+    <div class="side-enquiry-form white-box">
+ 
+     
+		<div class="mini-map">               
+            <div class="gmap" id="gmap-{url_title}" data-coords="{map_location}"></div>
+        </div>
+
+    
+        {enquiry-form}
+        
+    </div>
+    
+    <img class="dog-tilted" src="/template/default_site/assets/img/dog-tilted.png" alt="" />
+    
+</section>
+    
+{/exp:channel:entries}
+
+{/if}

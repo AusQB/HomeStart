@@ -1,0 +1,23 @@
+{layout="search/.layout"}
+
+<div class="row">
+
+    <div class="large-12 columns">
+    
+    	<h1>Search Results <small>'{exp:search:keywords}'</small></h1>
+
+        <h3>Found <span class="green">{exp:search:total_results}</span> matching pages</h3>
+
+        {exp:search:search_results}
+        <div class="search-result">
+
+            <a href="{auto_path}"><h4>{title}</h4></a>
+            
+            <p>{excerpt}</p>
+            
+        </div>
+		{/exp:search:search_results}
+        
+    </div>
+
+</div>

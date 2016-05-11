@@ -1,0 +1,9 @@
+<?php 
+if($this->EE->input->cookie('dontDoMob')) {
+	$this->EE->functions->set_cookie('dontDoMob', '', time()-3600);
+} else {
+	$this->EE->functions->set_cookie('dontDoMob', 'yes', 0);
+}
+header('Location:http://homestart.net.au');
+exit();
+?>

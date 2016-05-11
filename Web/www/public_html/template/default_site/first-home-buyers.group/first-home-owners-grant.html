@@ -1,0 +1,78 @@
+{layout="first-home-buyers/.layout"}
+
+{exp:channel:entries channel="pages" limit="1" url_title="{segment_2}"}
+<div class="row">
+
+    <div class="large-12 columns">
+
+        <div class="page-copy top">
+
+            <h1>{if page_heading != ''}{page_heading}{if:else}{title}{/if}</h1>
+
+            <div class="row">
+
+                <div class="medium-8 columns">
+
+                <div class="lead">{page_header_copy}</div>
+
+                {page_copy}
+
+                </div>
+
+                <div class="medium-4 columns">
+
+                    <img src="{assets}/img/10k.png" alt="" />
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+{/exp:channel:entries}
+
+<div class="row">
+
+    <div class="large-12 columns">
+
+    {if last_segment == 'thank-you'}
+
+    <h2>Thanks for contacting HomeStart.</h2>
+    <h3>We'll be in touch soon to let you know what kind of loan you can apply for.</h3>
+
+	{rea}
+
+    {if:else}
+
+    <div class="callout">
+
+    {exp:freeform:composer form_name="loan_calculator" return="{current_path}/thank-you" inline_errors="yes" required="name|email"}
+
+    </div>
+
+    {/if}
+
+    </div>
+
+</div>
+
+{if last_segment == "thank-you"}
+<div class="row">
+
+    <div class="medium-8 columns">
+
+        {looking_for}
+
+    </div>
+
+    <div class="medium-4 columns">
+
+        {enquiry_form}
+
+    </div>
+
+</div>
+{/if}

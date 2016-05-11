@@ -1,0 +1,18 @@
+{layout="onlineclientsurvey/.layout"}
+
+{if segment_3 == ''}
+
+    {layout:set name="title"}Search Entries{/layout:set}
+	{embed='onlineclientsurvey/.entry_form'}
+
+{if:elseif segment_3 == 'handover_survey'}
+
+    {layout:set name="title"}Handover Survey{/layout:set}
+	{embed='onlineclientsurvey/.handover_table' job='{segment_4}'}
+
+{if:elseif segment_3 == 'prestart_survey'}
+
+    {layout:set name="title"}Pre-Start Survey{/layout:set}
+	{embed='onlineclientsurvey/.prestart_table' job='{segment_4}'}
+
+{/if}

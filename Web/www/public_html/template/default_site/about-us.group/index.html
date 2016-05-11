@@ -1,0 +1,60 @@
+{layout="about-us/.layout"}
+
+{exp:channel:entries channel="pages" limit="1" url_title="{last_segment}"}
+<div class="row">
+
+    <div class="large-12 columns">
+
+        <div class="page-copy top">
+
+            <h1>{if page_heading != ''}{page_heading}{if:else}{title}{/if}</h1>
+
+            <div class="lead">{page_header_copy}</div>
+
+            {page_copy}
+
+        </div>
+
+    </div>
+
+</div>
+{/exp:channel:entries}
+
+{if segment_2 == ''}
+
+<div class="row">
+    <div class="medium-7 columns">
+        <ul class="no-bullet arrows-list">
+            <li><h4>KeyStart Home Loans</h4></li>
+            <li><h4>Banks Loans</h4></li>
+            <li><h4>Home Design</h4></li>
+            <li><h4>Lifetime structural Guarantee</h4></li>
+            <li><h4>Government Grants &amp; Incentives</h4></li>
+            <li><h4>Land Sourcing</h4></li>
+            <li><h4>Colour Selections</h4></li>
+            <li><h4>Quality Assurance with the BGC Group</h4></li>
+            <li><h4>No Savings Home Loans</h4></li>
+            <li><h4>Finance &amp; Settlement</h4></li>
+            <li><h4>Supervised construction</h4></li>
+        </ul>
+    </div>
+    <div class="medium-5 columns">
+        <div class="row small-up-1">
+
+            <div class="column">
+                <a href="{path='about-us/faq'}" class="large expanded success button">FAQ</a>
+            </div>
+
+            <div class="column">
+                <a href="{path='about-us/testimonials'}" class="large expanded success button">Testimonials</a>
+            </div>
+
+            <div class="column">
+                <a href="{path='about-us/careers'}" class="large expanded success button">Careers</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{/if}

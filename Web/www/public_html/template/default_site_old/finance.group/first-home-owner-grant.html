@@ -1,0 +1,153 @@
+{embed="includes/.header"}
+
+{exp:channel:entries channel="pages" limit="1" url_title="{last_segment}"}
+<section class="content first-section {segment_1} {segment_2}">
+    <div class="container white-box clearfix">
+    
+    	<div class="content-header image clearfix">
+            <div class="content-header-copy">
+                <h1>{if page_heading != ''}{page_heading}{if:else}{title}{/if}</h1>
+                {page_header_copy}
+            </div>
+            <img src="/template/default_site/assets/img/10k.png" alt="" />
+        </div>
+        
+        <div class="page-copy">
+        {page_copy}
+        </div>
+    
+    </div>
+</section>
+{/exp:channel:entries}
+
+<section class="content {segment_1} {segment_2}">
+    <div class="container white-box clearfix">
+    
+    {if last_segment == 'thank-you'}
+    <div>
+    	<h2>Thanks for contacting HomeStart. We'll be in touch soon.</h2>
+        <p class="call-us">Remember, you can always call us on (08) 6461 5300.</p>
+    </div>
+    
+	{rea}
+
+    {if:else}
+    
+    {exp:freeform:form form_name="contact_us" form:class="contact-form" return="finance/first-home-owner-grant/thank-you" inline_errors="yes" required="name|email|first_buyer|hear_about"}
+    
+    <div class="cols2 clearfix">
+    
+    	<h2>Fill out the form below to learn about the First Home Owner Grant</h2>
+    
+        <div class="pct50">
+        
+            <ul>
+            
+                <li>
+                <label>{freeform:label:name}</label>
+                <input type="text" name="name" value="" id="freeform_name" maxlength="150" data-role="none" tabindex="1" required>
+                {if freeform:error:name}
+                    <span class="error">{freeform:error:name}</span>
+                {/if}
+                </li>
+                
+                <li>
+                <label>{freeform:label:email}</label>
+                <input type="email" name="email" value="" id="freeform_email" maxlength="150" data-role="none" tabindex="2" required>
+                {if freeform:error:email}
+                    <span class="error">{freeform:error:email}</span>
+                {/if}
+                </li>
+                
+                <li>
+                <label>{freeform:label:phone}</label>
+                <input type="tel" name="phone" value="" id="freeform_phone" maxlength="12" data-role="none" tabindex="3" required>
+                {if freeform:error:phone}
+                    <span class="error">{freeform:error:phone}</span>
+                {/if}
+                </li>
+            
+            </ul>
+        
+        </div>
+        
+        <div class="pct50">
+        
+            <ul>
+            
+            	<li>
+                <label>{freeform:label:first_buyer}</label>
+                    <ul style="list-style:none; padding:0;" data-role="none" tabindex="5">
+                    <li>
+                    <input type="radio" name="first_buyer" id="freeform_first_buyer_1" value="Yes" checked="checked">&nbsp;&nbsp;
+                    <label for="freeform_first_buyer_1">Yes</label>
+                    </li>
+                    <li>
+                    <input type="radio" name="first_buyer" id="freeform_first_buyer_2" value="No">&nbsp;&nbsp;
+                    <label for="freeform_first_buyer_2">No</label>
+                    </li>
+                    </ul>
+                {if freeform:error:first_buyer}
+                    <span class="error">{freeform:error:first_buyer}</span>
+                {/if}
+                </li>
+                
+                <li class="drop-down">
+                <i class="icon-angle-down"></i>
+                <label>{freeform:label:hear_about}</label>
+                {!--{freeform:field:hear_about attr:data-role="none" attr:tabindex="6"}--}
+                <select name="hear_about" id="freeform_hear_about" data-role="none" tabindex="6" required="required">
+                    <option value="">Please select one</option>
+                    <option value="Realestate.com.au">Realestate.com.au</option>
+                    <option value="Reiwa.com.au">Reiwa.com.au</option>
+                    <option value="Radio">Radio</option>
+                    <option value="TV">TV</option>
+                    <option value="Google">Google</option>
+                    <option value="Regional Centre">Regional Centre</option>
+                    <option value="Shopping Centre">Shopping Centre</option>
+                    <option value="Exhibitions">Exhibitions</option>
+                    <option value="Friend">Friend</option>
+                </select>
+                {if freeform:error:hear_about}
+                    <span class="error">{freeform:error:hear_about}</span>
+                {/if}
+                </li>
+            
+                <li>
+                    <button class="btn-green" type="submit" name="submit" value="submit" data-role="none" tabindex="7" onclick="_gaq.push(['_trackEvent', 'Contact', 'Submit', 'FHOG'])">Send</button>
+                </li>
+            
+            </ul>
+            
+        </div>
+        
+    </div>
+
+    {freeform:field:page_origin}
+    
+    {/exp:freeform:form}
+    
+    {/if}
+    
+    </div>
+</section>
+
+{if last_segment == "thank-you"}
+<section class="side-enquiry container clearfix">
+	
+    <div class="side-enquiry-main dog-man white-box">
+    
+    	{looking-for}
+        
+    </div>
+    
+    <div class="side-enquiry-form white-box">
+    
+        {enquiry-form}
+        
+    </div>
+    
+</section>
+{/if}
+    
+{embed="includes/.footer"}

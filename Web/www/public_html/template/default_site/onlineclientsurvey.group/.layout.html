@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {exp:seo_lite use_last_segment="yes"}
+
+    <meta name="robots" content="noindex">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="shortcut icon" href="{assets}/img/icons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{assets}/img/icons/apple-touch-icon.png">
+
+    {layout:css}
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{assets}/css/foundation.min.css" />
+    <link rel="stylesheet" href="{assets}/css/main.css" />
+    <link rel="stylesheet" href="{assets}/css/survey.css" />
+
+    {if '{exp:detect_mobile:isphone}'}
+    <link rel="stylesheet" href="{assets}/css/mobile.css" />
+    {/if}
+
+    {layout:head_js}
+
+    <script src="{assets}/js/lib/modernizr.js"></script>
+
+</head>
+
+<body class="{layout:body_class}">
+
+<div id="header">
+    <div class="row">
+        <div class="medium-6 columns">
+
+            <a id="logo" href="{site_url}/onlineclientsurvey">
+                <img src="{assets}/img/homestart_logo.png" alt="HomeStart" />
+            </a>
+
+        </div>
+        <div class="medium-6 columns text-right">
+
+            <h1 class="title">{layout:title}</h1>
+
+        </div>
+    </div>
+</div>
+
+<div id="contents">
+    <div class="row">
+
+        <div class="large-12 columns">
+
+        {layout:contents}
+
+        </div>
+
+    </div>
+</div>
+
+{if logged_in AND segment_2 == ""}
+    <a class="success button" style="position:absolute;bottom:50px;left:50px;" href="/onlineclientsurvey/entries">View entries</a>
+{/if}
+
+<script src="{assets}/js/lib/jquery.min.js"></script>
+<script src="{assets}/js/lib/detectmobilebrowser.js"></script>
+<script src="{assets}/js/lib/foundation.min.js"></script>
+
+{layout:js_lib}
+
+<script src="{assets}/js/survey.js"></script>
+
+{layout:foot_js}
+
+</body>
+</html>

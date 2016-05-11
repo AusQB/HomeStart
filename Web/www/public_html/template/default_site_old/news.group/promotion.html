@@ -1,0 +1,97 @@
+{exp:channel:entries channel="promotions" url_title="{segment_3}" show_expired="yes"}
+
+{if expiration_date AND current_time > expiration_date}
+
+<div class="row">
+
+    <div class="large-12 columns">
+
+    	<h1>Competition over</h1>
+
+    	<p>Sorry, but this competition has ended. Head back to the <a href="{path='news/promotions'}">promotions page</a> to check out our other competitions.</p>
+
+    	<p><a href="#e-news-subscribe" data-lity>Subscribe</a> to our newsletter to be notified of new promotions.</p>
+
+    </div>
+
+</div>
+
+<div class="row" data-equalizer data-equalize-on="medium">
+
+    <div class="medium-8 columns">
+
+        {looking_for}
+
+    </div>
+
+    <div class="medium-4 columns">
+
+        {enquiry_form}
+
+    </div>
+
+</div>
+
+{if:else}
+
+<div class="row">
+
+    <div class="large-12 columns">
+
+	    <h1>{if promotion_heading}{promotion_heading}{if:else}{title}{/if}</h1>
+
+	    <div class="row">
+	        <div class="medium-8 columns">
+
+	            {promotion_copy}
+
+	        </div>
+	        <div class="medium-4 columns">
+
+	            {promotion_image}
+	            <img src="{image:url:medium}" alt="{title}" />
+	            {/promotion_image}
+
+	        </div>
+	    </div>
+
+    </div>
+
+</div>
+
+<div class="row">
+
+    <div class="large-12 columns">
+
+    	{if last_segment == 'thank-you'}
+
+        <h2>Thanks for entering. Good luck!</h2>
+
+    	{rea}
+
+        {if:else}
+
+        <div class="callout">
+
+	    {promotion_form}
+
+	    <div id="renters-only" class="reveal" data-reveal data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
+
+			<h3>Sorry, this promotion is not available to home owners.</h3>
+
+			<button class="close-button" data-close aria-label="Close modal" type="button">
+				<span aria-hidden="true"><i class="fa fa-times"></i></span>
+			</button>
+	    </div>
+
+	    </div>
+
+	    {/if}
+
+    </div>
+
+</div>
+
+{/if}
+
+{/exp:channel:entries}
